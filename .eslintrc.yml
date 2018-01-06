@@ -360,6 +360,7 @@ rules:
   sort-imports:
     - 2
     - ignoreMemberSort: true
+      ignoreDeclarationSort: true
   no-mixed-requires: 2
   import/order:
     - 2
