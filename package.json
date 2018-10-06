@@ -22,10 +22,7 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp"
-  },
+  "repository": "autoserver-org/eslint-config-standard-prettier-fp",
   "bugs": {
     "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp/issues"
   },
