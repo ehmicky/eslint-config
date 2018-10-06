@@ -27,6 +27,7 @@
     "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp/issues"
   },
   "author": "autoserver founder <founder@autoserver.io> (http://autoserver.io)",
+  "directories": {},
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
