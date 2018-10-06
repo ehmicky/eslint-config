@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-prettier-fp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint configuration combining Standard JavaScript, Prettier and functional programming",
   "keywords": [
     "eslint",
