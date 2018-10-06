@@ -1,6 +1,10 @@
 {
   "name": "eslint-config-standard-prettier-fp",
   "version": "1.0.2",
+  "main": ".eslintrc.json",
+  "scripts": {
+    "release": "release-it"
+  },
   "description": "ESLint configuration combining Standard JavaScript, Prettier and functional programming",
   "keywords": [
     "eslint",
@@ -11,17 +15,16 @@
     "standard style",
     "lint"
   ],
+  "license": "Apache-2.0",
   "homepage": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp",
   "repository": {
     "type": "git",
     "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp"
   },
-  "author": "autoserver founder <founder@autoserver.io> (http://autoserver.io)",
-  "main": ".eslintrc.json",
-  "scripts": {
-    "release": "release-it"
+  "bugs": {
+    "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp/issues"
   },
-  "license": "Apache-2.0",
+  "author": "autoserver founder <founder@autoserver.io> (http://autoserver.io)",
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
