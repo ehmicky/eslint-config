@@ -22,9 +22,6 @@
     "release": "release-it"
   },
   "license": "Apache-2.0",
-  "dependencies": {
-    "eslint-plugin-prettier": "^3.0.0"
-  },
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
