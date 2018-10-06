@@ -2,6 +2,11 @@
   "name": "eslint-config-standard-prettier-fp",
   "version": "1.0.2",
   "main": ".eslintrc.json",
+  "files": [
+    ".editorconfig",
+    ".prettierrc.yml",
+    "!*~"
+  ],
   "scripts": {
     "release": "release-it"
   },
