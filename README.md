@@ -16,10 +16,10 @@ This configuration combines:
 - [modern JavaScript](#modern-javascript).
 - [strictness](#stricness).
 
-# Install
+# Installation
 
 ```
-npm install -D eslint-config-standard-prettier-fp eslint@^5.6.0 eslint-config-prettier@^3.0.1 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-eslint-comments@^3.0.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.0-alpha.0 eslint-plugin-import@^2.14.0 eslint-plugin-markdown@^1.0.0-beta.8 eslint-plugin-node@^7.0.1 eslint-plugin-promise@^4.0.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^6.0.1 eslint-plugin-you-dont-need-lodash-underscore@^6.4.0 prettier@^1.14.3
+$ npm install -D eslint-config-standard-prettier-fp eslint@^5.6.0 eslint-config-prettier@^3.0.1 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-eslint-comments@^3.0.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.0-alpha.0 eslint-plugin-import@^2.14.0 eslint-plugin-markdown@^1.0.0-beta.8 eslint-plugin-node@^7.0.1 eslint-plugin-promise@^4.0.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^6.0.1 eslint-plugin-you-dont-need-lodash-underscore@^6.4.0 prettier@^1.14.3
 ```
 
 Then in your `.eslintrc.json`:
@@ -36,7 +36,7 @@ your `.eslintrc.json` to fit your needs and coding style.
 Then copy the Prettier configuration and `.editorconfig`:
 
 ```shell
-cp node_modules/eslint-config-standard-prettier-fp/.prettierrc.yml node_modules/eslint-config-standard-prettier-fp/.editorconfig .
+$ cp node_modules/eslint-config-standard-prettier-fp/.prettierrc.yml node_modules/eslint-config-standard-prettier-fp/.editorconfig .
 ```
 
 # Badge
