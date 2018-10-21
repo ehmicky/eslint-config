@@ -192,7 +192,10 @@
     "id-length": [
       2,
       {
-        "max": 24
+        "max": 24,
+        "exceptions": [
+          "t"
+        ]
       }
     ],
     "id-match": [
