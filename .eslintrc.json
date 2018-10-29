@@ -439,5 +439,28 @@
         "typeof": true
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.md",
+        "**/*.md"
+      ],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "impliedStrict": true
+        }
+      },
+      "rules": {
+        "strict": 0,
+        "no-console": 0,
+        "no-restricted-globals": 0,
+        "camelcase": 0,
+        "filenames/match-exported": 0,
+        "unicorn/filename-case": 0,
+        "import/no-unresolved": 0,
+        "node/no-missing-require": 0
+      }
+    }
+  ]
 }
