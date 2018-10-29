@@ -870,3 +870,24 @@ rules:
 #  no-restricted-modules: 2
 #  no-restricted-properties: 2
 #  import/no-restricted-paths: 2
+
+# Markdown files use slightly different rules
+overrides:
+  - files: ['*.md', '**/*.md']
+    # `use strict` is too verbose in documentation
+    parserOptions:
+      ecmaFeatures:
+        impliedStrict: true
+    rules:
+      strict: 0
+      # Markdown files are usually used for documentation where `console`
+      # statements might happen
+      no-console: 0
+      no-restricted-globals: 0
+      # Markdown filenames might not match code examples
+      camelcase: 0
+      filenames/match-exported: 0
+      unicorn/filename-case: 0
+      # Documentation often require the module itself
+      import/no-unresolved: 0
+      node/no-missing-require: 0
