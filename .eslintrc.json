@@ -459,7 +459,9 @@
         "filenames/match-exported": 0,
         "unicorn/filename-case": 0,
         "import/no-unresolved": 0,
-        "node/no-missing-require": 0
+        "node/no-missing-require": 0,
+        "no-undef": 0,
+        "no-unused-vars": 0
       }
     }
   ]
