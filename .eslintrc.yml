@@ -891,3 +891,7 @@ overrides:
       # Documentation often require the module itself
       import/no-unresolved: 0
       node/no-missing-require: 0
+      # Documentation code often misses context lines, leading to variables
+      # looking unused or undefined
+      no-undef: 0
+      no-unused-vars: 0
