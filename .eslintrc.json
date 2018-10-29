@@ -21,6 +21,8 @@
     "node/prefer-global/console": 2,
     "node/prefer-global/url": 2,
     "node/prefer-global/url-search-params": 2,
+    "node/prefer-global/text-decoder": 2,
+    "node/prefer-global/text-encoder": 2,
     "node/prefer-global/buffer": [
       2,
       "never"
