@@ -237,7 +237,11 @@
     "fp/no-loops": 2,
     "no-restricted-syntax": [
       2,
-      "SwitchStatement"
+      "SwitchStatement",
+      {
+        "selector": "SequenceExpression",
+        "message": "The comma operator is confusing and a common mistake. Don’t use it!"
+      }
     ],
     "default-case": 2,
     "no-case-declarations": 2,
