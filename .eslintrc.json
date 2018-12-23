@@ -250,6 +250,7 @@
     "unicorn/throw-new-error": 2,
     "unicorn/error-message": 2,
     "unicorn/catch-error-name": 2,
+    "no-useless-catch": 2,
     "unicorn/prefer-type-error": 2,
     "unicorn/custom-error-definition": 2,
     "func-style": 2,
