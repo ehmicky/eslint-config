@@ -19,7 +19,7 @@ This configuration combines:
 # Installation
 
 ```
-$ npm install -D eslint-config-standard-prettier-fp eslint@^5.10.0 eslint-config-prettier@^3.3.0 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-eslint-comments@^3.0.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.0 eslint-plugin-import@^2.14.0 eslint-plugin-markdown@^1.0.0-rc.1 eslint-plugin-node@^8.0.0 eslint-plugin-promise@^4.0.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^6.0.1 eslint-plugin-you-dont-need-lodash-underscore@^6.4.0 prettier@^1.15.3
+$ npm install -D eslint-config-standard-prettier-fp eslint@^5.11.0 eslint-config-prettier@^3.3.0 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-eslint-comments@^3.0.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.0 eslint-plugin-import@^2.14.0 eslint-plugin-markdown@^1.0.0-rc.1 eslint-plugin-node@^8.0.0 eslint-plugin-promise@^4.0.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^6.0.1 eslint-plugin-you-dont-need-lodash-underscore@^6.4.0 prettier@^1.15.3
 ```
 
 Then in your `.eslintrc.json`:
