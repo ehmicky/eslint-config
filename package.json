@@ -38,7 +38,7 @@
   "author": "autoserver founder <founder@autoserver.io> (http://autoserver.io)",
   "directories": {},
   "devDependencies": {
-    "eslint": "^5.11.0",
+    "eslint": "^5.11.1",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-import-resolver-node": "^0.3.2",
@@ -59,7 +59,7 @@
     "release-it": "^9.3.0"
   },
   "peerDependencies": {
-    "eslint": "^5.11.0",
+    "eslint": "^5.11.1",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-import-resolver-node": "^0.3.2",
