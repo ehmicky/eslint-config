@@ -381,7 +381,8 @@
     "sort-imports": [
       2,
       {
-        "ignoreMemberSort": true
+        "ignoreMemberSort": true,
+        "ignoreDeclarationSort": true
       }
     ],
     "no-mixed-requires": 2,
