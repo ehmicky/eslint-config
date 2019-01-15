@@ -138,6 +138,7 @@
       2,
       1
     ],
+    "unicorn/no-unused-properties": 2,
     "no-shadow": [
       2,
       {
@@ -306,6 +307,7 @@
     "unicorn/prefer-starts-ends-with": 2,
     "unicorn/no-hex-escape": 2,
     "unicorn/escape-case": 2,
+    "unicorn/no-console-spaces": 2,
     "unicorn/regex-shorthand": 2,
     "no-misleading-character-class": 2,
     "require-unicode-regexp": 2,
@@ -437,6 +439,8 @@
     "unicorn/prefer-add-event-listener": 2,
     "no-process-exit": 2,
     "unicorn/no-process-exit": 2,
+    "unicorn/prefer-query-selector": 2,
+    "unicorn/prefer-node-append": 2,
     "no-unused-vars": [
       2,
       {}
