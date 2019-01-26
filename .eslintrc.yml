@@ -246,10 +246,6 @@ rules:
   func-name-matching:
     - 2
     - considerPropertyDescriptor: true
-  prefer-arrow-callback:
-    - 2
-    - allowNamedFunctions: true
-  arrow-body-style: 2
   max-params: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
@@ -766,13 +762,12 @@ rules:
 ## Conclits with Prettier, i.e. disabled by eslint-config-prettier,
 ## otherwise we would add it (using those commented lines).
 
-#  lines-around-comment: 2
-#  no-confusing-arrow: 2
 #  array-bracket-newline:
 #    - 2
 #    - consistent
 #  array-bracket-spacing: 2
 #  array-element-newline: 2
+#  arrow-body-style: 2
 #  arrow-parens:
 #    - 2
 #    - as-needed
@@ -780,12 +775,17 @@ rules:
 #  function-paren-newline: 2
 #  implicit-arrow-linebreak: 2
 #  jsx-quotes: 2
+#  lines-around-comment: 2
 #  multiline-ternary: 2
 #  newline-per-chained-call: 2
+#  no-confusing-arrow: 2
 #  no-extra-semi: 2
 #  nonblock-statement-body-position: 2
 #  object-curly-newline: 2
 #  one-var-declaration-per-line: 2
+#  prefer-arrow-callback:
+#    - 2
+#    - allowNamedFunctions: true
 #  quote-props:
 #    - 2
 #    - as-needed
