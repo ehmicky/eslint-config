@@ -30,10 +30,10 @@
     "fp"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://git.io/fpqVH",
-  "repository": "autoserver-org/eslint-config-standard-prettier-fp",
+  "homepage": "https://git.io/fhSs6",
+  "repository": "ehmicky/eslint-config-standard-prettier-fp",
   "bugs": {
-    "url": "https://github.com/autoserver-org/eslint-config-standard-prettier-fp/issues"
+    "url": "https://github.com/ehmicky/eslint-config-standard-prettier-fp/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {},
