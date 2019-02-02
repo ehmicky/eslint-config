@@ -146,7 +146,7 @@ included so you can lint JavaScript inside HTML or Markdown files.
 
 # Projects using this configuration
 
-- [autoserver](https://github.com/autoserver-org/autoserver):
+- [autoserver](https://github.com/ehmicky/autoserver):
   create a full-featured REST/GraphQL API from a configuration file
 
 Feel free to submit an issue or PR to add your project to the list above!
