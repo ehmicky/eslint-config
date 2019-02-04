@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-prettier-fp",
-  "version": "14.0.1",
+  "version": "14.0.2",
   "main": ".eslintrc.json",
   "files": [
     ".editorconfig",
