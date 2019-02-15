@@ -8,7 +8,15 @@
     "!*~"
   ],
   "scripts": {
-    "release": "release-it"
+    "build": "gulp build",
+    "test": "npm run build && gulp test",
+    "release": "npm test && release-it",
+    "check-coverage": "gulp checkCoverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "gulp check"
+    }
   },
   "description": "ESLint configuration combining Standard JavaScript, Prettier and functional programming",
   "keywords": [
