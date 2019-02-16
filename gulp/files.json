@@ -1,3 +1,4 @@
 {
-  "YAML_TO_JSON": [".eslintrc.yml"]
+  "BUILD": "src",
+  "BUILD_DIST": "dist"
 }
