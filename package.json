@@ -47,6 +47,7 @@
   "directories": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/register": "^7.0.0",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
