@@ -3,4 +3,5 @@
 module.exports = {
   ...require('./main'),
   ...require('./build'),
+  ...require('./check'),
 }

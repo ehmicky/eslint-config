@@ -1,4 +1,5 @@
 {
+  "CHECK": ["*.{js,md}", "{src,gulp,test}/**/*.{js,md}"],
   "BUILD": "src",
   "BUILD_DIST": "dist"
 }
