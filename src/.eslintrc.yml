@@ -922,6 +922,14 @@ rules:
 #  no-restricted-properties: 2
 #  import/no-restricted-paths: 2
 
+settings:
+  # JSON files in `dist` are compiled from YAML in `src`
+  node:
+    tryExtensions: [.js, .json, .node, .yml, .yaml]
+  import/resolver:
+    node:
+      extensions: [.js, .json, .node, .yml, .yaml]
+
 # Markdown files use slightly different rules
 overrides:
   - files: ['*.md', '**/*.md']
