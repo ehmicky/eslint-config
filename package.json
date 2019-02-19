@@ -2,13 +2,9 @@
   "name": "eslint-config-standard-prettier-fp",
   "version": "15.1.1",
   "main": "dist/.eslintrc.json",
-  "files": [
-    "dist",
-    "!*~"
-  ],
+  "files": ["dist", "!*~"],
   "scripts": {
-    "build": "gulp build",
-    "test": "npm run build && gulp test"
+    "test": "gulp test"
   },
   "husky": {
     "hooks": {
