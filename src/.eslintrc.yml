@@ -59,10 +59,6 @@ rules:
     - 2
     - separate-lines
   line-comment-position: 2
-  capitalized-comments:
-    - 2
-    - always
-    - ignoreConsecutiveComments: true
 
   ## ESLint comments
   eslint-comments/disable-enable-pair: 2
@@ -846,6 +842,13 @@ rules:
 ## This is in conflict with no-useless-escape rule
 
 #  no-div-regex: 2
+
+## This makes commenting/uncommenting code tedious
+
+#  capitalized-comments:
+#    - 2
+#    - always
+#    - ignoreConsecutiveComments: true
 
 ## Those rules go against the codebase convention of using index.js files
 ## that require siblings, and exporting|requiring named objects.
