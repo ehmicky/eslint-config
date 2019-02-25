@@ -332,7 +332,11 @@ rules:
   import/no-named-as-default-member: 2
   import/no-namespace: 2
   import/no-named-default: 2
-  import/no-anonymous-default-export: 2
+  import/no-anonymous-default-export:
+    - 2
+    - allowArray: true
+      allowLiteral: true
+      allowObject: true
   import/no-default-export: 2
   node/exports-style:
     - 2
@@ -933,8 +937,8 @@ settings:
     node:
       extensions: [.js, .json, .node, .yml, .yaml]
 
-# Markdown files use slightly different rules
 overrides:
+  # Markdown files use slightly different rules
   - files: ['*.md', '**/*.md']
     # `use strict` is too verbose in documentation
     parserOptions:
@@ -957,3 +961,7 @@ overrides:
       # looking unused or undefined
       no-undef: 0
       no-unused-vars: 0
+  # ava.config.js requires ES modules
+  - files: [ava.config.js]
+    parserOptions:
+      sourceType: module
