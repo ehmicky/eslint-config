@@ -401,6 +401,14 @@ rules:
     ## Use require('process|buffer') instead
     - process
     - Buffer
+  # Prefer `if` + `throw new Error()` instead of `assert()` as it does not
+  # work in browsers
+  no-restricted-imports:
+    - 2
+    - paths: [assert]
+  no-restricted-modules:
+    - 2
+    - paths: [assert]
 
   ## To avoid
   no-void: 2
@@ -924,8 +932,6 @@ rules:
 ## No use for those rules
 
 #  id-blacklist: 2
-#  no-restricted-imports: 2
-#  no-restricted-modules: 2
 #  no-restricted-properties: 2
 #  import/no-restricted-paths: 2
 
