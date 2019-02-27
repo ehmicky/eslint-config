@@ -89,9 +89,6 @@ rules:
       next: multiline-block-like
   lines-between-class-members: 2
 
-  ## Whitespaces
-  linebreak-style: 2
-
   ## Statements
   no-empty:
     - 2
@@ -618,13 +615,13 @@ rules:
 #  standard/no-callback-literal: 2
 
 ## Might conflict with Prettier, i.e. disabled by eslint-config-prettier,
-## but overriden by us
+## but overriden by us.
 
 #  max-len: 0
 #  no-tabs: 0
 #  quotes: 0
 
-## Conflits with Prettier, i.e. disabled by eslint-config-prettier,
+## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
 ## although added by standard/standard.
 
 #  curly:
@@ -807,6 +804,7 @@ rules:
 #  function-paren-newline: 2
 #  implicit-arrow-linebreak: 2
 #  jsx-quotes: 2
+#  linebreak-style: 2
 #  lines-around-comment: 2
 #  multiline-ternary: 2
 #  newline-per-chained-call: 2
