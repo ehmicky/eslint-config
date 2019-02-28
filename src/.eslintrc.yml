@@ -965,7 +965,16 @@ overrides:
       # looking unused or undefined
       no-undef: 0
       no-unused-vars: 0
+
   # ava.config.js requires ES modules
   - files: [ava.config.js]
     parserOptions:
       sourceType: module
+
+  # Test files
+  - files: ['test/**/*.js']
+    rules:
+      # When using data-driven testing, an extra level of depth is implied
+      max-nested-callbacks:
+        - 2
+        - 2
