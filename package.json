@@ -3,8 +3,7 @@
   "version": "15.3.0",
   "main": "dist/.eslintrc.json",
   "files": [
-    "dist",
-    "!*~"
+    "dist"
   ],
   "scripts": {
     "test": "gulp test"
