@@ -36,7 +36,7 @@ your `.eslintrc.json` to fit your needs and coding style.
 Then copy the Prettier configuration and `.editorconfig`:
 
 ```shell
-$ cp node_modules/eslint-config-standard-prettier-fp/.prettierrc.yml node_modules/eslint-config-standard-prettier-fp/.editorconfig .
+$ cp node_modules/eslint-config-standard-prettier-fp/dist/src/.prettierrc.json node_modules/eslint-config-standard-prettier-fp/dist/src/.editorconfig .
 ```
 
 # Badge
