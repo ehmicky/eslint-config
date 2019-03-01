@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('./dist/.prettierrc.json')
+module.exports = require('./dist/src/.prettierrc.json')

@@ -1,1 +1,1 @@
-extends: ./dist/.eslintrc.json
+extends: ./dist/src/.eslintrc.json
