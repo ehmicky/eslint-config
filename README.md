@@ -1,8 +1,6 @@
 [![downloads](https://img.shields.io/npm/dt/eslint-config-standard-prettier-fp.svg?logo=npm)](https://www.npmjs.com/package/eslint-config-standard-prettier-fp) [![last commit](https://img.shields.io/github/last-commit/ehmicky/eslint-config-standard-prettier-fp.svg?logo=github&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp/graphs/contributors) [![travis](https://img.shields.io/travis/ehmicky/eslint-config-standard-prettier-fp/master.svg?logo=travis)](https://travis-ci.org/ehmicky/eslint-config-standard-prettier-fp/builds) [![node](https://img.shields.io/node/v/eslint-config-standard-prettier-fp.svg?logo=node.js)](#) [![Gitter](https://img.shields.io/gitter/room/ehmicky/eslint-config-standard-prettier-fp.svg?logo=gitter)](https://gitter.im/ehmicky/eslint-config-standard-prettier-fp)
 
-[ESLint](https://eslint.org/) is a code linter for JavaScript.
-
-This configuration combines:
+[ESLint](https://eslint.org/) configuration combining:
 
 - [functional programming](#functional-programming).
 - [Standard JavaScript](https://standardjs.com/) which prescribes how to
