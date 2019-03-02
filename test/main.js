@@ -3,7 +3,7 @@
 const test = require('ava')
 const execa = require('execa')
 
-const ESLINT_CONFIG = `${__dirname}/../build/src/.eslintrc.json`
+const ESLINT_CONFIG = `${__dirname}/../src/.eslintrc.json`
 const TEST_FILE = `${__dirname}/helpers/valid.js`
 
 test('Smoke test', async t => {
