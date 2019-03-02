@@ -1,9 +1,9 @@
 {
   "name": "eslint-config-standard-prettier-fp",
   "version": "15.3.2",
-  "main": "dist/src/.eslintrc.json",
+  "main": "build/src/.eslintrc.json",
   "files": [
-    "dist/src"
+    "build/src"
   ],
   "scripts": {
     "test": "gulp test"
