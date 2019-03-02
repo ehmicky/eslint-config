@@ -849,6 +849,10 @@ rules:
 #  unicorn/no-unsafe-regex: 2
 #  import/no-relative-parent-imports: 2
 
+## This makes RegExps more verbose
+
+#  prefer-named-capture-group: 2
+
 ## This is in conflict with no-useless-escape rule
 
 #  no-div-regex: 2
