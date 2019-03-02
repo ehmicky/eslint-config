@@ -938,7 +938,7 @@ rules:
 #  import/no-restricted-paths: 2
 
 settings:
-  # JSON files in `dist` are compiled from YAML in `src`
+  # JSON files in `build` are compiled from YAML in `src` and `test`
   node:
     tryExtensions: [.js, .json, .node, .yml, .yaml]
   import/resolver:
