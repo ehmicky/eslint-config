@@ -441,7 +441,9 @@ rules:
   ava/no-ignored-test-files:
     - 2
     - files: [test/**/*.js]
-  ava/no-import-test-files: 2
+  ava/no-import-test-files:
+    - 2
+    - files: [test/**/*.js]
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
@@ -976,6 +978,12 @@ overrides:
   - files: [ava.config.js]
     parserOptions:
       sourceType: module
+    rules:
+      filenames/match-regex: 0
+      filenames/match-exported: 0
+      import/no-internal-modules: 0
+      import/no-extraneous-dependencies: 0
+      import/no-default-export: 0
 
   # Test files
   - files: ['test/**/*.js']
