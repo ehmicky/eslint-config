@@ -986,7 +986,7 @@ overrides:
       import/no-default-export: 0
 
   # Test files
-  - files: ['build/test/**/*.js']
+  - files: ['test/**/*.js']
     rules:
       # When using data-driven testing, an extra level of depth is implied
       max-nested-callbacks:
