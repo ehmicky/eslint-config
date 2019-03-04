@@ -15,14 +15,6 @@ script: npm test
 if: '!(commit_message =~ /^Release/ && tag is blank)'
 jobs:
   include:
-    # Test coverage check must happen after tests for the whole matrix have
-    # been performed, so we get the merged coverage map
-    - stage: Coverage check
-      os: linux
-      node_js: 11
-      script: gulp coverage
-      # If CI fails, codecov does not post a bot comment on PR, so we skip it
-      if: type != pull_request && (branch == master || tag is not blank)
     # Deployment must happen after tests for the whole matrix have been
     # performed, so we use `jobs.include` with a different `stage`
     - stage: Deploy
