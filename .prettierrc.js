@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('./build/src/.prettierrc')
+module.exports = require('gulp-shared-tasks/.prettierrc')
