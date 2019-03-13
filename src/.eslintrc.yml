@@ -186,6 +186,8 @@ rules:
   no-underscore-dangle:
     - 2
     - enforceInMethodNames: true
+      # Often used in several libraries
+      allow: [_id]
 
   ## Typecasting
   no-implicit-coercion: 2
