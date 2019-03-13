@@ -342,7 +342,6 @@ rules:
     - module.exports
   import/extensions: 2
   import/no-absolute-path: 2
-  import/no-internal-modules: 2
   import/no-useless-path-segments: 2
   no-duplicate-imports:
     - 2
@@ -850,6 +849,10 @@ rules:
 
 #  import/no-commonjs: 2
 
+## This does not work with the way we import files
+
+#  import/no-internal-modules: 2
+
 ## This is too restrictive
 
 #  unicorn/no-unsafe-regex: 2
@@ -983,7 +986,6 @@ overrides:
     rules:
       filenames/match-regex: 0
       filenames/match-exported: 0
-      import/no-internal-modules: 0
       import/no-extraneous-dependencies: 0
       import/no-default-export: 0
 
