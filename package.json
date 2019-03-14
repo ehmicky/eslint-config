@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-prettier-fp",
-  "version": "15.5.7",
+  "version": "15.5.8",
   "main": "build/src/.eslintrc.json",
   "files": [
     "build/src"
