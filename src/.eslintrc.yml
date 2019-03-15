@@ -1007,3 +1007,8 @@ overrides:
       # Examples print their output at the end of the file
       no-console: 0
       no-restricted-globals: 0
+
+      # Examples point to already built files which might not be created yet
+      # if the user just cloned the repository
+      import/no-unresolved: 0
+      node/no-missing-require: 0
