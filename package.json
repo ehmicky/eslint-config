@@ -3,7 +3,8 @@
   "version": "15.5.10",
   "main": "build/src/.eslintrc.json",
   "files": [
-    "build/src"
+    "build/src",
+    "!~"
   ],
   "scripts": {
     "test": "gulp test"
