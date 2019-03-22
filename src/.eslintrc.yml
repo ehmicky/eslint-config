@@ -1011,7 +1011,9 @@ overrides:
       # Examples point to already built files which might not be created yet
       # if the user just cloned the repository
       import/no-unresolved: 0
+      import/no-extraneous-dependencies: 0
       node/no-missing-require: 0
+      node/no-extraneous-require: 0
 
       # Inlining constants is simpler for examples
       no-magic-numbers: 0
