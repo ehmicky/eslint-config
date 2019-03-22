@@ -973,11 +973,18 @@ overrides:
       unicorn/filename-case: 0
       # Documentation often require the module itself
       import/no-unresolved: 0
+      import/no-extraneous-dependencies: 0
       node/no-missing-require: 0
+      node/no-extraneous-require: 0
+      # Documentation can require a module that does not exist
+      node/no-unpublished-require: 0
       # Documentation code often misses context lines, leading to variables
       # looking unused or undefined
       no-undef: 0
       no-unused-vars: 0
+      # Inline comments can be nicer in documentation
+      line-comment-position: 0
+      no-inline-comments: 0
 
   # ava.config.js requires ES modules
   - files: [ava.config.js]
