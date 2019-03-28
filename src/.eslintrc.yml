@@ -188,23 +188,25 @@ rules:
     - enforceInMethodNames: true
       # Often used in several libraries
       allow: [_id]
-  unicorn/prevent-abbreviations:
-    - 2
-    - checkDefaultAndNamespaceImports: true
-      checkShorthandImports: true
-      checkShorthandProperties: true
-      replacements:
-        # `arguments` is a reserved word in JavaScript
-        arg: false
-        args: false
-        # Used in `process.env`
-        env: false
-        # This prevents prefixing methods with `e`, which is a convention we
-        # use for error handlers
-        e: false
-        # This is too common
-        prop: false
-        props: false
+  # The rule is too unstable for the moment.
+  # TODO: re-enable once it's more stable
+  # unicorn/prevent-abbreviations:
+  #   - 2
+  #   - checkDefaultAndNamespaceImports: true
+  #     checkShorthandImports: true
+  #     checkShorthandProperties: true
+  #     replacements:
+  #       # `arguments` is a reserved word in JavaScript
+  #       arg: false
+  #       args: false
+  #       # Used in `process.env`
+  #       env: false
+  #       # This prevents prefixing methods with `e`, which is a convention we
+  #       # use for error handlers
+  #       e: false
+  #       # This is too common
+  #       prop: false
+  #       props: false
 
   ## Typecasting
   no-implicit-coercion: 2
