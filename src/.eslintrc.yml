@@ -425,6 +425,7 @@ rules:
   ## DOM
   unicorn/prefer-query-selector: 2
   unicorn/prefer-node-append: 2
+  unicorn/prefer-node-remove: 2
 
   # AVA
   ava/no-unknown-modifiers: 2
