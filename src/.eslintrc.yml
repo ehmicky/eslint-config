@@ -193,6 +193,10 @@ rules:
     - checkDefaultAndNamespaceImports: true
       checkShorthandImports: true
       checkShorthandProperties: true
+      whitelist:
+        # `arguments` is a reserved word in JavaScript
+        arg: true
+        args: true
 
   ## Typecasting
   no-implicit-coercion: 2
