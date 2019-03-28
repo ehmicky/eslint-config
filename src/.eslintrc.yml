@@ -208,6 +208,7 @@ rules:
     - 2
     - allowElseIf: false
   for-direction: 2
+  unicorn/no-for-loop: 2
   guard-for-in: 2
   fp/no-loops: 2
 
