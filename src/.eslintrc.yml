@@ -197,6 +197,10 @@ rules:
         # `arguments` is a reserved word in JavaScript
         arg: false
         args: false
+        # Used in `process.env`
+        env: false
+        # This is too common
+        props: false
 
   ## Typecasting
   no-implicit-coercion: 2
