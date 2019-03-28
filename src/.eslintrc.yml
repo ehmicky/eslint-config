@@ -199,6 +199,9 @@ rules:
         args: false
         # Used in `process.env`
         env: false
+        # This prevents prefixing methods with `e`, which is a convention we
+        # use for error handlers
+        e: false
         # This is too common
         props: false
 
