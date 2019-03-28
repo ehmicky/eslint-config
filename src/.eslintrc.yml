@@ -188,6 +188,11 @@ rules:
     - enforceInMethodNames: true
       # Often used in several libraries
       allow: [_id]
+  unicorn/prevent-abbreviations:
+    - 2
+    - checkDefaultAndNamespaceImports: true
+      checkShorthandImports: true
+      checkShorthandProperties: true
 
   ## Typecasting
   no-implicit-coercion: 2
