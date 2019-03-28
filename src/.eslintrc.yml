@@ -269,6 +269,7 @@ rules:
 
   ## Arrays
   array-callback-return: 2
+  unicorn/prefer-includes: 2
 
   ## String
   quotes:
