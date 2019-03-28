@@ -203,6 +203,7 @@ rules:
         # use for error handlers
         e: false
         # This is too common
+        prop: false
         props: false
 
   ## Typecasting
