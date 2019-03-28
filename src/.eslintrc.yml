@@ -290,6 +290,7 @@ rules:
   require-unicode-regexp: 2
 
   ## Number
+  unicorn/no-zero-fractions: 2
   prefer-numeric-literals: 2
   radix:
     - 2
