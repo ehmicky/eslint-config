@@ -41,10 +41,11 @@ module.exports = {
       },
     },
     {
-      files: ['gulpfile.js'],
+      files: ['gulpfile.js', '.eslintrc.js', '.prettierrc.js'],
       parserOptions: {
         sourceType: 'script',
       },
+      'import/no-commonjs': 0,
     },
     {
       files: ['examples/**/*.js'],
