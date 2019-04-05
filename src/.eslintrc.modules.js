@@ -14,15 +14,11 @@ module.exports = {
 
     'ava/no-ignored-test-files': [
       2,
-      {
-        files: ['test/**/*.js', '!test/helpers/**/*.js'],
-      },
+      { files: ['test/**/*.js', '!test/helpers/**/*.js'] },
     ],
     'ava/no-import-test-files': [
       2,
-      {
-        files: ['test/**/*.js', '!test/helpers/**/*.js'],
-      },
+      { files: ['test/**/*.js', '!test/helpers/**/*.js'] },
     ],
 
     // This does not match our import/export style
