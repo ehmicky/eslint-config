@@ -904,7 +904,7 @@ rules:
 #  global-require: 2
 #  import/prefer-default-export: 2
 
-## We sort object keys by type, but by name
+## We sort object keys by type, not by name
 
 #  sort-keys: 2
 
