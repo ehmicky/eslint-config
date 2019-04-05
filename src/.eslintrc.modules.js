@@ -45,7 +45,9 @@ module.exports = {
       parserOptions: {
         sourceType: 'script',
       },
-      'import/no-commonjs': 0,
+      rules: {
+        'import/no-commonjs': 0,
+      },
     },
     {
       files: ['examples/**/*.js'],
