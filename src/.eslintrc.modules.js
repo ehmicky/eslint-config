@@ -25,6 +25,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/group-exports': 0,
     'import/exports-last': 0,
+    'import/default': 0,
     'unicorn/import-index': 0,
   },
   overrides: [
