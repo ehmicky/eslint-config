@@ -1,5 +1,5 @@
-const test = require('ava')
-const execa = require('execa')
+import test from 'ava'
+import execa from 'execa'
 
 const ESLINT_CONFIG = `${__dirname}/../src/.eslintrc.json`
 const TEST_FILE = `${__dirname}/../../test/helpers/valid.js`
