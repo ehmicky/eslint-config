@@ -1,7 +1,7 @@
 import test from 'ava'
 import execa from 'execa'
 
-const ESLINT_CONFIG = `${__dirname}/../src/.eslintrc.json`
+const ESLINT_CONFIG = `${__dirname}/../src/.eslintrc.modules.js`
 const TEST_FILE = `${__dirname}/../../test/helpers/valid.js`
 
 test('Smoke test', async t => {
