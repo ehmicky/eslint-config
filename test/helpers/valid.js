@@ -1,5 +1,1 @@
-const test = true
-
-module.exports = {
-  test,
-}
+export const test = true
