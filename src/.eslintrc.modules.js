@@ -7,6 +7,7 @@ module.exports = {
     'import/no-anonymous-default-export': 2,
     // Enable once we replace *.yml to *.json
     // 'import/extensions': [2, 'always', { ignorePackages: true }],
+    'import/extensions': 0,
     'global-require': 2,
     'import/no-commonjs': 2,
     'filenames/no-index': 2,
