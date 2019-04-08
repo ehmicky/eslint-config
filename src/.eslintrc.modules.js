@@ -20,6 +20,7 @@ module.exports = {
     ],
 
     // This does not match our import/export style
+    'import/no-named-export': 0,
     'import/prefer-default-export': 0,
     'import/group-exports': 0,
     'import/exports-last': 0,
