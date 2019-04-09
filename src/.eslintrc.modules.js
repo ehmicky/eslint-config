@@ -31,30 +31,25 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.md', '**/*.md'],
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-    {
       files: ['ava.config.js'],
       parserOptions: {
         sourceType: 'module',
       },
     },
     {
-      files: ['gulpfile.js', '.eslintrc.js', '.prettierrc.js'],
+      files: [
+        '*.md',
+        '**/*.md',
+        'gulpfile.js',
+        '.eslintrc.js',
+        '.prettierrc.js',
+        'examples/**/*.js',
+      ],
       parserOptions: {
         sourceType: 'script',
       },
       rules: {
         'import/no-commonjs': 0,
-      },
-    },
-    {
-      files: ['examples/**/*.js'],
-      parserOptions: {
-        sourceType: 'script',
       },
     },
   ],
