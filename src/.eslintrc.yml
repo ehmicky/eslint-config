@@ -8,7 +8,7 @@ extends:
 
 parserOptions:
   ecmaVersion: 2019
-  sourceType: script
+  sourceType: module
 ## Added by standard/standard
 #  ecmaFeatures:
 #    jsx: true
@@ -347,22 +347,22 @@ rules:
   node/no-missing-import: 2
   node/no-unpublished-import: 2
   import/named: 2
-  import/default: 2
   import/namespace: 2
   import/no-named-as-default: 2
   import/no-named-as-default-member: 2
   import/no-namespace: 2
   import/no-named-default: 2
-  import/no-anonymous-default-export:
-    - 2
-    - allowArray: true
-      allowLiteral: true
-      allowObject: true
+  import/no-anonymous-default-export: 2
   import/no-default-export: 2
   node/exports-style:
     - 2
     - module.exports
-  import/extensions: 2
+  # Enable once we replace *.yml to *.json
+  # import/extensions:
+  #   - 2
+  #   - always
+  #   - ignorePackages: true
+  import/extensions: 0
   import/no-absolute-path: 2
   import/no-useless-path-segments: 2
   no-duplicate-imports:
@@ -372,7 +372,6 @@ rules:
   import/no-cycle:
     - 2
     - commonjs: true
-  import/group-exports: 2
   import/no-extraneous-dependencies:
     - 2
     - devDependencies: [test/**, gulp/**, gulpfile.*js]
@@ -388,10 +387,11 @@ rules:
     - newlines-between: always
   import/newline-after-import: 2
   import/unambiguous: 2
+  global-require: 2
   import/no-dynamic-require: 2
+  import/no-commonjs: 2
   import/no-amd: 2
   import/no-deprecated: 2
-  unicorn/import-index: 2
 
   ## Filenames
   filenames/match-regex:
@@ -400,6 +400,7 @@ rules:
   filenames/match-exported:
     - 2
     - snake
+  filenames/no-index: 2
   unicorn/filename-case:
     - 2
     - case: snakeCase
@@ -465,10 +466,10 @@ rules:
   ava/no-identical-title: 2
   ava/no-ignored-test-files:
     - 2
-    - files: [test/**/*.js]
+    - files: [test/**/*.js, '!test/helpers/**/*.js']
   ava/no-import-test-files:
     - 2
-    - files: [test/**/*.js]
+    - files: [test/**/*.js, '!test/helpers/**/*.js']
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
@@ -869,10 +870,6 @@ rules:
 #  - allowUseStrict: true
 #  consistent-return: 2
 
-## We wait for ES modules to be enabled without experimental flags in Node.js
-
-#  import/no-commonjs: 2
-
 ## This does not work with the way we import files
 
 #  import/no-internal-modules: 2
@@ -897,12 +894,14 @@ rules:
 #    - always
 #    - ignoreConsecutiveComments: true
 
-## Those rules go against the codebase convention of using index.js files
-## that require siblings, and exporting|requiring named objects.
+## This does not match our import/export style
 
-#  filenames/no-index: 2
-#  global-require: 2
-#  import/prefer-default-export: 2
+#  import/no-named-export: 0
+#  import/prefer-default-export: 0
+#  import/group-exports: 0
+#  import/exports-last: 0
+#  import/default: 0
+#  unicorn/import-index: 0
 
 ## We sort object keys by type, not by name
 
@@ -1010,18 +1009,28 @@ overrides:
       line-comment-position: 0
       no-inline-comments: 0
 
-  # ava.config.js requires ES modules
+  # ava.config.js requires a default export
   - files: [ava.config.js]
-    parserOptions:
-      sourceType: module
     rules:
-      filenames/match-regex: 0
       filenames/match-exported: 0
       import/no-extraneous-dependencies: 0
       import/no-default-export: 0
 
+  # Files that use CommonJS instead of ES modules
+  - files:
+      - '*.md'
+      - '**/*.md'
+      - gulpfile.js
+      - .eslintrc.js
+      - .prettierrc.js
+      - examples/**/*.js
+    parserOptions:
+      sourceType: script
+    rules:
+      import/no-commonjs: 0
+
   # Test files
-  - files: ['test/**/*.js']
+  - files: [test/**/*.js]
     rules:
       # When using data-driven testing, an extra level of depth is implied
       max-nested-callbacks:
@@ -1029,7 +1038,7 @@ overrides:
         - 2
 
   # Examples files
-  - files: ['examples/**/*.js']
+  - files: [examples/**/*.js]
     rules:
       # Examples usually include the return value as inline comments
       no-inline-comments: 0
