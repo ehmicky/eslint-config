@@ -1014,6 +1014,7 @@ overrides:
     rules:
       filenames/match-exported: 0
       import/no-extraneous-dependencies: 0
+      import/no-anonymous-default-export: 0
       import/no-default-export: 0
 
   # Files that use CommonJS instead of ES modules
