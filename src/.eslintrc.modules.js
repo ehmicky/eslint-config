@@ -44,7 +44,6 @@ module.exports = {
         '.eslintrc.js',
         '.prettierrc.js',
         'examples/**/*.js',
-        'gulp/**/*.js',
       ],
       parserOptions: {
         sourceType: 'script',
