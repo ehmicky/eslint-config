@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('gulp-shared-tasks/.eslintrc.js')
+module.exports = require('./build/src/.eslintrc.json')

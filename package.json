@@ -1,10 +1,10 @@
 {
   "name": "eslint-config-standard-prettier-fp",
   "version": "15.9.6",
-  "main": "src/.prettierrc.json",
+  "main": "src/.prettierrc.js",
   "files": [
-    "src",
-    "!~"
+    "src/.eslintrc.yml",
+    "src/.editorconfig"
   ],
   "scripts": {
     "test": "gulp test"
