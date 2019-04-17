@@ -18,6 +18,8 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
 
   // Same as .editorconfig (but different from default values)
+  // `.gitattributes` with `* text=auto eol=lf` is also needed to prevent
+  // Git from using CRLF on Windows.
   endOfLine: 'lf',
 
   // Different from default values
