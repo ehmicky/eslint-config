@@ -7,10 +7,10 @@
 [ESLint](https://eslint.org/) configuration combining:
 
 - [functional programming](#functional-programming).
-- [Standard JavaScript](https://standardjs.com/) which prescribes how to
-  format your code.
-- [Prettier](https://prettier.io/) which allows you to automatically format
-  your code as part of your build process or inside your IDE.
+- [Standard JavaScript](https://standardjs.com/) which prescribes how to format
+  your code.
+- [Prettier](https://prettier.io/) which allows you to automatically format your
+  code as part of your build process or inside your IDE.
 - [editorconfig](https://editorconfig.org/) which fulfills a similar goal but
   more generic and limited.
 - [modularity](#modularity) by encouraging splitting your code into small
@@ -43,7 +43,8 @@ $ cp node_modules/eslint-config-standard-prettier-fp/build/src/.prettierrc.json 
 
 # Badge
 
-The following badge can be added to your project: [![eslint-config-standard-prettier-fp](https://img.shields.io/badge/eslint-config--standard--prettier--fp-4cc61e.svg?logo=eslint&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp)
+The following badge can be added to your project:
+[![eslint-config-standard-prettier-fp](https://img.shields.io/badge/eslint-config--standard--prettier--fp-4cc61e.svg?logo=eslint&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp)
 
 ```markdown
 [![eslint-config-standard-prettier-fp](https://img.shields.io/badge/eslint-config--standard--prettier--fp-4cc61e.svg?logo=eslint&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp)
@@ -74,8 +75,8 @@ referenced:
   [early returns](https://eslint.org/docs/rules/no-else-return)) can be used.
 - [Classes/OOP are forbidden as they imply state](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-class.md).
   To inherit/share behavior, one can use
-  [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance)
-  or [Generic programming](https://en.wikipedia.org/wiki/Generic_programming)
+  [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) or
+  [Generic programming](https://en.wikipedia.org/wiki/Generic_programming)
   instead.
 - [Events are forbidden](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-events.md)
   as they imply state.
@@ -103,8 +104,7 @@ modules and functions:
 - [object spreading](https://eslint.org/docs/rules/prefer-object-spread):
   `{ ...object }` instead of `Object.assign({}, ...object)`
 - [arguments spreading](https://eslint.org/docs/rules/prefer-spread):
-  `funcName(...args)` instead of
-  `funcName.call(this, ...args)`
+  `funcName(...args)` instead of `funcName.call(this, ...args)`
 - [parameters spreading](https://eslint.org/docs/rules/prefer-rest-params):
   `function(...args)` instead of `function(arguments)`
 - [template strings instead of concatenation](https://eslint.org/docs/rules/prefer-template)
@@ -112,13 +112,12 @@ modules and functions:
 - [`**` instead of `Math.pow()`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-exponentiation-operator.md)
 - vanilla JavaScript
   [instead of Lodash/Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
-- [only JavaScript features supported by the Node.js version specified in your
-  `package.json` `engines` field](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md).
+- [only JavaScript features supported by the Node.js version specified in your `package.json` `engines` field](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md).
 
 # Strictness
 
-The configuration is very explicit and enforces strict linting. This should
-help you find bugs and maintain a consistent coding style.
+The configuration is very explicit and enforces strict linting. This should help
+you find bugs and maintain a consistent coding style.
 
 This includes:
 
@@ -133,10 +132,8 @@ This includes:
 
 # Other styling rules
 
-- [named parameters (i.e. passing an object as single parameter) instead of
-  positional parameters.](https://eslint.org/docs/rules/max-params)
-- [using `index.js` files and `require('./dir')` instead of
-  `require('./dir/subdir')`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md)
+- [named parameters (i.e. passing an object as single parameter) instead of positional parameters.](https://eslint.org/docs/rules/max-params)
+- [using `index.js` files and `require('./dir')` instead of `require('./dir/subdir')`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md)
 - [function declarations must be `const funcName = function() { ... }`](https://eslint.org/docs/rules/func-style)
 - [errors must be named `error`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/catch-error-name.md)
 
