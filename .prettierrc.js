@@ -1,3 +1,8 @@
 'use strict'
 
-module.exports = require('./src/.prettierrc.js')
+module.exports = {
+  semi: false,
+  singleQuote: true,
+  trailingComma: 'all',
+  loglevel: 'warn',
+}
