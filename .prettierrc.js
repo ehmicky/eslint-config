@@ -17,6 +17,9 @@ module.exports = {
   arrowParens: 'avoid',
   htmlWhitespaceSensitivity: 'css',
 
+  // Same as .editorconfig (but different from default values)
+  endOfLine: 'lf',
+
   // Different from default values
   semi: false,
   singleQuote: true,
