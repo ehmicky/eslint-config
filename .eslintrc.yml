@@ -979,7 +979,7 @@ settings:
       extensions: [.js, .json, .node, .yml, .yaml]
 
 overrides:
-  # Markdown files use slightly different rules
+  # Markdown files
   - files: ['*.md', '**/*.md']
     # `use strict` is too verbose in documentation
     parserOptions:
