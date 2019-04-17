@@ -1019,11 +1019,7 @@ overrides:
       import/no-default-export: 0
 
   # Files that use CommonJS instead of ES modules
-  - files:
-      - '*.md'
-      - '**/*.md'
-      - gulpfile.js
-      - examples/**/*.js
+  - files: ['*.md', '**/*.md', gulpfile.js, examples/**/*.js]
     parserOptions:
       sourceType: script
     rules:
