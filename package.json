@@ -3,7 +3,7 @@
   "version": "15.9.3",
   "main": "build/src/.prettierrc.json",
   "files": [
-    "build/src",
+    "src",
     "!~"
   ],
   "scripts": {
