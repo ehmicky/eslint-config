@@ -1,5 +1,6 @@
 'use strict'
 
+// We specify all options to avoid them being overridden
 module.exports = {
   // Same as .editorconfig (and also default values)
   printWidth: 80,
