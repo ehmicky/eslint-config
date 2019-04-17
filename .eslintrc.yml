@@ -237,7 +237,8 @@ rules:
     - SwitchStatement
     # This is added by eslint-config-prettier, so we keep it
     - selector: SequenceExpression
-      message: The comma operator is confusing and a common mistake. Don’t use it!
+      message:
+        The comma operator is confusing and a common mistake. Don’t use it!
   default-case: 2
   no-case-declarations: 2
 
