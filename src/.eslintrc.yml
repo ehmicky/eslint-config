@@ -1022,7 +1022,6 @@ overrides:
       - '*.md'
       - '**/*.md'
       - gulpfile.js
-      - .prettierrc.js
       - examples/**/*.js
     parserOptions:
       sourceType: script
