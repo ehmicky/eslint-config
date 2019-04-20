@@ -21,7 +21,7 @@
 The configuration is very opinionated but you can override specific rules in
 your `.eslintrc` to fit your needs and coding style.
 
-# Installation
+# Install
 
 ```
 $ npm install -D eslint-config-standard-prettier-fp eslint@^6.0.0-alpha.0 eslint-config-prettier@^4.1.0 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-ava@^6.0.0 eslint-plugin-eslint-comments@^3.1.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.3 eslint-plugin-import@^2.17.2 eslint-plugin-markdown@^1.0.0 eslint-plugin-node@^8.0.1 eslint-plugin-promise@^4.1.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^8.0.2 eslint-plugin-you-dont-need-lodash-underscore@^6.4.0 prettier@^1.17.0
@@ -53,15 +53,6 @@ Finally copy the `.editorconfig`:
 $ cp node_modules/eslint-config-standard-prettier-fp/.editorconfig .
 ```
 
-# Badge
-
-The following badge can be added to your project:
-[![eslint-config-standard-prettier-fp](https://img.shields.io/badge/eslint-standard--prettier--fp-4cc61e.svg?logo=eslint&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp)
-
-```markdown
-[![eslint-config-standard-prettier-fp](https://img.shields.io/badge/eslint-standard--prettier--fp-4cc61e.svg?logo=eslint&logoColor=white)](https://github.com/ehmicky/eslint-config-standard-prettier-fp)
-```
-
 # Prettier
 
 `prettier` must be run before `eslint` to avoid conflicts.
@@ -74,79 +65,66 @@ Do not forget to add `.eslintcache` to your `.gitignore` file.
 
 ## Functional programming
 
-This enforces that state is never directly mutated and global state is not
-referenced:
+State should be immutable.
 
-- [immutability: mutating variables or object properties is not allowed](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-mutation.md).
-  In other words it enforces no assignment after declaration, i.e. variables
-  must be copied instead of mutated.
-- no global variables except the ones that are built-in (e.g. `module` or
-  `Object`) unless they are Node-specific (e.g. `process`) or should be wrapped
-  (e.g. `console`)
-- [loops (`for`, `while`, `switch`) are forbidden as they imply state](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-loops.md).
-  Instead functional methods (like `Array.map()` and `Array.filter()`),
-  recursion and small `if` blocks (with
-  [early returns](https://eslint.org/docs/rules/no-else-return)) can be used
-- [Classes/OOP are forbidden as they imply state](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-class.md).
-  To inherit/share behavior, one can use
-  [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) or
-  [Generic programming](https://en.wikipedia.org/wiki/Generic_programming)
+Variables and object properties should be read-only. They should be copied
+instead of mutated. Assignment should only happen during declaration.
+
+The following patterns should be avoided as they imply state:
+
+- loops (`for`, `while`). Use functional methods (like `Array.map()` and
+  `Array.filter()`) and recursion instead.
+- classes/OOP. To inherit/share behavior, use composition or generic programming
   instead.
-- [Events are forbidden](https://github.com/jfmengels/eslint-plugin-fp/blob/master/docs/rules/no-events.md)
-  as they imply state
+- events. Use promises and streams instead.
 
-However throwing exceptions are allowed as this can simplify code.
+Global variables should not be used except the ones that are built-in (e.g.
+`Object`).
+
+Throwing exceptions is allowed as this can simplify code.
 
 ## Modularity
 
-The following rules are enforced to encourage splitting your code into small
-modules and functions:
+Code should be split into small files and functions:
 
-- [lines are at most 80 characters long](https://eslint.org/docs/rules/max-len)
-- [lines are at most 2 statements long](https://eslint.org/docs/rules/max-statements-per-line)
-- [branches/blocks cannot be nested](https://eslint.org/docs/rules/max-depth)
-- [functions have at most 4 branches/blocks](https://eslint.org/docs/rules/complexity)
-- [functions are at most 10 statements long](https://eslint.org/docs/rules/max-statements)
-- [files are at most 90 non-empty lines long](https://eslint.org/docs/rules/max-lines)
-- [files have at most 10 dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md)
+- files have at most 90 non-empty lines and 10 dependencies.
+- functions have at most 4 branches and 10 statements.
+- branches/blocks should not be nested.
+- lines are at most 80 characters long.
 
 ## Modern JavaScript
 
-- [ES modules](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md)
-- [object and array destructuring](https://eslint.org/docs/rules/prefer-destructuring)
-- [object spreading](https://eslint.org/docs/rules/prefer-object-spread):
-  `{ ...object }` instead of `Object.assign({}, ...object)`
-- [arguments spreading](https://eslint.org/docs/rules/prefer-spread):
-  `funcName(...args)` instead of `funcName.call(this, ...args)`
-- [parameters spreading](https://eslint.org/docs/rules/prefer-rest-params):
-  `function(...args)` instead of `function(arguments)`
-- [template strings instead of concatenation](https://eslint.org/docs/rules/prefer-template)
-- [`async`/`await` instead of explicit promises or callbacks](https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/prefer-await-to-then.md)
-- vanilla JavaScript
-  [instead of Lodash/Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
-- [only JavaScript features supported by the Node.js version specified in your `package.json` `engines` field](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md)
+- ES modules. Exports should be named (no `export default`).
+- object and array destructuring.
+- object spreading: `{ ...object }` instead of `Object.assign({}, ...object)`
+- arguments spreading: `funcName(...args)` instead of
+  `funcName.call(this, ...args)`
+- parameters spreading: `function(...args)` instead of `function(arguments)`
+- template strings instead of concatenation.
+- `async`/`await` instead of explicit promises or callbacks.
+- vanilla JavaScript instead of Lodash/Underscore.
+- only JavaScript features supported by the Node.js version specified in your
+  `package.json` `engines` field.
 
 ## Strictness
 
 The configuration is very explicit and enforces strict linting. This should help
-you find bugs and maintain a consistent coding style.
+you find bugs and maintain a consistent coding style:
 
-This includes:
-
-- [no dead code](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md)
-- [typecasting must be explicit](https://eslint.org/docs/rules/no-implicit-coercion)
-- [file dependencies must be sorted](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
-- [variable names must remain short](https://eslint.org/docs/rules/id-length)
-- [constants must be assigned to variables](https://eslint.org/docs/rules/no-magic-numbers)
-- [avoiding turning off ESLint rules with comments](https://github.com/mysticatea/eslint-plugin-eslint-comments)
-- [RegExps must use the `u` flag](https://eslint.org/docs/rules/require-unicode-regexp)
-- [no variable shadowing](https://eslint.org/docs/rules/no-shadow)
+- no dead code.
+- typecasting should be explicit.
+- file dependencies should be sorted.
+- variable names should remain short.
+- constants should be assigned to variables.
+- avoiding turning off ESLint rules with comments.
+- RegExps should use the `u` flag.
+- no variables shadowing.
 
 ## Other styling rules
 
-- [named parameters (i.e. passing an object as single parameter) instead of positional parameters.](https://eslint.org/docs/rules/max-params)
-- [function declarations must be `const funcName = function() { ... }`](https://eslint.org/docs/rules/func-style)
-- [errors must be named `error`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/catch-error-name.md)
+- named parameters (i.e. passing an object as single parameter) instead of
+  positional parameters.
+- function declarations should be `const funcName = function() { ... }`
 
 # HTML and Markdown
 
