@@ -347,6 +347,26 @@ rules:
   node/no-unpublished-require: 2
   node/no-missing-import: 2
   node/no-unpublished-import: 2
+  import/no-unused-modules:
+    - 2
+    - unusedExports: true
+      missingExports: true
+      src: [src/]
+      ignoreExports:
+        - ava.config.js
+        # Documentation/examples might not export anything
+        - '*.md'
+        - '**/*.md'
+        - examples/**/*.js
+        # Tests are side-effects-only, i.e. do not export anything
+        - test/**/*.js
+        # Custom Gulp tasks use ES modules but gulpfile.js uses CommonJS,
+        # so this rule cannot be used between them
+        - gulp/**/*.js
+        - gulpfile.js
+        # Entry points
+        - src/main.js
+        - src/bin/main.js
   import/named: 2
   import/namespace: 2
   import/no-named-as-default: 2
