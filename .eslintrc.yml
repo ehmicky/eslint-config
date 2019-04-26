@@ -453,6 +453,8 @@ rules:
     ## Use require('process|buffer') instead
     - process
     - Buffer
+    ## new RegExp() is a security hazard
+    - RegExp
   # Prefer `if` + `throw new Error()` instead of `assert()` as it does not
   # work in browsers
   no-restricted-imports:
