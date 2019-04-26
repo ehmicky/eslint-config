@@ -244,8 +244,6 @@ rules:
   no-restricted-syntax:
     - 2
     - SwitchStatement
-    ## new RegExp() is a security hazard
-    - NewExpression > Identifier[name="RegExp"]
     # This is added by eslint-config-prettier, so we keep it
     - selector: SequenceExpression
       message:
