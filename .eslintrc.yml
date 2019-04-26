@@ -159,7 +159,7 @@ rules:
   sort-vars: 2
   no-magic-numbers:
     - 2
-    - ignore: [-2, -1, 0, 1, 2]
+    - ignore: [-2, -1, 0, 1, 2, 3]
       enforceConst: true
 
   ## Assignments
