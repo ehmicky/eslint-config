@@ -244,6 +244,8 @@ rules:
   no-restricted-syntax:
     - 2
     - SwitchStatement
+    ## new RegExp() is a security hazard
+    - NewExpression > Identifier[name="RegExp"]
     # This is added by eslint-config-prettier, so we keep it
     - selector: SequenceExpression
       message:
@@ -453,8 +455,6 @@ rules:
     ## Use require('process|buffer') instead
     - process
     - Buffer
-    ## new RegExp() is a security hazard
-    - RegExp
   # Prefer `if` + `throw new Error()` instead of `assert()` as it does not
   # work in browsers
   no-restricted-imports:
