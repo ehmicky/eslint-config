@@ -1055,7 +1055,9 @@ overrides:
       ecmaFeatures:
         impliedStrict: true
     rules:
+      # We want to keep Markdown code examples short
       strict: 0
+      import/newline-after-import: 0
 
       # Markdown filenames do not match code examples
       camelcase: 0
