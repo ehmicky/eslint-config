@@ -1009,6 +1009,45 @@ settings:
       extensions: [.js, .json, .node, .yml, .yaml]
 
 overrides:
+  # Examples and documentation files
+  - files: ['*.md', '**/*.md', examples/**/*.js]
+    parserOptions:
+      sourceType: script
+    rules:
+      # Most Node.js users still use CommonJS, so we document it as such
+      import/no-commonjs: 0
+
+      # Examples print their output at the end of the file
+      # It might happen in documentation as well
+      no-console: 0
+      no-restricted-globals: 0
+
+      # Inline comments can be nicer in documentation
+      # Examples usually include the return value as inline comments
+      line-comment-position: 0
+      no-inline-comments: 0
+
+      # Inlining constants is simpler for examples
+      no-magic-numbers: 0
+
+      # Documentation often require the module itself.
+      # Also documentation can require a module that does not exist.
+      # Examples point to already built files which might not be created yet
+      # if the user just cloned the repository
+      import/no-unresolved: 0
+      import/no-extraneous-dependencies: 0
+      node/no-missing-require: 0
+      node/no-extraneous-require: 0
+      node/no-unpublished-require: 0
+
+      # Using those globals is simpler in documentation
+      node/prefer-global/buffer: 0
+      node/prefer-global/process: 0
+      node/prefer-global/url: 0
+
+      # Example test files
+      ava/no-ignored-test-files: 0
+
   # Markdown files
   - files: ['*.md', '**/*.md']
     # `use strict` is too verbose in documentation
@@ -1017,43 +1056,16 @@ overrides:
         impliedStrict: true
     rules:
       strict: 0
-      # Markdown files are usually used for documentation where `console`
-      # statements might happen
-      no-console: 0
-      no-restricted-globals: 0
-      # Markdown filenames might not match code examples
+
+      # Markdown filenames do not match code examples
       camelcase: 0
       filenames/match-exported: 0
       unicorn/filename-case: 0
-      # Documentation often require the module itself
-      import/no-unresolved: 0
-      import/no-extraneous-dependencies: 0
-      node/no-missing-require: 0
-      node/no-extraneous-require: 0
-      # Documentation can require a module that does not exist
-      node/no-unpublished-require: 0
+
       # Documentation code often misses context lines, leading to variables
       # looking unused or undefined
       no-undef: 0
       no-unused-vars: 0
-      # Inline comments can be nicer in documentation
-      line-comment-position: 0
-      no-inline-comments: 0
-
-  # ava.config.js requires a default export
-  - files: [ava.config.js]
-    rules:
-      filenames/match-exported: 0
-      import/no-extraneous-dependencies: 0
-      import/no-anonymous-default-export: 0
-      import/no-default-export: 0
-
-  # Files that use CommonJS instead of ES modules
-  - files: ['*.md', '**/*.md', gulpfile.js, examples/**/*.js]
-    parserOptions:
-      sourceType: script
-    rules:
-      import/no-commonjs: 0
 
   # Test files
   - files: [test/**/*.js]
@@ -1063,23 +1075,17 @@ overrides:
         - 2
         - 2
 
-  # Examples files
-  - files: [examples/**/*.js]
+  # ava.config.js requires a default export
+  - files: [ava.config.js]
     rules:
-      # Examples usually include the return value as inline comments
-      no-inline-comments: 0
-      line-comment-position: 0
-
-      # Examples print their output at the end of the file
-      no-console: 0
-      no-restricted-globals: 0
-
-      # Examples point to already built files which might not be created yet
-      # if the user just cloned the repository
-      import/no-unresolved: 0
+      filenames/match-exported: 0
       import/no-extraneous-dependencies: 0
-      node/no-missing-require: 0
-      node/no-extraneous-require: 0
+      import/no-anonymous-default-export: 0
+      import/no-default-export: 0
 
-      # Inlining constants is simpler for examples
-      no-magic-numbers: 0
+  # Gulpfile
+  - files: [gulpfile.js]
+    parserOptions:
+      sourceType: script
+    rules:
+      import/no-commonjs: 0
