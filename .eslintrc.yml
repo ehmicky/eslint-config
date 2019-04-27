@@ -1105,3 +1105,5 @@ overrides:
         - exports
         - process
         - Buffer
+      # CLI often forwards to main commands using `import * as commands`
+      import/no-namespace: 0
