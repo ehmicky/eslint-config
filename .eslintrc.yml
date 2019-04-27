@@ -1113,8 +1113,8 @@ overrides:
       import/no-commonjs: 0
       filenames/match-exported: 0
 
-  # CLI entry point
-  - files: [src/bin/main.js]
+  # CLI
+  - files: [src/bin/**/*.js]
     rules:
       # CLI often prints to console
       no-console: 0
