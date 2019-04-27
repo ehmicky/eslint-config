@@ -1092,3 +1092,16 @@ overrides:
       sourceType: script
     rules:
       import/no-commonjs: 0
+
+  # CLI entry point
+  - files: [src/bin/main.js]
+    rules:
+      # CLI often prints to console
+      no-console: 0
+      no-restricted-globals:
+        - 2
+        - global
+        - GLOBAL
+        - exports
+        - process
+        - Buffer
