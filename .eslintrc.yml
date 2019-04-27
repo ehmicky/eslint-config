@@ -1076,6 +1076,7 @@ overrides:
       max-nested-callbacks:
         - 2
         - 2
+      max-lines-per-function: 0
 
   # ava.config.js requires a default export
   - files: [ava.config.js]
