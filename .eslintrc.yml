@@ -183,8 +183,11 @@ rules:
   id-length:
     - 2
     - max: 24
-      # ava requires `test` to be called `t` for `power-assert` to work
-      exceptions: [t]
+      exceptions:
+        # ava requires `test` to be called `t` for `power-assert` to work
+        - t
+        # Returned by yargs
+        - _
   id-match:
     - 2
     - ^[A-Za-z0-9_]+$
