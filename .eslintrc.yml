@@ -380,7 +380,9 @@ rules:
   #       - src/main.js
   #       - src/bin/main.js
   import/named: 2
-  import/namespace: 2
+  import/namespace:
+    - 2
+    - allowComputed: true
   import/no-named-as-default: 2
   import/no-named-as-default-member: 2
   import/no-namespace: 2
