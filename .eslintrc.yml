@@ -1074,6 +1074,12 @@ overrides:
       no-undef: 0
       no-unused-vars: 0
 
+  # Examples files
+  - files: [examples/**/*.js]
+    rules:
+      # We import `util.js` in examples, which monkey patches `require()`
+      import/no-unassigned-import: 0
+
   # Test files
   - files: [test/**/*.js]
     rules:
