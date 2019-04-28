@@ -1016,10 +1016,10 @@ settings:
 overrides:
   # Examples and documentation files
   - files: ['*.md', '**/*.md', examples/**/*.js]
+    # Most Node.js users still use CommonJS, so we document it as such
     parserOptions:
       sourceType: script
     rules:
-      # Most Node.js users still use CommonJS, so we document it as such
       import/no-commonjs: 0
 
       # Examples print their output at the end of the file
