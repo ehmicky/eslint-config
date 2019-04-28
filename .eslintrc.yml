@@ -200,8 +200,7 @@ rules:
   # The rule is too unstable for the moment.
   # TODO: re-enable once it's more stable
   # Also wait for resolutions on:
-  #  - https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
-  #  - https://github.com/prettier/eslint-config-prettier/issues/89
+  #   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
   # unicorn/prevent-abbreviations:
   #   - 2
   #   - checkDefaultAndNamespaceImports: true
