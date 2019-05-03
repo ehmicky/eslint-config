@@ -377,6 +377,7 @@ rules:
     - 2
     - always
     - ignorePackages: true
+  node/file-extension-in-import: 2
   import/no-absolute-path: 2
   import/no-useless-path-segments: 2
   no-duplicate-imports:
@@ -896,6 +897,11 @@ rules:
 ## This makes RegExps more verbose
 
 #  prefer-named-capture-group: 2
+
+## Not supported by Node <11.4.0, and no polyfill available
+
+#  node/prefer-promises/fs: 2
+#  node/prefer-promises/dns: 2
 
 ## This is in conflict with no-useless-escape rule
 
