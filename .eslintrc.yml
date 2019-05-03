@@ -377,7 +377,8 @@ rules:
     - 2
     - always
     - ignorePackages: true
-  node/file-extension-in-import: 2
+  # Bug: https://github.com/mysticatea/eslint-plugin-node/issues/160
+  # node/file-extension-in-import: 2
   import/no-absolute-path: 2
   import/no-useless-path-segments: 2
   no-duplicate-imports:
