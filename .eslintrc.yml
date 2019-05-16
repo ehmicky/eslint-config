@@ -77,6 +77,7 @@ rules:
         - eslint-disable-next-line
         - eslint-disable
         - eslint-enable
+        - eslint-env
   unicorn/no-abusive-eslint-disable: 2
 
   ## Strictness
