@@ -63,7 +63,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0",
     "execa": "^1.0.0",
     "gulp": "^4.0.2",
     "gulp-shared-tasks": "^0.27.80",
@@ -86,7 +86,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0",
     "prettier": "^1.17.1"
   },
   "engines": {
