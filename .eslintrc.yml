@@ -1134,3 +1134,9 @@ overrides:
         - Buffer
       # CLI often forwards to main commands using `import * as commands`
       import/no-namespace: 0
+
+  # Benchmark files
+  - files: [benchmarks/**/*.js]
+    rules:
+      # Often used to signify number of iterations
+      no-magic-numbers: 0
