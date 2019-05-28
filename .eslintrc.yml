@@ -347,13 +347,14 @@ rules:
       # for repositories without a `src`.
       src: ['{README.md,src/**/*.js}']
       # Excludes:
-      #   - documentation/examples might not export anything
-      #   - tests are side-effects-only, i.e. do not export anything
+      #   - documentation/examples/benchmarks might not export anything
+      #   - tests and register files are side-effects-only, i.e. do not
+      #     export anything
       #   - custom Gulp tasks use ES modules but gulpfile.js uses CommonJS,
       #     so this rule cannot be used between them
       #   - entry points
       ignoreExports:
-        - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js}'
+        - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js}'
   import/named: 2
   import/namespace:
     - 2
