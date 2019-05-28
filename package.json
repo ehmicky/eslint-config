@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-prettier-fp",
-  "version": "15.9.50",
+  "version": "15.9.51",
   "main": ".prettierrc.js",
   "files": [
     ".eslintrc.yml",
