@@ -342,9 +342,18 @@ rules:
     - 2
     - unusedExports: true
       missingExports: true
-      src: [src/]
-      # Entry points
-      ignoreExports: [src/main.js, src/bin/main.js]
+      # We need to use globbing `{,}` instead of an array because non-existing
+      # directories are reported otherwise. We use `README.md` as a catch-all
+      # for repositories without a `src`.
+      src: ['{README.md,src/**/*.js}']
+      # Excludes:
+      #   - documentation/examples might not export anything
+      #   - tests are side-effects-only, i.e. do not export anything
+      #   - custom Gulp tasks use ES modules but gulpfile.js uses CommonJS,
+      #     so this rule cannot be used between them
+      #   - entry points
+      ignoreExports:
+        - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js}'
   import/named: 2
   import/namespace:
     - 2
