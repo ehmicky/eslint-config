@@ -343,9 +343,14 @@ rules:
     - unusedExports: true
       missingExports: true
       # We need to use globbing `{,}` instead of an array because non-existing
-      # directories are reported otherwise. We use `README.md` as a catch-all
-      # for repositories without a `src`.
-      src: ['{README.md,src/**/*.js}']
+      # directories are reported otherwise.
+      # We need to add all directories that are ignored, because while
+      # `ignoreExports` ensures they don't have to export something, they might
+      # still import other files. E.g. some files exported in `src` might be
+      # imported only in tests.
+      # We use `README.md` as a catch-all for repositories without a `src`.
+      src:
+        - '{README.md,src/**/*.js,ava.config.js,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js}'
       # Excludes:
       #   - documentation/examples/benchmarks might not export anything
       #   - tests and register files are side-effects-only, i.e. do not
