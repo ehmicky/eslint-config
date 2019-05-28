@@ -480,8 +480,13 @@ rules:
   ava/no-statement-after-end: 2
   ava/test-title: 2
   ava/no-identical-title: 2
-  ava/no-ignored-test-files: 2
-  ava/no-import-test-files: 2
+  # TODO: remove options after upgrading to Ava 2.0.0 and eslint-plugin-ava 7
+  ava/no-ignored-test-files:
+    - 2
+    - files: [test/**/*.js, '!test/helpers/**/*.js']
+  ava/no-import-test-files:
+    - 2
+    - files: [test/**/*.js, '!test/helpers/**/*.js']
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
