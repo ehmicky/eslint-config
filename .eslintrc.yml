@@ -390,7 +390,7 @@ rules:
     - commonjs: true
   import/no-extraneous-dependencies:
     - 2
-    - devDependencies: [test/**, gulp/**, gulpfile.js]
+    - devDependencies: [test/**, gulp/**, benchmarks/**, gulpfile.js]
   node/no-extraneous-require: 2
   node/no-extraneous-import: 2
   sort-imports:
