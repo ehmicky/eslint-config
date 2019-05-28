@@ -480,12 +480,8 @@ rules:
   ava/no-statement-after-end: 2
   ava/test-title: 2
   ava/no-identical-title: 2
-  ava/no-ignored-test-files:
-    - 2
-    - files: [test/**/*.js, '!test/helpers/**/*.js']
-  ava/no-import-test-files:
-    - 2
-    - files: [test/**/*.js, '!test/helpers/**/*.js']
+  ava/no-ignored-test-files: 2
+  ava/no-import-test-files: 2
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
@@ -997,6 +993,10 @@ rules:
 ## Do not use Power assert directly
 
 #  ava/prefer-power-assert: 2
+
+## Test titles do not follow any format
+
+# ava/test-title-format: 2
 
 ## Rules for client-side code only
 
