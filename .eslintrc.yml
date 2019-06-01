@@ -487,7 +487,7 @@ rules:
   ava/no-skip-assert: 2
   ava/no-todo-test: 2
   ava/use-true-false: 2
-  # TODO: re-enable after upgrading to Ava 2.0.0
+  # https://github.com/avajs/eslint-plugin-ava/issues/251
   # ava/prefer-t-regex: 2
   ava/max-asserts: [2, 5]
   ava/use-t: 2
