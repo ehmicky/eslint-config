@@ -479,7 +479,7 @@ rules:
   ava/no-statement-after-end: 2
   ava/test-title: 2
   ava/no-identical-title: 2
-  # TODO: re-enable after upgrading to Ava 2.0.0
+  # https://github.com/avajs/eslint-plugin-ava/issues/252
   # ava/no-ignored-test-files: 2
   # ava/no-import-test-files: 2
   ava/no-only-test: 2
