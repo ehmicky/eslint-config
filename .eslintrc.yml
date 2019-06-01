@@ -491,7 +491,8 @@ rules:
   ava/no-skip-assert: 2
   ava/no-todo-test: 2
   ava/use-true-false: 2
-  ava/prefer-t-regex: 2
+  # TODO: re-enable after upgrading to Ava 2.0.0
+  # ava/prefer-t-regex: 2
   ava/max-asserts: [2, 5]
   ava/use-t: 2
   ava/use-test: 2
