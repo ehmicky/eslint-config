@@ -24,7 +24,7 @@ your `.eslintrc` to fit your needs and coding style.
 # Install
 
 ```
-$ npm install -D eslint-config-standard-prettier-fp eslint@^6.0.0-alpha.0 eslint-config-prettier@^4.3.0 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-ava@^6.0.0 eslint-plugin-eslint-comments@^3.1.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.5 eslint-plugin-import@^2.17.3 eslint-plugin-markdown@^1.0.0 eslint-plugin-node@^9.1.0 eslint-plugin-promise@^4.1.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^8.0.2 eslint-plugin-you-dont-need-lodash-underscore@^6.5.0 prettier@^1.17.1
+$ npm install -D eslint-config-standard-prettier-fp eslint@^6.0.0-alpha.0 eslint-config-prettier@^4.3.0 eslint-config-standard@^12.0.0 eslint-import-resolver-node@^0.3.2 eslint-plugin-ava@^7.0.0 eslint-plugin-eslint-comments@^3.1.1 eslint-plugin-filenames@^1.3.2 eslint-plugin-fp@^2.3.0 eslint-plugin-html@^5.0.5 eslint-plugin-import@^2.17.3 eslint-plugin-markdown@^1.0.0 eslint-plugin-node@^9.1.0 eslint-plugin-promise@^4.1.1 eslint-plugin-standard@^4.0.0 eslint-plugin-unicorn@^8.0.2 eslint-plugin-you-dont-need-lodash-underscore@^6.5.0 prettier@^1.17.1
 ```
 
 Then add the following files.
