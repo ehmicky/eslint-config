@@ -282,6 +282,7 @@ rules:
   ## Arrays
   array-callback-return: 2
   unicorn/prefer-includes: 2
+  unicorn/prefer-flat-map: 2
 
   ## String
   quotes:
@@ -465,6 +466,7 @@ rules:
   unicorn/prefer-node-append: 2
   unicorn/prefer-node-remove: 2
   unicorn/prefer-text-content: 2
+  unicorn/prefer-event-key: 2
 
   # AVA
   ava/no-unknown-modifiers: 2
