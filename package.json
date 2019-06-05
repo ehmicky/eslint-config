@@ -67,7 +67,7 @@
     "execa": "^1.0.0",
     "gulp": "^4.0.2",
     "gulp-shared-tasks": "^0.29.7",
-    "husky": "^2.3.0",
+    "husky": "^2.4.0",
     "prettier": "^1.17.1"
   },
   "peerDependencies": {
