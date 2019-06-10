@@ -481,9 +481,13 @@ rules:
   ava/no-statement-after-end: 2
   ava/test-title: 2
   ava/no-identical-title: 2
-  # https://github.com/avajs/eslint-plugin-ava/issues/252
-  # ava/no-ignored-test-files: 2
-  # ava/no-import-test-files: 2
+  ava/no-ignored-test-files:
+    - 2
+    - files: [test/**/*.js]
+      helpers: [test/helpers/**/*.js]
+  ava/no-import-test-files:
+    - 2
+    - files: [test/**/*.js]
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
