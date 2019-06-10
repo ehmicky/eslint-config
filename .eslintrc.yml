@@ -488,6 +488,7 @@ rules:
   ava/no-import-test-files:
     - 2
     - files: [test/**/*.js]
+      helpers: [test/helpers/**/*.js]
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
