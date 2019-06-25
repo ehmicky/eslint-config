@@ -64,7 +64,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^9.1.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0",
-    "execa": "^1.0.0",
+    "execa": "^2.0.0",
     "gulp": "^4.0.2",
     "gulp-shared-tasks": "^0.30.7",
     "husky": "^2.5.0",
