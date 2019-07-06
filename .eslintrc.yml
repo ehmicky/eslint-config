@@ -92,7 +92,6 @@ rules:
     - blankLine: always
       prev: '*'
       next: multiline-block-like
-  lines-between-class-members: 2
 
   ## Statements
   no-empty:
@@ -154,7 +153,6 @@ rules:
   no-var: 2
   fp/no-let: 2
   import/no-mutable-exports: 2
-  prefer-const: 2
   no-implicit-globals: 2
   vars-on-top: 2
   sort-vars: 2
@@ -241,7 +239,6 @@ rules:
   unicorn/throw-new-error: 2
   unicorn/error-message: 2
   unicorn/catch-error-name: 2
-  no-useless-catch: 2
   unicorn/prefer-type-error: 2
   unicorn/custom-error-definition: 2
 
@@ -274,7 +271,6 @@ rules:
   no-invalid-this: 2
   class-methods-use-this: 2
   consistent-this: 2
-  no-prototype-builtins: 2
   max-classes-per-file: 0
   fp/no-class: 2
   fp/no-this: 2
@@ -299,7 +295,6 @@ rules:
 
   ## RegExps
   unicorn/regex-shorthand: 2
-  no-misleading-character-class: 2
   require-unicode-regexp: 2
 
   ## Number
@@ -315,7 +310,6 @@ rules:
   callback-return: 2
   require-await: 2
   no-await-in-loop: 2
-  no-async-promise-executor: 2
   require-atomic-updates: 2
   no-sync: 2
   promise/catch-or-return: 2
@@ -515,6 +509,7 @@ rules:
 ## Added by standard/standard
 
 #  accessor-pairs: 2
+#  array-bracket-spacing: 0
 #  camelcase:
 #    - 2
 #    - properties: never
@@ -526,11 +521,13 @@ rules:
 #  handle-callback-err:
 #    - 2
 #    - '^(err|2)$'
+#  lines-between-class-members: 2
 #  new-cap:
 #    - 2
 #    - newIsCap: true
 #      capIsNew: false
 #  no-array-constructor: 2
+#  no-async-promise-executor: 2
 #  no-caller: 2
 #  no-class-assign: 2
 #  no-compare-neg-zero: 2
@@ -569,6 +566,7 @@ rules:
 #    - allowLoop: false
 #      allowSwitch: false
 #  no-lone-blocks: 2
+#  no-misleading-character-class: 2
 #  no-multi-str: 2
 #  no-negated-in-lhs: 2
 #  no-new: 2
@@ -582,7 +580,10 @@ rules:
 #  no-octal-escape: 2
 #  no-path-concat: 2
 #  no-proto: 2
-#  no-redeclare: 2
+#  no-prototype-builtins: 2
+#  no-redeclare:
+#    - 2
+#    - builtinGlobals: false
 #  no-regex-spaces: 2
 #  no-return-assign:
 #    - 2
@@ -616,6 +617,7 @@ rules:
 #      classes: false
 #      variables: false
 #  no-useless-call: 2
+#  no-useless-catch: 2
 #  no-useless-computed-key: 2
 #  no-useless-constructor: 2
 #  no-useless-escape: 2
@@ -625,6 +627,7 @@ rules:
 #  one-var:
 #    - 2
 #    - initialized: never
+#  prefer-const: 2
 #  prefer-promise-reject-2s: 2
 #  spaced-comment:
 #    - 2
@@ -719,6 +722,7 @@ rules:
 #  comma-style:
 #    - 2
 #    - last
+#  computed-property-spacing: 2
 #  dot-location:
 #    - 2
 #    - property
@@ -788,6 +792,9 @@ rules:
 #    - blocks: never
 #      switches: never
 #      classes: never
+#  quote-props:
+#    - 2
+#    - as-needed
 #  rest-spread-spacing:
 #    - 2
 #    - never
@@ -828,15 +835,6 @@ rules:
 #  yield-star-spacing:
 #    - 2
 #    - both
-#  standard/array-bracket-even-spacing:
-#    - 2
-#    - either
-#  standard/computed-property-even-spacing:
-#    - 2
-#    - even
-#  standard/object-curly-even-spacing:
-#    - 2
-#    - either
 
 ## Conclits with Prettier, i.e. disabled by eslint-config-prettier,
 ## otherwise we would add it (using those commented lines).
@@ -844,13 +842,11 @@ rules:
 #  array-bracket-newline:
 #    - 2
 #    - consistent
-#  array-bracket-spacing: 2
 #  array-element-newline: 2
 #  arrow-body-style: 2
 #  arrow-parens:
 #    - 2
 #    - as-needed
-#  computed-property-spacing: 2
 #  function-paren-newline: 2
 #  implicit-arrow-linebreak: 2
 #  jsx-quotes: 2
@@ -866,9 +862,6 @@ rules:
 #  prefer-arrow-callback:
 #    - 2
 #    - allowNamedFunctions: true
-#  quote-props:
-#    - 2
-#    - as-needed
 #  semi-style: 2
 #  switch-colon-spacing: 2
 #  wrap-regex: 2
