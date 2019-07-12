@@ -627,7 +627,9 @@ rules:
 #  one-var:
 #    - 2
 #    - initialized: never
-#  prefer-const: 2
+#  prefer-const:
+#    - 2
+#    - destructuring: all
 #  prefer-promise-reject-2s: 2
 #  spaced-comment:
 #    - 2
