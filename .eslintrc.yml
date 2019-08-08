@@ -357,7 +357,7 @@ rules:
   #     #     so this rule cannot be used between them
   #     #   - entry points
   #     ignoreExports:
-  #       - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js}'
+  #       - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
   import/named: 2
   import/namespace:
     - 2
@@ -1138,7 +1138,7 @@ overrides:
       filenames/match-exported: 0
 
   # CLI
-  - files: [src/bin/**/*.js]
+  - files: [src/bin/**/*.js, src/bin.js]
     rules:
       # CLI often prints to console
       no-console: 0
