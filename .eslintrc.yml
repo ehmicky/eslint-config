@@ -443,6 +443,8 @@ rules:
   no-restricted-modules:
     - 2
     - paths: [assert]
+  # Using object destructuring is not a good solution
+  you-dont-need-lodash-underscore/omit: 0
 
   ## To avoid
   no-void: 2
