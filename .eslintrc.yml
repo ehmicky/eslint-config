@@ -499,7 +499,10 @@ rules:
   ava/no-todo-test: 2
   ava/use-true-false: 2
   ava/prefer-t-regex: 2
+  ava/hooks-order: 2
+  ava/no-inline-assertions: 2
   ava/max-asserts: [2, 5]
+  ava/no-incorrect-deep-equal: 2
   ava/use-t: 2
   ava/use-test: 2
   ava/prefer-async-await: 2
