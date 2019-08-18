@@ -93,6 +93,11 @@ rules:
       prev: '*'
       next: multiline-block-like
 
+  ## Spaces
+  function-call-argument-newline:
+    - 2
+    - consistent
+
   ## Statements
   no-empty:
     - 2
