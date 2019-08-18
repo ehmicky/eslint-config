@@ -767,7 +767,7 @@ rules:
 #      flatTernaryExpressions: false
 #      ignoreComments: false
 #      ignoredNodes:
-#       - TemplateLiteral > *
+#       - TemplateLiteral *
 #  key-spacing:
 #    - 2
 #    - beforeColon: false
