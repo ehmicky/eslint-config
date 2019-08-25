@@ -302,6 +302,7 @@ rules:
 
   ## Async
   callback-return: 2
+  node/no-callback-literal: 2
   require-await: 2
   no-await-in-loop: 2
   require-atomic-updates: 2
