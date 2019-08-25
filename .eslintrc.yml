@@ -7,9 +7,9 @@ extends:
   - prettier/standard
 
 parserOptions:
-  ecmaVersion: 2020
   sourceType: module
 ## Added by standard/standard
+#  ecmaVersion: 2020
 #  ecmaFeatures:
 #    jsx: true
 
