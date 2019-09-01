@@ -46,6 +46,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@ehmicky/dev-tasks": "^0.30.40",
     "ava": "^2.3.0",
     "core-js": "^3.2.1",
     "eslint": "^6.3.0",
@@ -66,7 +67,6 @@
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.7.0",
     "execa": "^2.0.4",
     "gulp": "^4.0.2",
-    "gulp-shared-tasks": "^0.30.40",
     "husky": "^3.0.5",
     "prettier": "^1.18.2"
   },
