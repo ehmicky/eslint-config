@@ -13,6 +13,8 @@ parserOptions:
 #  ecmaFeatures:
 #    jsx: true
 
+reportUnusedDisableDirectives: true
+
 ## Added by standard/standard
 #env:
 #  node: true
