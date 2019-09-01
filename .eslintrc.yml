@@ -368,6 +368,7 @@ rules:
   node/exports-style:
     - 2
     - module.exports
+  node/no-exports-assign: 2
   import/extensions:
     - 2
     - always
