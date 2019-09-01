@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-standard-prettier-fp",
+  "name": "@ehmicky/eslint-config",
   "version": "15.10.14",
   "main": ".prettierrc.js",
   "files": [
@@ -35,9 +35,9 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://git.io/fhSs6",
-  "repository": "ehmicky/eslint-config-standard-prettier-fp",
+  "repository": "ehmicky/eslint-config",
   "bugs": {
-    "url": "https://github.com/ehmicky/eslint-config-standard-prettier-fp/issues"
+    "url": "https://github.com/ehmicky/eslint-config/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {
