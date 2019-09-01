@@ -4,37 +4,9 @@
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
-[ESLint](https://eslint.org/) configuration combining:
+[ESLint](https://eslint.org/) configuration for my own projects.
 
-- [functional programming](#functional-programming).
-- [Standard JavaScript](https://standardjs.com/) which prescribes how to format
-  your code.
-- [Prettier](https://prettier.io/) which automatically formats your code as part
-  of your build process or inside your IDE.
-- [editorconfig](https://editorconfig.org/) which fulfills a similar goal but
-  more generic and limited.
-- [modularity](#modularity) by encouraging splitting your code into small
-  modules and functions.
-- [modern JavaScript](#modern-javascript).
-- [strictness](#stricness).
-
-The configuration is very opinionated but you can override specific rules in
-your `.eslintrc` to fit your needs and coding style.
-
-# Install
-
-This configuration is meant to be used inside my projects.
-
-To use it in your own projects, please copy and paste it instead of
-referencing/extending it. This library does not respect semantic versioning.
-
-# Prettier
-
-`prettier` must be run before `eslint` to avoid conflicts.
-
-We recommend using first `prettier --write` then `eslint --fix --cache`.
-
-Do not forget to add `.eslintcache` to your `.gitignore` file.
+This is not meant to be shared and semantic versioning is not followed.
 
 # Coding style
 
@@ -101,15 +73,9 @@ you find bugs and maintain a consistent coding style:
   positional parameters.
 - function declarations should be `const funcName = function() { ... }`
 
-# HTML and Markdown
-
-[eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) and
-[eslint-plugin-markdown](https://github.com/eslint/eslint-plugin-markdown) are
-included so you can lint JavaScript inside HTML or Markdown files.
-
 # Support
 
-If you found a bug or would like a new feature, _don't hesitate_ to
+If you found a bug, _don't hesitate_ to
 [submit an issue on GitHub](../../issues).
 
 For other questions, feel free to
@@ -127,7 +93,7 @@ sharing it online.
 If the documentation is unclear or has a typo, please click on the page's `Edit`
 button (pencil icon) and suggest a correction.
 
-If you would like to help us fix a bug or add a new feature, please check our
+If you would like to help us fix a bug, please check our
 [guidelines](CONTRIBUTING.md). Pull requests are welcome!
 
 <!-- Thanks go to our wonderful contributors: -->

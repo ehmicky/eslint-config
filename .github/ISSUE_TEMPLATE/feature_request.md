@@ -8,6 +8,9 @@ assignees: ''
 
 Thanks for suggesting a new feature!
 
+Please note that this project is not intended to be used outside my own projects
+so new features are unlikely to be accepted.
+
 Please fill in the sections below.
 
 **Which problem is this feature request solving?**

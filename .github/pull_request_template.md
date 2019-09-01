@@ -1,5 +1,8 @@
 🎉 Thanks for sending this pull request! 🎉
 
+Please note that this project is not intended to be used outside my own projects
+so new features are unlikely to be accepted.
+
 Please make sure the title is clear and descriptive.
 
 If you are fixing a typo or documentation, please skip these instructions.

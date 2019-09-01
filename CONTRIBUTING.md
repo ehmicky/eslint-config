@@ -4,6 +4,9 @@
 
 These guidelines will help you send a pull request.
 
+Please note that this project is not intended to be used outside my own projects
+so new features are unlikely to be accepted.
+
 If you're submitting an issue instead, please skip this document.
 
 If your pull request is related to a typo or the documentation being unclear,
