@@ -14,7 +14,7 @@
       "pre-push": "gulp check --full"
     }
   },
-  "description": "ESLint configuration combining Standard JavaScript, Prettier and functional programming",
+  "description": "ESLint configuration for my own projects",
   "keywords": [
     "eslint",
     "eslintconfig",
