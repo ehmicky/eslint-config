@@ -254,6 +254,7 @@ rules:
     - 2
     - considerPropertyDescriptor: true
   max-params: 2
+  default-param-last: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
   prefer-rest-params: 2
@@ -291,6 +292,7 @@ rules:
 
   ## RegExps
   unicorn/regex-shorthand: 2
+  prefer-regex-literals: 2
   require-unicode-regexp: 2
 
   ## Number
@@ -369,6 +371,7 @@ rules:
     - 2
     - module.exports
   node/no-exports-assign: 2
+  no-import-assign: 2
   import/extensions:
     - 2
     - always
