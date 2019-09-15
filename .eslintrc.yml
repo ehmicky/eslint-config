@@ -264,6 +264,8 @@ rules:
   fp/no-get-set: 2
   fp/no-proxy: 2
   no-empty-function: 2
+  unicorn/consistent-function-scoping: 2
+  unicorn/prefer-reflect-apply: 2
 
   ## Objects
   object-shorthand: 2
@@ -465,6 +467,7 @@ rules:
   unicorn/prefer-node-remove: 2
   unicorn/prefer-text-content: 2
   unicorn/prefer-event-key: 2
+  unicorn/prefer-dataset: 2
 
   # AVA
   ava/no-unknown-modifiers: 2
@@ -960,9 +963,14 @@ rules:
 
 #  no-ternary: 2
 
+## We don't allow nested ternaries even wrapped in parenthesis
+
+#  unicorn/no-nested-ternary: 2
+
 ## We allow TODO comments
 
 #  no-warning-comments: 2
+#  unicorn/expiring-todo-comments: 2
 
 ## We are symlinking shebang files so that they have the correct file extension
 
