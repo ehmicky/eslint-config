@@ -288,6 +288,7 @@ rules:
   no-useless-concat: 2
   prefer-template: 2
   unicorn/prefer-starts-ends-with: 2
+  unicorn/prefer-string-slice: 2
   unicorn/no-hex-escape: 2
   unicorn/escape-case: 2
   unicorn/no-console-spaces: 2
