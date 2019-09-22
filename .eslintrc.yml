@@ -304,6 +304,9 @@ rules:
   radix:
     - 2
     - as-needed
+  use-isnan:
+    - 2
+    - enforceForSwitchCase: true
   unicorn/prefer-exponentiation-operator: 2
   no-bitwise: 2
 
@@ -673,7 +676,6 @@ rules:
 #        exceptions:
 #          - '*'
 #  symbol-description: 2
-#  use-isnan: 2
 #  valid-typeof:
 #    - 2
 #    - requireStringLiterals: true
