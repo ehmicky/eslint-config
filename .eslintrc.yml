@@ -900,6 +900,11 @@ rules:
 #  wrap-regex: 2
 #  unicorn/number-literal-case: 2
 
+## Conclits with Prettier, i.e. disabled by eslint-config-prettier,
+## but we would not add it anyway
+
+#  unicorn/no-nested-ternary: 2
+
 ## The only difference from pure functional programming is that we
 ## allow exceptions to avoid cumbersome code
 
@@ -965,10 +970,6 @@ rules:
 ## We allow ternaries, they can make code look cleaner
 
 #  no-ternary: 2
-
-## We don't allow nested ternaries even wrapped in parenthesis
-
-#  unicorn/no-nested-ternary: 2
 
 ## We allow TODO comments
 
