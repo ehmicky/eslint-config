@@ -282,7 +282,6 @@ rules:
   ## Arrays
   array-callback-return: 2
   unicorn/prefer-includes: 2
-  unicorn/prefer-flat-map: 2
 
   ## String
   no-useless-concat: 2
@@ -958,6 +957,11 @@ rules:
 #  import/exports-last: 0
 #  import/default: 0
 #  unicorn/import-index: 0
+
+## We allow [].concat() instead because Array.flatMap() currently requires
+## core-js for Node <11
+
+#  unicorn/prefer-flat-map: 2
 
 ## We sort object keys by type, not by name
 
