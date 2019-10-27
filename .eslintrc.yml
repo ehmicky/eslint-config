@@ -309,7 +309,7 @@ rules:
   use-isnan:
     - 2
     - enforceForSwitchCase: true
-    - enforceForIndexOf: true
+      enforceForIndexOf: true
   unicorn/prefer-exponentiation-operator: 2
   no-bitwise: 2
 
