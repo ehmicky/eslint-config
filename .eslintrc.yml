@@ -899,11 +899,6 @@ rules:
 #  wrap-regex: 2
 #  unicorn/number-literal-case: 2
 
-## Conclits with Prettier, i.e. disabled by eslint-config-prettier,
-## but we would not add it anyway
-
-#  unicorn/no-nested-ternary: 2
-
 ## The only difference from pure functional programming is that we
 ## allow exceptions to avoid cumbersome code
 
@@ -937,6 +932,10 @@ rules:
 
 #  node/prefer-promises/fs: 2
 #  node/prefer-promises/dns: 2
+
+## The no-nested-ternary ESLint rule is stricter/better
+
+#  unicorn/no-nested-ternary: 2
 
 ## This is in conflict with no-useless-escape rule
 
