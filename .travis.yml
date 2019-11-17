@@ -14,6 +14,15 @@ jobs:
     - os: osx
     - node_js: '8.12.0'
     - node_js: '13'
+    # Test coverage check must happen after tests for the whole matrix have
+    # been performed, so we get the merged coverage map
+    - stage: Coverage check
+      # If this fails during a PR, CI will fail. However when CI fails, codecov
+      # does not post any comment. Since codecov comments are nicer than
+      # Travis Buddy comments for this, we skip it during PRs. Also this makes
+      # PRs checks faster.
+      if: type != pull_request
+      script: gulp coverage
     # Deployment must happen after tests for the whole matrix have been
     # performed, so we use `jobs.include` with a different `stage`.
     - stage: Deploy
@@ -28,3 +37,5 @@ notifications:
   email: false
 # We do not use `cache: npm` because downloading and uploading the cache
 # actually takes more time than it saves during `npm ci`.
+env:
+  COVERAGE: 'false'
