@@ -155,7 +155,9 @@ rules:
   no-var: 2
   fp/no-let: 2
   import/no-mutable-exports: 2
-  no-implicit-globals: 2
+  no-implicit-globals:
+    - 2
+    - lexicalBindings: true
   vars-on-top: 2
   sort-vars: 2
   no-magic-numbers:
@@ -213,6 +215,7 @@ rules:
     - enforceForOrderingRelations: true
   unicorn/no-array-instanceof: 2
   no-negated-condition: 2
+  no-dupe-else-if: 2
   no-nested-ternary: 2
 
   ## Structures
@@ -263,7 +266,11 @@ rules:
   prefer-rest-params: 2
   fp/no-arguments: 2
   require-yield: 2
+  grouped-accessor-pairs:
+    - 2
+    - getBeforeSet
   getter-return: 2
+  no-setter-return: 2
   fp/no-get-set: 2
   fp/no-proxy: 2
   no-empty-function: 2
@@ -275,6 +282,7 @@ rules:
   prefer-destructuring: 2
 
   ## Inheritance
+  no-constructor-return: 2
   no-invalid-this: 2
   class-methods-use-this: 2
   consistent-this: 2
@@ -310,6 +318,7 @@ rules:
     - 2
     - enforceForSwitchCase: true
       enforceForIndexOf: true
+  prefer-exponentiation-operator: 2
   unicorn/prefer-exponentiation-operator: 2
   no-bitwise: 2
 
@@ -522,6 +531,10 @@ rules:
   no-undef:
     - 2
     - typeof: true
+  ## Stricter than standard/standard
+  no-useless-computed-key:
+    - 2
+    - enforceForClassMembers: true
 
 ## Added by standard/standard
 
@@ -637,7 +650,6 @@ rules:
 #      variables: false
 #  no-useless-call: 2
 #  no-useless-catch: 2
-#  no-useless-computed-key: 2
 #  no-useless-constructor: 2
 #  no-useless-escape: 2
 #  no-useless-rename: 2
