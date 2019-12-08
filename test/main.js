@@ -1,5 +1,5 @@
-import test from 'ava'
 import execa from 'execa'
+import test from 'ava'
 
 const ESLINT_CONFIG = `${__dirname}/../../.eslintrc.yml`
 const TEST_FILE = `${__dirname}/../../test/helpers/valid.js`

@@ -397,7 +397,9 @@ rules:
     - always
     - ignorePackages: true
   node/file-extension-in-import: 2
-  import/no-useless-path-segments: 2
+  import/no-useless-path-segments:
+    - 2
+    - commonjs: true
   no-duplicate-imports:
     - 2
     - includeExports: true
@@ -418,6 +420,9 @@ rules:
   import/order:
     - 2
     - newlines-between: always
+      # TODO: uncomment. At the moment, this creates newlines between groups
+      # alphabetize:
+      #   order: desc
   import/newline-after-import: 2
   import/unambiguous: 2
   global-require: 2
