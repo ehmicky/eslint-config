@@ -46,11 +46,7 @@ rules:
   node/prefer-global/url-search-params: 2
   node/prefer-global/text-decoder: 2
   node/prefer-global/text-encoder: 2
-  # TODO: uncomment after dropping Node.js 9 support
-  # node/prefer-global/url: 2
-  node/prefer-global/url:
-    - 2
-    - never
+  node/prefer-global/url: 2
   ## We only use globals for globals also defined in the browser
   node/prefer-global/buffer:
     - 2
@@ -147,8 +143,6 @@ rules:
       allow:
         - process
         - Buffer
-        # TODO: uncomment after dropping Node.js 9 support
-        - URL
 
   ## Declarations
   block-scoped-var: 2
