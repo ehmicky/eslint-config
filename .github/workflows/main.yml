@@ -1,5 +1,4 @@
 on: push
-
 jobs:
   one:
     runs-on: ubuntu-16.04
