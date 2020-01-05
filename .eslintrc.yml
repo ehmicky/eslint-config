@@ -417,6 +417,7 @@ rules:
       # TODO: uncomment. At the moment, this creates newlines between groups
       # alphabetize:
       #   order: desc
+      #   caseInsensitive: true
   import/newline-after-import: 2
   import/unambiguous: 2
   global-require: 2
