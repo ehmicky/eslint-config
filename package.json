@@ -67,7 +67,7 @@
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.8.0",
     "execa": "^4.0.0",
     "gulp": "^4.0.2",
-    "husky": "^4.0.7",
+    "husky": "^4.0.9",
     "prettier": "^1.19.1"
   },
   "peerDependencies": {
