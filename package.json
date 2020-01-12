@@ -46,7 +46,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.4",
+    "@ehmicky/dev-tasks": "^0.31.5",
     "ava": "^3.0.0-beta.2",
     "core-js": "^3.6.4",
     "eslint": "^6.8.0",
