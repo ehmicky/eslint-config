@@ -301,7 +301,7 @@ rules:
   unicorn/no-console-spaces: 2
 
   ## RegExps
-  unicorn/better-regex: 2
+  unicorn/regex-shorthand: 2
   prefer-regex-literals: 2
   require-unicode-regexp: 2
 
