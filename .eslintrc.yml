@@ -231,6 +231,7 @@ rules:
       message:
         The comma operator is confusing and a common mistake. Don’t use it!
   default-case: 2
+  default-case-last: 2
 
   ## Labels
   no-unused-labels: 2
@@ -302,6 +303,7 @@ rules:
 
   ## RegExps
   unicorn/regex-shorthand: 2
+  no-useless-backreference: 2
   prefer-regex-literals: 2
   require-unicode-regexp: 2
 
@@ -313,8 +315,7 @@ rules:
     - as-needed
   use-isnan:
     - 2
-    - enforceForSwitchCase: true
-      enforceForIndexOf: true
+    - enforceForIndexOf: true
   prefer-exponentiation-operator: 2
   no-bitwise: 2
 
@@ -1073,6 +1074,7 @@ rules:
 
 #  id-blacklist: 2
 #  no-restricted-properties: 2
+#  no-restricted-exports: 2
 #  import/no-restricted-paths: 2
 
 settings:
