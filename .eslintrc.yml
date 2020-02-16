@@ -412,10 +412,9 @@ rules:
     - ignoreMemberSort: true
       ignoreDeclarationSort: true
   no-mixed-requires: 2
-  # TODO: uncomment once https://github.com/benmosher/eslint-plugin-import/pull/1651 is released
-  # import/order:
-  #   - 2
-  #   - newlines-between: always
+  import/order:
+    - 2
+    - newlines-between: always
   # TODO: uncomment. At the moment, this creates newlines between groups
   # alphabetize:
   #   order: desc
