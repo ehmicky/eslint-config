@@ -302,7 +302,7 @@ rules:
   unicorn/no-console-spaces: 2
 
   ## RegExps
-  unicorn/regex-shorthand: 2
+  unicorn/better-regex: 2
   no-useless-backreference: 2
   prefer-regex-literals: 2
   require-unicode-regexp: 2
@@ -1010,7 +1010,11 @@ rules:
 
 ## It conflicts with `prefer-destructuring` rule
 
-# unicorn/no-unreadable-array-destructuring: 2
+#  unicorn/no-unreadable-array-destructuring: 2
+
+## This is not useful at the moment
+
+#  unicorn/string-content: 2
 
 ## This rule should be turned on in the future
 
