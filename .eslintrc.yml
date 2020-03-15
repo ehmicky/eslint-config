@@ -323,6 +323,7 @@ rules:
   callback-return: 2
   node/no-callback-literal: 2
   require-await: 2
+  no-return-await: 2
   no-await-in-loop: 2
   require-atomic-updates: 2
   no-sync: 2
@@ -623,7 +624,6 @@ rules:
 #  no-return-assign:
 #    - 2
 #    - except-parens
-#  no-return-await: 2
 #  no-self-assign: 2
 #  no-self-compare: 2
 #  no-sequences: 2
