@@ -418,10 +418,9 @@ rules:
   import/order:
     - 2
     - newlines-between: always
-  # TODO: uncomment. At the moment, this creates newlines between groups
-  # alphabetize:
-  #   order: desc
-  #   caseInsensitive: true
+      alphabetize:
+        order: desc
+        caseInsensitive: true
   import/newline-after-import: 2
   import/unambiguous: 2
   node/global-require: 2
