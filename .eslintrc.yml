@@ -320,7 +320,7 @@ rules:
   no-bitwise: 2
 
   ## Async
-  callback-return: 2
+  node/callback-return: 2
   node/no-callback-literal: 2
   require-await: 2
   no-return-await: 2
@@ -412,7 +412,7 @@ rules:
     - 2
     - ignoreMemberSort: true
       ignoreDeclarationSort: true
-  no-mixed-requires: 2
+  node/no-mixed-requires: 2
   import/order:
     - 2
     - newlines-between: always
@@ -422,7 +422,7 @@ rules:
   #   caseInsensitive: true
   import/newline-after-import: 2
   import/unambiguous: 2
-  global-require: 2
+  node/global-require: 2
   import/no-dynamic-require: 2
   import/no-commonjs: 2
   import/no-amd: 2
@@ -462,9 +462,12 @@ rules:
   no-restricted-imports:
     - 2
     - paths: [assert]
-  no-restricted-modules:
+  node/no-restricted-require:
     - 2
-    - paths: [assert]
+    - [assert]
+  node/no-restricted-import:
+    - 2
+    - [assert]
   # Using object destructuring is not a good solution
   you-dont-need-lodash-underscore/omit: 0
 
@@ -474,11 +477,11 @@ rules:
   fp/no-events: 2
   no-buffer-constructor: 2
   unicorn/no-new-buffer: 2
-  no-process-env: 2
+  node/no-process-env: 2
   no-script-url: 2
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
-  no-process-exit: 2
+  node/no-process-exit: 2
   unicorn/no-process-exit: 2
 
   ## DOM
@@ -552,7 +555,7 @@ rules:
 #    - 2
 #    - always
 #    - 'null': ignore
-#  handle-callback-err:
+#  node/handle-callback-err:
 #    - 2
 #    - '^(err|2)$'
 #  lines-between-class-members:
@@ -608,13 +611,13 @@ rules:
 #  no-new: 2
 #  no-new-func: 2
 #  no-new-object: 2
-#  no-new-require: 2
+#  node/no-new-require: 2
 #  no-new-symbol: 2
 #  no-new-wrappers: 2
 #  no-obj-calls: 2
 #  no-octal: 2
 #  no-octal-escape: 2
-#  no-path-concat: 2
+#  node/no-path-concat: 2
 #  no-proto: 2
 #  no-prototype-builtins: 2
 #  no-redeclare:
@@ -1159,9 +1162,12 @@ overrides:
       no-restricted-imports:
         - 2
         - paths: []
-      no-restricted-modules:
+      node/no-restricted-require:
         - 2
-        - paths: []
+        - []
+      node/no-restricted-import:
+        - 2
+        - []
 
   # Test files
   - files: [test/**/*.js]
