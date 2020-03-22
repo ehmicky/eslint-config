@@ -419,7 +419,7 @@ rules:
     - 2
     - newlines-between: always
       alphabetize:
-        order: desc
+        order: asc
         caseInsensitive: true
   import/newline-after-import: 2
   import/unambiguous: 2
