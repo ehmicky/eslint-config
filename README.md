@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/badge/cross-platform-4cc61e.svg?logo=travis)](https://travis-ci.org/ehmicky/eslint-config)
+[![Build](https://github.com/ehmicky/eslint-config/workflows/Build/badge.svg)](https://github.com/ehmicky/eslint-config/actions)
 [![Node](https://img.shields.io/node/v/@ehmicky/eslint-config.svg?logo=node.js)](https://www.npmjs.com/package/@ehmicky/eslint-config)
 [![Gitter](https://img.shields.io/gitter/room/ehmicky/eslint-config.svg?logo=gitter)](https://gitter.im/ehmicky/eslint-config)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
