@@ -289,6 +289,7 @@ rules:
   array-callback-return: 2
   unicorn/prefer-includes: 2
   unicorn/prefer-negative-index: 2
+  unicorn/prefer-set-has: 2
 
   ## String
   no-useless-concat: 2
@@ -313,6 +314,7 @@ rules:
   radix:
     - 2
     - as-needed
+  unicorn/prefer-number-properties: 2
   use-isnan:
     - 2
     - enforceForIndexOf: true
