@@ -91,6 +91,11 @@ rules:
       prev: '*'
       next: multiline-block-like
 
+  ## Braces
+  curly:
+    - 2
+    - all
+
   ## Statements
   no-empty:
     - 2
@@ -722,9 +727,6 @@ rules:
 ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
 ## although added by standard/standard.
 
-#  curly:
-#    - 2
-#    - multi-line
 #  no-mixed-operators:
 #    - 2
 #    - groups:
