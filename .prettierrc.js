@@ -27,6 +27,5 @@ module.exports = {
   singleQuote: true,
   jsxSingleQuote: true,
   trailingComma: 'all',
-  loglevel: 'warn',
   proseWrap: 'always',
 }
