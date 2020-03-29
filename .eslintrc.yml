@@ -467,13 +467,17 @@ rules:
   # work in browsers
   no-restricted-imports:
     - 2
-    - paths: [assert]
+    - paths:
+        - name: assert
+          message: Please throw an Error instead
   node/no-restricted-require:
     - 2
-    - [assert]
+    - - name: assert
+        message: Please throw an Error instead
   node/no-restricted-import:
     - 2
-    - [assert]
+    - - name: assert
+        message: Please throw an Error instead
   # Using object destructuring is not a good solution
   you-dont-need-lodash-underscore/omit: 0
 
@@ -1180,6 +1184,34 @@ overrides:
         - 2
         - 2
       max-lines-per-function: 0
+      # Enforce integration testing
+      no-restricted-imports:
+        - 2
+        - paths:
+            - name: assert
+              message: Please throw an Error instead
+          patterns:
+            - '**/../src/**'
+            - '!**/../src/main.js'
+      node/no-restricted-require:
+        - 2
+        - - name: assert
+            message: Please throw an Error instead
+      node/no-restricted-import:
+        - 2
+        - - name: assert
+            message: Please throw an Error instead
+          - name:
+              - '../src/**'
+              - '../../src/**'
+              - '../../../src/**'
+              - '../../../../src/**'
+              - '../../../../../src/**'
+              - '!../src/main.js'
+              - '!../../src/main.js'
+              - '!../../../src/main.js'
+              - '!../../../../../src/main.js'
+            message: Only ../src/main.js should be imported in tests
 
   # ava.config.js requires a default export
   - files: [ava.config.js]
