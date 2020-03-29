@@ -509,7 +509,9 @@ rules:
   ava/no-todo-implementation: 2
   ava/no-nested-tests: 2
   ava/no-duplicate-modifiers: 2
-  ava/assertion-arguments: 2
+  ava/assertion-arguments:
+    - 2
+    - message: never
   ava/no-cb-test: 2
   ava/test-ended: 2
   ava/no-invalid-end: 2
