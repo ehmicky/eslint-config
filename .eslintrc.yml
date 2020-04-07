@@ -235,10 +235,6 @@ rules:
     - selector: SequenceExpression
       message:
         The comma operator is confusing and a common mistake. Don’t use it!
-    - selector: VariableDeclarator > ArrowFunctionExpression
-      message:
-        Please use `const ... = function() { ... }` instead of `const ... = ()
-        => { ... }`
   default-case: 2
   default-case-last: 2
 
