@@ -1141,6 +1141,9 @@ overrides:
       # Example test files
       ava/no-ignored-test-files: 0
 
+      # Too verbose for documentation
+      strict: 0
+
   # Markdown files
   - files: ['*.md', '**/*.md']
     # `use strict` is too verbose in documentation
