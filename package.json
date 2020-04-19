@@ -49,7 +49,7 @@
     "@ehmicky/dev-tasks": "^0.31.37",
     "ava": "^3.7.1",
     "core-js": "^3.6.5",
-    "eslint": "^7.0.0-alpha.3",
+    "eslint": "^7.0.0-rc.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-import-resolver-node": "^0.3.3",
