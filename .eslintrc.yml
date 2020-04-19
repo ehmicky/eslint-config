@@ -482,6 +482,7 @@ rules:
   you-dont-need-lodash-underscore/omit: 0
 
   ## To avoid
+  unicorn/no-null: 2
   no-continue: 2
   no-console: 2
   fp/no-events: 2
