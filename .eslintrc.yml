@@ -539,6 +539,7 @@ rules:
   ava/use-test: 2
   ava/prefer-async-await: 2
   ava/no-async-fn-without-await: 2
+  ava/use-t-throws-async-well: 2
 
   ## Differences from standard/standard
 
