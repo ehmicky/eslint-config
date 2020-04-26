@@ -39,8 +39,6 @@ jobs:
       - name: Upload test coverage
         run: npx gulp uploadCoverage
         env:
-          COVECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   # Performed after each OS + Node.js version combination has succeeded
   final:
