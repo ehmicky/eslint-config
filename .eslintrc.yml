@@ -297,7 +297,6 @@ rules:
     - allowImplicit: true
       checkForEach: true
   unicorn/prefer-includes: 2
-  unicorn/no-reduce: 2
   unicorn/prefer-negative-index: 2
   unicorn/prefer-set-has: 2
 
@@ -961,6 +960,10 @@ rules:
 
 #  unicorn/no-unsafe-regex: 2
 #  import/no-relative-parent-imports: 2
+
+## Array.reduce() is sometimes useful in stateful logic
+
+#  unicorn/no-reduce: 2
 
 ## This makes RegExps more verbose
 
