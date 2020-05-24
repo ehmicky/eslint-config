@@ -320,6 +320,7 @@ rules:
     - 2
     - as-needed
   unicorn/prefer-number-properties: 2
+  no-loss-of-precision: 2
   use-isnan:
     - 2
     - enforceForIndexOf: true
