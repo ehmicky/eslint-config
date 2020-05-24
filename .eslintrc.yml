@@ -76,7 +76,6 @@ rules:
         - eslint-disable
         - eslint-enable
         - eslint-env
-  eslint-comments/require-description: 2
   unicorn/no-abusive-eslint-disable: 2
 
   ## Strictness
@@ -1017,6 +1016,11 @@ rules:
 
 #  no-warning-comments: 2
 #  unicorn/expiring-todo-comments: 2
+
+## This requires putting comments on the same line as the ESLint directive,
+## but we prefer to put the comment on the previous line
+
+#  eslint-comments/require-description: 2
 
 ## We are symlinking shebang files so that they have the correct file extension
 
