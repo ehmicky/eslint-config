@@ -249,6 +249,7 @@ rules:
   unicorn/error-message: 2
   unicorn/catch-error-name: 2
   unicorn/prefer-type-error: 2
+  unicorn/prefer-optional-catch-binding: 2
   unicorn/custom-error-definition: 2
 
   ## Functions
@@ -292,8 +293,12 @@ rules:
   fp/no-this: 2
 
   ## Arrays
-  array-callback-return: 2
+  array-callback-return:
+    - 2
+    - allowImplicit: true
+      checkForEach: true
   unicorn/prefer-includes: 2
+  unicorn/no-reduce: 2
   unicorn/prefer-negative-index: 2
   unicorn/prefer-set-has: 2
 
@@ -485,6 +490,7 @@ rules:
 
   ## To avoid
   unicorn/no-null: 2
+  unicorn/no-useless-undefined: 2
   no-continue: 2
   no-console: 2
   fp/no-events: 2
