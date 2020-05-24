@@ -76,6 +76,7 @@ rules:
         - eslint-disable
         - eslint-enable
         - eslint-env
+  eslint-comments/require-description: 2
   unicorn/no-abusive-eslint-disable: 2
 
   ## Strictness
