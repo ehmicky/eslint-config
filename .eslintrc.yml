@@ -315,7 +315,9 @@ rules:
   ## RegExps
   unicorn/better-regex: 2
   no-useless-backreference: 2
-  prefer-regex-literals: 2
+  prefer-regex-literals:
+    - 2
+    - disallowRedundantWrapping: true
   require-unicode-regexp: 2
 
   ## Number
@@ -1107,7 +1109,7 @@ rules:
 
 ## No use for those rules
 
-#  id-blacklist: 2
+#  id-denylist: 2
 #  no-restricted-properties: 2
 #  no-restricted-exports: 2
 #  import/no-restricted-paths: 2
