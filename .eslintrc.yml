@@ -100,6 +100,7 @@ rules:
   no-empty:
     - 2
     - allowEmptyCatch: true
+  no-unreachable-loop: 2
 
   ## Complexity
   max-len:
@@ -334,6 +335,7 @@ rules:
   ## Async
   node/callback-return: 2
   node/no-callback-literal: 2
+  no-promise-executor-return: 2
   require-await: 2
   no-return-await: 2
   no-await-in-loop: 2
@@ -687,7 +689,7 @@ rules:
 #  prefer-const:
 #    - 2
 #    - destructuring: all
-#  prefer-promise-reject-2s: 2
+#  prefer-promise-reject-errors: 2
 #  quotes:
 #    - 2
 #    - single
