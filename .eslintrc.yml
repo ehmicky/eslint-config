@@ -282,6 +282,7 @@ rules:
   ## Objects
   object-shorthand: 2
   prefer-destructuring: 2
+  unicorn/no-object-as-default-parameter: 2
 
   ## Inheritance
   no-constructor-return: 2
@@ -299,6 +300,7 @@ rules:
       checkForEach: true
   unicorn/prefer-includes: 2
   unicorn/prefer-negative-index: 2
+  unicorn/prefer-array-find: 2
   unicorn/prefer-set-has: 2
 
   ## String
