@@ -33,7 +33,7 @@ plugins:
   - html
   - markdown
   - unicorn
-  - eslint-plugin-ava
+  - ava
 ## Added by standard/standard
 #  - import
 #  - node
