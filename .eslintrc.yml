@@ -439,9 +439,8 @@ rules:
         wasi: { named: true }
         worker_threads: { named: true }
         zlib: { named: true }
-        # Some methods require `process.*` to be called like this
-        process: { default: true }
         # The default export is used
+        process: { named: true, default: true }
         assert: { named: true, default: true }
         module: { named: true, default: true }
       extendDefaultStyles: false
