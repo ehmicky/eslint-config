@@ -401,7 +401,6 @@ rules:
   unicorn/import-style:
     - 2
     - styles:
-        assert: { named: true }
         async_hooks: { named: true }
         buffer: { named: true }
         child_process: { named: true }
@@ -418,12 +417,10 @@ rules:
         http2: { named: true }
         https: { named: true }
         inspector: { named: true }
-        module: { named: true }
         net: { named: true }
         os: { named: true }
         path: { named: true }
         perf_hooks: { named: true }
-        process: { named: true }
         punycode: { named: true }
         querystring: { named: true }
         readline: { named: true }
@@ -442,7 +439,12 @@ rules:
         wasi: { named: true }
         worker_threads: { named: true }
         zlib: { named: true }
-      extendDefaultStyles: true
+        # Some methods require `process.*` to be called like this
+        process: { default: true }
+        # The default export is used
+        assert: { named: true, default: true }
+        module: { named: true, default: true }
+      extendDefaultStyles: false
   import/no-namespace: 2
   import/no-named-default: 2
   import/no-anonymous-default-export: 2
