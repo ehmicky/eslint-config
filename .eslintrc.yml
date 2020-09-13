@@ -397,6 +397,52 @@ rules:
     - allowComputed: true
   import/no-named-as-default: 2
   import/no-named-as-default-member: 2
+  # All core Node.js libraries should be imported using destructuring
+  unicorn/import-style:
+    - 2
+    - styles:
+        assert: { named: true }
+        async_hooks: { named: true }
+        buffer: { named: true }
+        child_process: { named: true }
+        cluster: { named: true }
+        console: { named: true }
+        constants: { named: true }
+        crypto: { named: true }
+        dgram: { named: true }
+        dns: { named: true }
+        domain: { named: true }
+        events: { named: true }
+        fs: { named: true }
+        http: { named: true }
+        http2: { named: true }
+        https: { named: true }
+        inspector: { named: true }
+        module: { named: true }
+        net: { named: true }
+        os: { named: true }
+        path: { named: true }
+        perf_hooks: { named: true }
+        process: { named: true }
+        punycode: { named: true }
+        querystring: { named: true }
+        readline: { named: true }
+        repl: { named: true }
+        stream: { named: true }
+        string_decoder: { named: true }
+        sys: { named: true }
+        timers: { named: true }
+        tls: { named: true }
+        trace_events: { named: true }
+        tty: { named: true }
+        url: { named: true }
+        util: { named: true }
+        v8: { named: true }
+        vm: { named: true }
+        wasi: { named: true }
+        worker_threads: { named: true }
+        zlib: { named: true }
+      extendDefaultStyles: true
   import/no-namespace: 2
   import/no-named-default: 2
   import/no-anonymous-default-export: 2
