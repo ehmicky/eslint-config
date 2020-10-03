@@ -30,4 +30,4 @@ Example: Another solution would be [...]
 Yes/No.
 
 Pull requests are welcome! If you would like to help us add this feature, please
-check our [contributions guidelines](../blob/master/CONTRIBUTING.md).
+check our [contributions guidelines](../blob/main/CONTRIBUTING.md).
