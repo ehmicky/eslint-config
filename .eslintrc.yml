@@ -217,6 +217,7 @@ rules:
   no-negated-condition: 2
   no-dupe-else-if: 2
   no-nested-ternary: 2
+  unicorn/prefer-ternary: 2
 
   ## Structures
   no-lonely-if: 2
@@ -335,6 +336,7 @@ rules:
     - enforceForIndexOf: true
   prefer-exponentiation-operator: 2
   no-bitwise: 2
+  unicorn/prefer-math-trunc: 2
 
   ## Async
   node/callback-return: 2
@@ -1085,6 +1087,10 @@ rules:
 ## We want to allow Promise.all() and Promise.race()
 
 #  promise/no-native: 2
+
+## Requires Node 12
+
+#  unicorn/numeric-separators-style: 2
 
 ## This rule encourages creating functions where it is not needed
 
