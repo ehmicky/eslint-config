@@ -617,6 +617,8 @@ rules:
   no-useless-computed-key:
     - 2
     - enforceForClassMembers: true
+  ## In most cases, forward slashes are just fine on Windows
+  node/no-path-concat: 0
 
 ## Added by standard/standard
 
@@ -736,7 +738,6 @@ rules:
 #    - 2
 #    - '^(err|error)$'
 #  node/no-new-require: 2
-#  node/no-path-concat: 2
 #  one-var:
 #    - 2
 #    - initialized: never
