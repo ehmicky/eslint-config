@@ -9,7 +9,7 @@ extends:
 parserOptions:
   sourceType: module
 ## Added by standard/standard
-#  ecmaVersion: 2020
+#  ecmaVersion: 2021
 #  ecmaFeatures:
 #    jsx: true
 
@@ -18,7 +18,7 @@ reportUnusedDisableDirectives: true
 ## Added by standard/standard
 #env:
 #  node: true
-#  es6: true
+#  es2021: true
 
 ## Added by standard/standard
 #globals:
@@ -100,7 +100,6 @@ rules:
   no-empty:
     - 2
     - allowEmptyCatch: true
-  no-unreachable-loop: 2
 
   ## Complexity
   max-len:
@@ -159,6 +158,9 @@ rules:
     - 2
     - lexicalBindings: true
   vars-on-top: 2
+  no-inner-declarations:
+    - 2
+    - functions
   sort-vars: 2
   no-magic-numbers:
     - 2
@@ -240,7 +242,6 @@ rules:
       message:
         The comma operator is confusing and a common mistake. Don’t use it!
   default-case: 2
-  default-case-last: 2
 
   ## Labels
   no-unused-labels: 2
@@ -319,7 +320,6 @@ rules:
 
   ## RegExps
   unicorn/better-regex: 2
-  no-useless-backreference: 2
   prefer-regex-literals:
     - 2
     - disallowRedundantWrapping: true
@@ -332,7 +332,6 @@ rules:
     - 2
     - as-needed
   unicorn/prefer-number-properties: 2
-  no-loss-of-precision: 2
   use-isnan:
     - 2
     - enforceForIndexOf: true
@@ -627,14 +626,12 @@ rules:
 #    - 2
 #    - properties: never
 #  constructor-super: 2
+#  default-case-last: 2
 #  dot-notation: 2
 #  eqeqeq:
 #    - 2
 #    - always
 #    - 'null': ignore
-#  node/handle-callback-err:
-#    - 2
-#    - '^(err|2)$'
 #  lines-between-class-members:
 #    - 2
 #    - always
@@ -671,9 +668,6 @@ rules:
 #  no-func-assign: 2
 #  no-global-assign: 2
 #  no-implied-eval: 2
-#  no-inner-declarations:
-#    - 2
-#    - functions
 #  no-invalid-regexp: 2
 #  no-irregular-whitespace: 2
 #  no-iterator: 2
@@ -682,19 +676,17 @@ rules:
 #    - allowLoop: false
 #      allowSwitch: false
 #  no-lone-blocks: 2
+#  no-loss-of-precision: 2
 #  no-misleading-character-class: 2
 #  no-multi-str: 2
-#  no-negated-in-lhs: 2
 #  no-new: 2
 #  no-new-func: 2
 #  no-new-object: 2
-#  node/no-new-require: 2
 #  no-new-symbol: 2
 #  no-new-wrappers: 2
 #  no-obj-calls: 2
 #  no-octal: 2
 #  no-octal-escape: 2
-#  node/no-path-concat: 2
 #  no-proto: 2
 #  no-prototype-builtins: 2
 #  no-redeclare:
@@ -719,6 +711,7 @@ rules:
 #    - 2
 #    - defaultAssignment: false
 #  no-unreachable: 2
+#  no-unreachable-loop: 2
 #  no-unsafe-finally: 2
 #  no-unused-expressions:
 #    - 2
@@ -730,6 +723,7 @@ rules:
 #    - functions: false
 #      classes: false
 #      variables: false
+#  no-useless-backreference: 2
 #  no-useless-call: 2
 #  no-useless-catch: 2
 #  no-useless-constructor: 2
@@ -738,6 +732,11 @@ rules:
 #  no-useless-return: 2
 #  no-void: 2
 #  no-with: 2
+#  node/handle-callback-err:
+#    - 2
+#    - '^(err|error)$'
+#  node/no-new-require: 2
+#  node/no-path-concat: 2
 #  one-var:
 #    - 2
 #    - initialized: never
@@ -874,6 +873,7 @@ rules:
 #      ignoreComments: false
 #      ignoredNodes:
 #       - TemplateLiteral *
+#      offsetTernaryExpressions: true
 #  key-spacing:
 #    - 2
 #    - beforeColon: false
@@ -979,7 +979,6 @@ rules:
 #  jsx-quotes: 2
 #  linebreak-style: 2
 #  lines-around-comment: 2
-#  multiline-ternary: 2
 #  newline-per-chained-call: 2
 #  no-confusing-arrow: 2
 #  no-extra-semi: 2
