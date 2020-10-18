@@ -511,7 +511,7 @@ rules:
   ## Binary
   node/no-unpublished-bin: 2
 
-  ## Blacklist
+  ## Denylist
   ## Avoid Node.js-specific global variables
   no-restricted-globals:
     - 2
