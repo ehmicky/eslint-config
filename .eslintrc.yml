@@ -38,7 +38,6 @@ plugins:
 #  - import
 #  - node
 #  - promise
-#  - standard
 
 rules:
   ## Globals
@@ -96,11 +95,6 @@ rules:
     - 2
     - all
 
-  ## Statements
-  no-empty:
-    - 2
-    - allowEmptyCatch: true
-
   ## Complexity
   max-len:
     - 2
@@ -151,7 +145,6 @@ rules:
 
   ## Declarations
   block-scoped-var: 2
-  no-var: 2
   fp/no-let: 2
   import/no-mutable-exports: 2
   no-implicit-globals:
@@ -266,7 +259,6 @@ rules:
     - 2
     - considerPropertyDescriptor: true
   max-params: 2
-  default-param-last: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
   prefer-rest-params: 2
@@ -320,9 +312,6 @@ rules:
 
   ## RegExps
   unicorn/better-regex: 2
-  prefer-regex-literals:
-    - 2
-    - disallowRedundantWrapping: true
   require-unicode-regexp: 2
 
   ## Number
@@ -332,16 +321,12 @@ rules:
     - 2
     - as-needed
   unicorn/prefer-number-properties: 2
-  use-isnan:
-    - 2
-    - enforceForIndexOf: true
   prefer-exponentiation-operator: 2
   no-bitwise: 2
   unicorn/prefer-math-trunc: 2
 
   ## Async
   node/callback-return: 2
-  node/no-callback-literal: 2
   no-promise-executor-return: 2
   require-await: 2
   no-return-await: 2
@@ -454,8 +439,6 @@ rules:
   node/exports-style:
     - 2
     - module.exports
-  node/no-exports-assign: 2
-  no-import-assign: 2
   import/extensions:
     - 2
     - always
@@ -626,9 +609,12 @@ rules:
 #  array-bracket-spacing: 0
 #  camelcase:
 #    - 2
-#    - properties: never
+#    - allow: ['^UNSAFE_']
+#      properties: never
+#      ignoreGlobals: true
 #  constructor-super: 2
 #  default-case-last: 2
+#  default-param-last: 2
 #  dot-notation: 2
 #  eqeqeq:
 #    - 2
@@ -659,6 +645,9 @@ rules:
 #  no-dupe-class-members: 2
 #  no-dupe-keys: 2
 #  no-duplicate-case: 2
+#  no-empty:
+#    - 2
+#    - allowEmptyCatch: true
 #  no-empty-character-class: 2
 #  no-empty-pattern: 2
 #  no-eval: 2
@@ -670,6 +659,7 @@ rules:
 #  no-func-assign: 2
 #  no-global-assign: 2
 #  no-implied-eval: 2
+#  no-import-assign: 2
 #  no-invalid-regexp: 2
 #  no-irregular-whitespace: 2
 #  no-iterator: 2
@@ -732,6 +722,7 @@ rules:
 #  no-useless-escape: 2
 #  no-useless-rename: 2
 #  no-useless-return: 2
+#  no-var: 2
 #  no-void: 2
 #  no-with: 2
 #  node/handle-callback-err:
@@ -745,6 +736,9 @@ rules:
 #    - 2
 #    - destructuring: all
 #  prefer-promise-reject-errors: 2
+#  prefer-regex-literals:
+#    - 2
+#    - disallowRedundantWrapping: true
 #  quotes:
 #    - 2
 #    - single
@@ -772,6 +766,9 @@ rules:
 #        exceptions:
 #          - '*'
 #  symbol-description: 2
+#  use-isnan:
+#    - 2
+#    - enforceForIndexOf: true
 #  valid-typeof:
 #    - 2
 #    - requireStringLiterals: true
@@ -783,10 +780,11 @@ rules:
 #  import/no-absolute-path: 2
 #  import/no-duplicates: 2
 #  import/no-webpack-loader-syntax: 2
+#  node/no-callback-literal: 2
 #  node/no-deprecated-api: 2
+#  node/no-exports-assign: 2
 #  node/process-exit-as-throw: 2
 #  promise/param-names: 2
-#  standard/no-callback-literal: 2
 
 ## Might conflict with Prettier, i.e. disabled by eslint-config-prettier,
 ## but overriden by us.
@@ -874,6 +872,22 @@ rules:
 #      ignoreComments: false
 #      ignoredNodes:
 #       - TemplateLiteral *
+#       - JSXElement
+#       - JSXElement > *
+#       - JSXAttribute
+#       - JSXIdentifier
+#       - JSXNamespacedName
+#       - JSXMemberExpression
+#       - JSXSpreadAttribute
+#       - JSXExpressionContainer
+#       - JSXOpeningElement
+#       - JSXClosingElement
+#       - JSXFragment
+#       - JSXOpeningFragment
+#       - JSXClosingFragment
+#       - JSXText
+#       - JSXEmptyExpression
+#       - JSXSpreadChild
 #      offsetTernaryExpressions: true
 #  key-spacing:
 #    - 2
