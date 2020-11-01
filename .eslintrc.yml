@@ -1357,3 +1357,4 @@ overrides:
     rules:
       # Often used to signify number of iterations
       no-magic-numbers: 0
+      filenames/no-index: 0
