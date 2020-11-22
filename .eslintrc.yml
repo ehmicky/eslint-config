@@ -323,6 +323,7 @@ rules:
 
   ## Number
   unicorn/no-zero-fractions: 2
+  no-nonoctal-decimal-escape: 2
   prefer-numeric-literals: 2
   radix:
     - 2
