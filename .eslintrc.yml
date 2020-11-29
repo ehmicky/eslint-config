@@ -171,6 +171,13 @@ rules:
   no-param-reassign:
     - 2
     - props: true
+      ignorePropertyModificationsFor:
+        - process
+        - error
+        - req
+        - request
+        - res
+        - response
   fp/no-mutation:
     - 2
     - commonjs: true
