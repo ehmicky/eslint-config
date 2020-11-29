@@ -338,7 +338,6 @@ rules:
   node/callback-return: 2
   no-promise-executor-return: 2
   require-await: 2
-  no-return-await: 2
   no-await-in-loop: 2
   require-atomic-updates: 2
   no-sync: 2
@@ -1134,6 +1133,11 @@ rules:
 ## This is not useful at the moment
 
 #  unicorn/string-content: 2
+
+## This rule produces bad stack straces
+## See https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/returningpromises.md
+
+#  no-return-await: 2
 
 ## This rule should be turned on in the future
 
