@@ -273,6 +273,10 @@ rules:
   func-name-matching:
     - 2
     - considerPropertyDescriptor: true
+  prefer-arrow-callback:
+    - 2
+    - allowNamedFunctions: true
+  arrow-body-style: 2
   max-params: 2
   default-param-last: 2
   prefer-spread: 2
@@ -1002,7 +1006,6 @@ rules:
 #    - 2
 #    - consistent
 #  array-element-newline: 2
-#  arrow-body-style: 2
 #  arrow-parens:
 #    - 2
 #    - as-needed
@@ -1019,9 +1022,6 @@ rules:
 #  no-extra-semi: 2
 #  nonblock-statement-body-position: 2
 #  one-var-declaration-per-line: 2
-#  prefer-arrow-callback:
-#    - 2
-#    - allowNamedFunctions: true
 #  semi-style: 2
 #  switch-colon-spacing: 2
 #  wrap-regex: 2
