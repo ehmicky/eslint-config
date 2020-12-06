@@ -295,6 +295,9 @@ rules:
   object-shorthand: 2
   prefer-destructuring: 2
   unicorn/no-object-as-default-parameter: 2
+  no-unsafe-optional-chaining:
+    - 2
+    - disallowArithmeticOperators: true
 
   ## Inheritance
   no-constructor-return: 2
