@@ -95,6 +95,9 @@ rules:
     - 2
     - all
 
+  ## Spaces
+  unicorn/empty-brace-spaces: 2
+
   ## Complexity
   max-len:
     - 2
@@ -225,7 +228,7 @@ rules:
   no-unsafe-negation:
     - 2
     - enforceForOrderingRelations: true
-  unicorn/no-array-instanceof: 2
+  unicorn/no-instanceof-array: 2
   no-negated-condition: 2
   no-dupe-else-if: 2
   no-nested-ternary: 2
@@ -233,6 +236,7 @@ rules:
 
   ## Structures
   no-lonely-if: 2
+  unicorn/no-lonely-if: 2
   no-else-return:
     - 2
     - allowElseIf: false
@@ -279,6 +283,7 @@ rules:
   arrow-body-style: 2
   max-params: 2
   default-param-last: 2
+  unicorn/prefer-default-parameters: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
   prefer-rest-params: 2
@@ -320,13 +325,14 @@ rules:
   unicorn/prefer-includes: 2
   unicorn/prefer-negative-index: 2
   unicorn/prefer-array-find: 2
+  unicorn/prefer-array-some: 2
   unicorn/prefer-set-has: 2
 
   ## String
   no-useless-concat: 2
   prefer-template: 2
-  unicorn/prefer-starts-ends-with: 2
-  unicorn/prefer-trim-start-end: 2
+  unicorn/prefer-string-starts-ends-with: 2
+  unicorn/prefer-string-trim-start-end: 2
   unicorn/prefer-string-slice: 2
   unicorn/no-hex-escape: 2
   unicorn/escape-case: 2
@@ -564,11 +570,11 @@ rules:
 
   ## DOM
   unicorn/prefer-query-selector: 2
-  unicorn/prefer-node-append: 2
-  unicorn/prefer-node-remove: 2
-  unicorn/prefer-text-content: 2
-  unicorn/prefer-event-key: 2
-  unicorn/prefer-dataset: 2
+  unicorn/prefer-dom-node-append: 2
+  unicorn/prefer-dom-node-remove: 2
+  unicorn/prefer-dom-node-text-content: 2
+  unicorn/prefer-keyboard-event-key: 2
+  unicorn/prefer-dom-node-dataset: 2
   unicorn/prefer-modern-dom-apis: 2
 
   # AVA
@@ -1054,7 +1060,7 @@ rules:
 
 ## Array.reduce() is sometimes useful in stateful logic
 
-#  unicorn/no-reduce: 2
+#  unicorn/no-array-reduce: 2
 
 ## This makes RegExps more verbose
 
@@ -1092,7 +1098,7 @@ rules:
 ## We allow [].concat() instead because Array.flatMap() currently requires
 ## core-js for Node <11
 
-#  unicorn/prefer-flat-map: 2
+#  unicorn/prefer-array-flat-map: 2
 
 ## We sort object keys by type, not by name
 
@@ -1130,11 +1136,11 @@ rules:
 
 ## Requires Node 15.0.0
 
-#  unicorn/prefer-replace-all: 2
+#  unicorn/prefer-string-replace-all: 2
 
 ## This rule encourages creating functions where it is not needed
 
-#  unicorn/no-fn-reference-in-iterator: 2
+#  unicorn/no-array-callback-reference: 2
 
 ## It conflicts with `prefer-destructuring` rule
 
