@@ -95,9 +95,6 @@ rules:
     - 2
     - all
 
-  ## Spaces
-  unicorn/empty-brace-spaces: 2
-
   ## Complexity
   max-len:
     - 2
@@ -1031,6 +1028,7 @@ rules:
 #  semi-style: 2
 #  switch-colon-spacing: 2
 #  wrap-regex: 2
+#  unicorn/empty-brace-spaces: 2
 #  unicorn/number-literal-case: 2
 
 ## The only difference from pure functional programming is that we
