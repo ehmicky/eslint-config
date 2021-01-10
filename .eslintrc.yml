@@ -300,6 +300,7 @@ rules:
   ## Objects
   object-shorthand: 2
   prefer-destructuring: 2
+  unicorn/consistent-destructuring: 2
   unicorn/no-object-as-default-parameter: 2
   no-unsafe-optional-chaining:
     - 2
@@ -323,7 +324,9 @@ rules:
   unicorn/prefer-negative-index: 2
   unicorn/prefer-array-find: 2
   unicorn/prefer-array-some: 2
+  unicorn/prefer-array-index-of: 2
   unicorn/prefer-set-has: 2
+  unicorn/no-new-array: 2
 
   ## String
   no-useless-concat: 2
@@ -338,6 +341,7 @@ rules:
   ## RegExps
   unicorn/better-regex: 2
   require-unicode-regexp: 2
+  unicorn/prefer-regexp-test: 2
 
   ## Number
   unicorn/no-zero-fractions: 2
