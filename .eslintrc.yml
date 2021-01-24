@@ -311,6 +311,7 @@ rules:
   no-invalid-this: 2
   class-methods-use-this: 2
   consistent-this: 2
+  unicorn/no-this-assignment: 2
   max-classes-per-file: 0
   fp/no-class: 2
   fp/no-this: 2
@@ -325,8 +326,9 @@ rules:
   unicorn/prefer-array-find: 2
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
-  unicorn/prefer-set-has: 2
+  unicorn/no-array-push-push: 2
   unicorn/no-new-array: 2
+  unicorn/prefer-set-has: 2
 
   ## String
   no-useless-concat: 2
@@ -1101,6 +1103,10 @@ rules:
 ## core-js for Node <11
 
 #  unicorn/prefer-array-flat-map: 2
+
+## Conflict with eslint-plugin-fp
+
+#  unicorn/no-array-for-each: 2
 
 ## We sort object keys by type, not by name
 
