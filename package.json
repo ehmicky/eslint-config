@@ -63,7 +63,6 @@
     "eslint-plugin-unicorn": "^28.0.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "execa": "^5.0.0",
-    "husky": "^4.3.8",
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
