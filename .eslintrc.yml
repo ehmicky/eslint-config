@@ -485,11 +485,12 @@ rules:
   import/no-cycle:
     - 2
     - commonjs: true
-  import/no-extraneous-dependencies:
+  node/no-extraneous-require:
     - 2
-    - devDependencies: [test/**, gulp/**, benchmarks/**, gulpfile.js]
-  node/no-extraneous-require: 2
-  node/no-extraneous-import: 2
+    - allowModules: [ava]
+  node/no-extraneous-import:
+    - 2
+    - allowModules: [ava]
   sort-imports:
     - 2
     - ignoreMemberSort: true
@@ -1056,6 +1057,12 @@ rules:
 ## This does not work with the way we import files
 
 #  import/no-internal-modules: 2
+
+## This does not allow excluding peerDependencies, so we only use node/no-extraneous-import
+
+# import/no-extraneous-dependencies:
+#   - 2
+#   - devDependencies: [test/**, gulp/**, benchmarks/**, gulpfile.js]
 
 ## This is too restrictive
 
