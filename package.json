@@ -45,7 +45,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.79",
+    "@ehmicky/dev-tasks": "^0.31.80",
     "core-js": "^3.8.1",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
