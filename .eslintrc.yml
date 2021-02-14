@@ -1237,8 +1237,33 @@ settings:
       extensions: [.js, .json, .node, .yml, .yaml]
 
 overrides:
+  # Markdown files
+  - files: ['**/*.md']
+    processor: 'markdown/markdown'
+
+  - files: ['**/*.md/*.js']
+    # `use strict` is too verbose in documentation
+    parserOptions:
+      ecmaFeatures:
+        impliedStrict: true
+    rules:
+      # We want to keep Markdown code examples short
+      strict: 0
+      import/newline-after-import: 0
+
+      # Markdown filenames do not match code examples
+      camelcase: 0
+      filenames/match-exported: 0
+      filenames/match-regex: 0
+      unicorn/filename-case: 0
+
+      # Documentation code often misses context lines, leading to variables
+      # looking unused or undefined
+      no-undef: 0
+      no-unused-vars: 0
+
   # Examples and documentation files
-  - files: ['*.md', '**/*.md', examples/**/*.js]
+  - files: ['**/*.md/*.js', examples/**/*.js]
     # Most Node.js users still use CommonJS, so we document it as such
     parserOptions:
       sourceType: script
@@ -1278,27 +1303,6 @@ overrides:
 
       # Too verbose for documentation
       strict: 0
-
-  # Markdown files
-  - files: ['*.md', '**/*.md']
-    # `use strict` is too verbose in documentation
-    parserOptions:
-      ecmaFeatures:
-        impliedStrict: true
-    rules:
-      # We want to keep Markdown code examples short
-      strict: 0
-      import/newline-after-import: 0
-
-      # Markdown filenames do not match code examples
-      camelcase: 0
-      filenames/match-exported: 0
-      unicorn/filename-case: 0
-
-      # Documentation code often misses context lines, leading to variables
-      # looking unused or undefined
-      no-undef: 0
-      no-unused-vars: 0
 
   # Examples files
   - files: [examples/**/*.js]
