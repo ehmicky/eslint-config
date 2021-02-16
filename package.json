@@ -44,10 +44,8 @@
     "lib": "src",
     "test": "test"
   },
-  "dependencies": {},
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.31.79",
-    "ava": "^3.15.0",
     "core-js": "^3.8.1",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
@@ -65,7 +63,6 @@
     "eslint-plugin-unicorn": "^28.0.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "execa": "^5.0.0",
-    "gulp": "^4.0.2",
     "husky": "^4.3.8",
     "prettier": "^2.2.1"
   },
