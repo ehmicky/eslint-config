@@ -4,7 +4,6 @@ extends:
   - plugin:you-dont-need-lodash-underscore/all
   ## The rules disabled by eslint-config-prettier are shown as comments below
   - prettier
-  - prettier/standard
 
 parserOptions:
   sourceType: module
