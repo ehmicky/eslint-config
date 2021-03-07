@@ -325,7 +325,6 @@ rules:
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
   unicorn/no-array-push-push: 2
-  unicorn/no-new-array: 2
   unicorn/prefer-set-has: 2
 
   ## String
@@ -1199,6 +1198,10 @@ rules:
 #       # This is too common
 #       prop: false
 #       props: false
+
+## `Array.from()` is slower than `new Array()` followed by a `for` loop
+
+#  unicorn/no-new-array: 2
 
 ## This rule is too cumbersome:
 
