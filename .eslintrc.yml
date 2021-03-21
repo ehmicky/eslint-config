@@ -310,6 +310,7 @@ rules:
   class-methods-use-this: 2
   consistent-this: 2
   unicorn/no-this-assignment: 2
+  unicorn/no-static-only-class: 2
   max-classes-per-file: 0
   fp/no-class: 2
   fp/no-this: 2
@@ -1103,10 +1104,11 @@ rules:
 #  import/default: 0
 #  unicorn/import-index: 0
 
-## We allow [].concat() instead because Array.flatMap() currently requires
+## We allow [].concat() instead because Array.flat[Map]() currently requires
 ## core-js for Node <11
 
 #  unicorn/prefer-array-flat-map: 2
+#  unicorn/prefer-array-flat: 2
 
 ## Conflict with eslint-plugin-fp
 
