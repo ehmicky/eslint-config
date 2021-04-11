@@ -213,7 +213,9 @@ rules:
       allow: [_id]
 
   ## Typecasting
-  no-implicit-coercion: 2
+  no-implicit-coercion:
+    - 2
+    - disallowTemplateShorthand: true
   unicorn/explicit-length-check:
     - 2
     - non-zero: not-equal
