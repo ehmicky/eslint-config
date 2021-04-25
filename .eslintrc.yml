@@ -1186,6 +1186,12 @@ rules:
 ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
 ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
 
+## TODO: enable once dropping support for Node `<12.20.0`
+#  unicorn/prefer-node-protocol: 2
+
+## TODO: enable once dropping support for Node `<12`
+#  unicorn/prefer-module: 2
+
 #  unicorn/prevent-abbreviations:
 #   - 2
 #   - checkDefaultAndNamespaceImports: true
