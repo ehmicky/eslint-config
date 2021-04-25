@@ -252,6 +252,7 @@ rules:
       message:
         The comma operator is confusing and a common mistake. Don’t use it!
   default-case: 2
+  unicorn/prefer-switch: 2
 
   ## Labels
   no-unused-labels: 2
