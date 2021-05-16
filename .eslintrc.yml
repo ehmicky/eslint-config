@@ -479,6 +479,7 @@ rules:
   import/no-useless-path-segments:
     - 2
     - commonjs: true
+  import/no-relative-packages: 2
   no-duplicate-imports:
     - 2
     - includeExports: true
@@ -503,12 +504,14 @@ rules:
       alphabetize:
         order: asc
         caseInsensitive: true
+      warnOnUnassignedImports: true
   import/newline-after-import: 2
   import/unambiguous: 2
   node/global-require: 2
   import/no-dynamic-require: 2
   import/no-commonjs: 2
   import/no-amd: 2
+  import/no-import-module-exports: 2
   import/no-deprecated: 2
 
   ## Filenames
