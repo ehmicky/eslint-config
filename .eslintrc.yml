@@ -511,7 +511,6 @@ rules:
   import/no-dynamic-require: 2
   import/no-commonjs: 2
   import/no-amd: 2
-  import/no-import-module-exports: 2
   import/no-deprecated: 2
 
   ## Filenames
@@ -1061,6 +1060,10 @@ rules:
 ## This does not work with the way we import files
 
 #  import/no-internal-modules: 2
+
+## Enable this when dropping CommonJS exports (Node >=12.20.0)
+
+# import/no-import-module-exports: 2
 
 ## This does not allow excluding peerDependencies, so we only use node/no-extraneous-import
 
