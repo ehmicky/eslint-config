@@ -513,9 +513,10 @@ rules:
   node/global-require: 2
   import/no-dynamic-require: 2
   import/no-commonjs: 2
-  unicorn/prefer-module: 2
   import/no-amd: 2
-  unicorn/prefer-node-protocol: 2
+  ## TODO: enable after using ES modules
+  # unicorn/prefer-module: 2
+  # unicorn/prefer-node-protocol: 2
   import/no-deprecated: 2
 
   ## Filenames
