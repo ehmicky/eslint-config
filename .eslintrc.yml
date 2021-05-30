@@ -325,6 +325,8 @@ rules:
     - allowImplicit: true
       checkForEach: true
   unicorn/prefer-includes: 2
+  unicorn/prefer-array-flat-map: 2
+  unicorn/prefer-array-flat: 2
   unicorn/prefer-negative-index: 2
   unicorn/prefer-array-find: 2
   unicorn/prefer-array-some: 2
@@ -1113,12 +1115,6 @@ rules:
 #  import/exports-last: 0
 #  import/default: 0
 #  unicorn/import-index: 0
-
-## We allow [].concat() instead because Array.flat[Map]() currently requires
-## core-js for Node <11
-
-#  unicorn/prefer-array-flat-map: 2
-#  unicorn/prefer-array-flat: 2
 
 ## Conflict with eslint-plugin-fp
 
