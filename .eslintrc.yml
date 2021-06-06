@@ -179,7 +179,8 @@ rules:
         - response
   fp/no-mutation:
     - 2
-    - exceptions:
+    - commonjs: true
+      exceptions:
         - object: process
           property: exitCode
         - object: error
@@ -406,7 +407,7 @@ rules:
   #     # imported only in tests.
   #     # We use `README.md` as a catch-all for repositories without a `src`.
   #     src:
-  #       - '{README.md,src/**/*.js,ava.config.js,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js}'
+  #       - '{README.md,src/**/*.js,ava.config.cjs,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js}'
   #     # Excludes:
   #     #   - documentation/examples/benchmarks might not export anything
   #     #   - tests and register files are side-effects-only, i.e. do not
@@ -415,7 +416,7 @@ rules:
   #     #     so this rule cannot be used between them
   #     #   - entry points
   #     ignoreExports:
-  #       - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
+  #       - '{ava.config.cjs,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,register/**/*.js,gulp/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
   import/named: 2
   import/namespace:
     - 2
@@ -512,10 +513,10 @@ rules:
   import/no-dynamic-require: 2
   import/no-commonjs: 2
   import/no-amd: 2
+  unicorn/prefer-module: 2
+  import/no-import-module-exports: 2
   ## TODO: enable after using ES modules
-  # unicorn/prefer-module: 2
   # unicorn/prefer-node-protocol: 2
-  # import/no-import-module-exports: 2
   import/no-deprecated: 2
 
   ## Filenames
@@ -1367,8 +1368,8 @@ overrides:
               - '!../../../../../src/main.js'
             message: Only ../src/main.js should be imported in tests
 
-  # ava.config.js requires a default export
-  - files: [ava.config.js]
+  # ava.config.cjs requires a default export
+  - files: [ava.config.cjs]
     rules:
       filenames/match-exported: 0
       import/no-extraneous-dependencies: 0
