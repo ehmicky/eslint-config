@@ -4,6 +4,7 @@
   "type": "module",
   "exports": "./.prettierrc.cjs",
   "files": [
+    ".prettierrc.cjs",
     ".eslintrc.yml",
     ".editorconfig"
   ],
