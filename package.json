@@ -2,7 +2,7 @@
   "name": "@ehmicky/eslint-config",
   "version": "16.0.0",
   "type": "module",
-  "exports": "./.prettierrc.js",
+  "exports": "./.prettierrc.cjs",
   "files": [
     ".eslintrc.yml",
     ".editorconfig"
