@@ -1,7 +1,8 @@
 {
   "name": "@ehmicky/eslint-config",
   "version": "15.10.107",
-  "main": ".prettierrc.js",
+  "type": "module",
+  "exports": "./.prettierrc.js",
   "files": [
     ".eslintrc.yml",
     ".editorconfig"

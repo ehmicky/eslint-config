@@ -1,3 +1,1 @@
-'use strict'
-
-module.exports = require('@ehmicky/dev-tasks')
+export * from '@ehmicky/dev-tasks'
