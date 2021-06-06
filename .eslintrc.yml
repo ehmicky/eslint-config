@@ -351,6 +351,7 @@ rules:
 
   ## Number
   unicorn/no-zero-fractions: 2
+  unicorn/numeric-separators-style: 2
   no-nonoctal-decimal-escape: 2
   prefer-numeric-literals: 2
   radix:
@@ -368,6 +369,8 @@ rules:
   no-await-in-loop: 2
   require-atomic-updates: 2
   no-sync: 2
+  node/prefer-promises/fs: 2
+  node/prefer-promises/dns: 2
   promise/catch-or-return: 2
   promise/always-return: 2
   promise/valid-params: 2
@@ -517,6 +520,7 @@ rules:
   ## TODO: enable after using ES modules
   # unicorn/prefer-module: 2
   # unicorn/prefer-node-protocol: 2
+  # import/no-import-module-exports: 2
   import/no-deprecated: 2
 
   ## Filenames
@@ -1067,10 +1071,6 @@ rules:
 
 #  import/no-internal-modules: 2
 
-## Enable this when dropping CommonJS exports (Node >=12.20.0)
-
-# import/no-import-module-exports: 2
-
 ## This does not allow excluding peerDependencies, so we only use node/no-extraneous-import
 
 # import/no-extraneous-dependencies:
@@ -1089,11 +1089,6 @@ rules:
 ## This makes RegExps more verbose
 
 #  prefer-named-capture-group: 2
-
-## Not supported by Node <11.4.0, and no polyfill available
-
-#  node/prefer-promises/fs: 2
-#  node/prefer-promises/dns: 2
 
 ## The no-nested-ternary ESLint rule is stricter/better
 
@@ -1152,10 +1147,6 @@ rules:
 ## We want to allow Promise.all() and Promise.race()
 
 #  promise/no-native: 2
-
-## Requires Node 12
-
-#  unicorn/numeric-separators-style: 2
 
 ## Requires Node 15.0.0
 
