@@ -1,6 +1,6 @@
 {
   "name": "@ehmicky/eslint-config",
-  "version": "15.10.107",
+  "version": "16.0.0",
   "type": "module",
   "exports": "./.prettierrc.js",
   "files": [
