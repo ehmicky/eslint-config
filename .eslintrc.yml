@@ -179,8 +179,7 @@ rules:
         - response
   fp/no-mutation:
     - 2
-    - commonjs: true
-      exceptions:
+    - exceptions:
         - object: process
           property: exitCode
         - object: error
@@ -387,9 +386,7 @@ rules:
   promise/prefer-await-to-callbacks: 2
 
   ## Modules
-  import/no-unresolved:
-    - 2
-    - commonjs: true
+  import/no-unresolved: 2
   node/no-missing-require: 2
   node/no-unpublished-require: 2
   node/no-missing-import: 2
@@ -484,17 +481,13 @@ rules:
     - always
     - ignorePackages: true
   node/file-extension-in-import: 2
-  import/no-useless-path-segments:
-    - 2
-    - commonjs: true
+  import/no-useless-path-segments: 2
   import/no-relative-packages: 2
   no-duplicate-imports:
     - 2
     - includeExports: true
   import/no-self-import: 2
-  import/no-cycle:
-    - 2
-    - commonjs: true
+  import/no-cycle: 2
   node/no-extraneous-require:
     - 2
     - allowModules: [ava]
@@ -1385,10 +1378,6 @@ overrides:
   # Main entry point
   - files: [src/main.js]
     rules:
-      # We do not use `export default` because Babel transpiles it in a way that
-      # requires CommonJS users to `require(...).default` instead of
-      # `require(...)`.
-      import/no-commonjs: 0
       filenames/match-exported: 0
 
   # CLI
