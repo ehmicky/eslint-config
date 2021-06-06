@@ -1,13 +1,13 @@
-import { normalize } from 'path'
+import { fileURLToPath } from 'url'
 
 import test from 'ava'
 import execa from 'execa'
 
-const ESLINT_CONFIG = normalize(
-  new URL('../../.eslintrc.yml', import.meta.url).pathname,
+const ESLINT_CONFIG = fileURLToPath(
+  new URL('../../.eslintrc.yml', import.meta.url),
 )
-const TEST_FILE = normalize(
-  new URL('../../test/helpers/valid.js', import.meta.url).pathname,
+const TEST_FILE = fileURLToPath(
+  new URL('../../test/helpers/valid.js', import.meta.url),
 )
 
 test('Smoke test', async (t) => {
