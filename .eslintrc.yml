@@ -1286,12 +1286,7 @@ overrides:
 
   # Examples and documentation files
   - files: ['**/*.md/*.js', examples/**/*.js]
-    # Most Node.js users still use CommonJS, so we document it as such
-    parserOptions:
-      sourceType: script
     rules:
-      import/no-commonjs: 0
-
       # Examples print their output at the end of the file
       # It might happen in documentation as well
       no-console: 0
@@ -1386,13 +1381,6 @@ overrides:
       import/no-extraneous-dependencies: 0
       import/no-anonymous-default-export: 0
       import/no-default-export: 0
-
-  # Gulpfile
-  - files: [gulpfile.js]
-    parserOptions:
-      sourceType: script
-    rules:
-      import/no-commonjs: 0
 
   # Main entry point
   - files: [src/main.js]
