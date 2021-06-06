@@ -2,7 +2,10 @@
   "name": "@ehmicky/eslint-config",
   "version": "16.0.2",
   "type": "module",
-  "exports": "./.prettierrc.cjs",
+  "exports": {
+    ".": "./.prettierrc.cjs",
+    "./.eslintrc.yml": "./.eslintrc.yml"
+  },
   "files": [
     ".prettierrc.cjs",
     ".eslintrc.yml",
