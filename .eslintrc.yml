@@ -1318,8 +1318,6 @@ overrides:
   # Examples files
   - files: [examples/**/*.js]
     rules:
-      # We import `util.js` in examples, which monkey patches `require()`
-      import/no-unassigned-import: 0
       # We allow asserts as they are simple in examples
       no-restricted-imports:
         - 2
