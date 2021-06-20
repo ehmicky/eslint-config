@@ -1260,10 +1260,10 @@ rules:
 settings:
   # JSON files in `build` are compiled from YAML in `src` and `test`
   node:
-    tryExtensions: [.js, .json, .node, .yml, .yaml]
+    tryExtensions: [.js, .cjs, .mjs, .json, .node, .yml, .yaml]
   import/resolver:
     node:
-      extensions: [.js, .json, .node, .yml, .yaml]
+      extensions: [.js, .cjs, .mjs, .json, .node, .yml, .yaml]
 
 overrides:
   # CommonJS files
