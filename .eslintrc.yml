@@ -189,7 +189,9 @@ rules:
         - object: res
         - object: response
   fp/no-delete: 2
-  import/no-unassigned-import: 2
+  import/no-unassigned-import:
+    - 2
+    - allow: ['@ehmicky/dev-tasks/register.js']
   fp/no-mutating-assign: 2
   fp/no-mutating-methods:
     - 2
