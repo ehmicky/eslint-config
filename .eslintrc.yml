@@ -1382,6 +1382,7 @@ overrides:
   - files: [src/main.js]
     rules:
       filenames/match-exported: 0
+      import/no-default-export: 0
 
   # CLI
   - files: [src/bin/**/*.js, src/bin.js]
