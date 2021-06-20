@@ -50,7 +50,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.17",
+    "@ehmicky/dev-tasks": "^1.0.18",
     "core-js": "^3.10.0",
     "execa": "^5.1.1"
   },
