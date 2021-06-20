@@ -1351,6 +1351,9 @@ overrides:
       no-empty-function: 0
       no-empty: 0
 
+      # Filenames do not always match in documentation
+      filenames/match-exported: 0
+
   # Examples files
   - files: [examples/**/*.js]
     rules:
