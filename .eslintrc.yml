@@ -1376,6 +1376,7 @@ overrides:
         - 2
         - 2
       max-lines-per-function: 0
+
       # Enforce integration testing
       no-restricted-imports:
         - 2
@@ -1404,10 +1405,15 @@ overrides:
               - '!../../../src/main.js'
               - '!../../../../../src/main.js'
             message: Only ../src/main.js should be imported in tests
+
       # Self imports
       import/no-unresolved: 0
       node/no-missing-import: 0
       node/no-extraneous-import: 0
+
+      # Empty functions can be useful in tests
+      no-empty: 0
+      no-empty-function: 0
 
   # Test fixtures
   - files: [test/helpers/fixtures/**/*.js]
