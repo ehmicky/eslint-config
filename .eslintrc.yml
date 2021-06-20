@@ -1391,6 +1391,7 @@ overrides:
     rules:
       import/no-unresolved: 0
       node/no-missing-import: 0
+      node/no-extraneous-import: 0
 
   # Main entry point
   - files: [src/main.js]
