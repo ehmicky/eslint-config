@@ -515,8 +515,7 @@ rules:
   import/no-amd: 2
   unicorn/prefer-module: 2
   import/no-import-module-exports: 2
-  ## TODO: enable after using ES modules
-  # unicorn/prefer-node-protocol: 2
+  unicorn/prefer-node-protocol: 2
   import/no-deprecated: 2
 
   ## Filenames
