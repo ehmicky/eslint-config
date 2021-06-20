@@ -1333,6 +1333,10 @@ overrides:
       # Too verbose for documentation
       strict: 0
 
+      # Fixture files are sometimes executed by a CLI without exporting nor
+      # importing anything
+      import/unambiguous: 0
+
   # Examples files
   - files: [examples/**/*.js]
     rules:
@@ -1387,6 +1391,13 @@ overrides:
       import/no-unresolved: 0
       node/no-missing-import: 0
       node/no-extraneous-import: 0
+
+  # Test fixtures
+  - files: [test/helpers/fixtures/**/*.js]
+    rules:
+      # Fixture files are sometimes executed by a CLI without exporting nor
+      # importing anything
+      import/unambiguous: 0
 
   # ava.config.cjs requires a default export
   - files: [ava.config.cjs]
