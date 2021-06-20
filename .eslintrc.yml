@@ -1378,6 +1378,12 @@ overrides:
       import/no-anonymous-default-export: 0
       import/no-default-export: 0
 
+  # Gulpfile
+  - files: [gulpfile.js]
+    rules:
+      import/no-unresolved: 0
+      node/no-missing-import: 0
+
   # Main entry point
   - files: [src/main.js]
     rules:
