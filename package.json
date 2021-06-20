@@ -6,6 +6,7 @@
     ".": "./.prettierrc.cjs",
     "./.eslintrc.yml": "./.eslintrc.yml"
   },
+  "main": "./.prettierrc.cjs",
   "files": [
     ".prettierrc.cjs",
     ".eslintrc.yml",
