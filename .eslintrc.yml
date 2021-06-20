@@ -1266,6 +1266,13 @@ settings:
       extensions: [.js, .json, .node, .yml, .yaml]
 
 overrides:
+  # CommonJS files
+  - files: ['**/*.cjs']
+    rules:
+      import/no-commonjs: 0
+      unicorn/prefer-module: 0
+      import/unambiguous: 0
+
   # Markdown files
   - files: ['**/*.md']
     processor: 'markdown/markdown'
