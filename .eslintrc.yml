@@ -191,7 +191,17 @@ rules:
   fp/no-delete: 2
   import/no-unassigned-import: 2
   fp/no-mutating-assign: 2
-  fp/no-mutating-methods: 2
+  fp/no-mutating-methods:
+    - 2
+    - allowedObjects:
+        - process
+        - error
+        - req
+        - request
+        - res
+        - response
+        # gulp.watch() is flagged as mutable otherwise
+        - gulp
 
   ## Naming
   id-length:
