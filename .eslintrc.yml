@@ -1369,6 +1369,9 @@ overrides:
               - '!../../../src/main.js'
               - '!../../../../../src/main.js'
             message: Only ../src/main.js should be imported in tests
+      # Self imports
+      import/no-unresolved: 0
+      node/no-missing-import: 0
 
   # ava.config.cjs requires a default export
   - files: [ava.config.cjs]
@@ -1411,3 +1414,7 @@ overrides:
       # Often used to signify number of iterations
       no-magic-numbers: 0
       filenames/no-index: 0
+
+      # Self imports
+      import/no-unresolved: 0
+      node/no-missing-import: 0
