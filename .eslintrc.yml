@@ -1301,7 +1301,12 @@ overrides:
       import/no-extraneous-dependencies: 0
       node/no-missing-require: 0
       node/no-extraneous-require: 0
+      node/no-extraneous-import: 0
       node/no-unpublished-require: 0
+      node/no-missing-import: 0
+
+      # Examples sometimes use default exports
+      import/no-default-export: 0
 
       # Using those globals is simpler in documentation
       node/prefer-global/buffer: 0
