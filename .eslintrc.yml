@@ -1376,6 +1376,7 @@ overrides:
       # Self imports
       import/no-unresolved: 0
       node/no-missing-import: 0
+      node/no-extraneous-import: 0
 
   # ava.config.cjs requires a default export
   - files: [ava.config.cjs]
