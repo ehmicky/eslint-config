@@ -1328,6 +1328,7 @@ overrides:
 
       # Examples sometimes use default exports
       import/no-default-export: 0
+      import/no-anonymous-default-export: 0
 
       # Using those globals is simpler in documentation
       node/prefer-global/buffer: 0
@@ -1343,6 +1344,10 @@ overrides:
       # Fixture files are sometimes executed by a CLI without exporting nor
       # importing anything
       import/unambiguous: 0
+
+      # Sometimes useful in documentation
+      no-empty-function: 0
+      no-empty: 0
 
   # Examples files
   - files: [examples/**/*.js]
