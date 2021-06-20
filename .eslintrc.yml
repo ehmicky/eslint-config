@@ -387,10 +387,14 @@ rules:
   promise/prefer-await-to-callbacks: 2
 
   ## Modules
-  import/no-unresolved: 2
+  import/no-unresolved:
+    - 2
+    - ignore: ['@ehmicky/eslint-config']
   node/no-missing-require: 2
   node/no-unpublished-require: 2
-  node/no-missing-import: 2
+  node/no-missing-import:
+    - 2
+    - allowModules: ['@ehmicky/eslint-config']
   node/no-unpublished-import: 2
   # TODO: there are two bugs that make this rule hard to work with at the moment
   #  - https://github.com/microsoft/vscode-eslint/issues/717
