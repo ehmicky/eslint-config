@@ -316,6 +316,7 @@ rules:
   unicorn/no-this-assignment: 2
   unicorn/no-static-only-class: 2
   max-classes-per-file: 0
+  unicorn/prefer-prototype-methods: 2
   fp/no-class: 2
   fp/no-this: 2
 
@@ -1222,11 +1223,6 @@ rules:
 ## Rules for client-side code only
 
 #  import/no-nodejs-modules: 2
-
-## Enable once https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1343
-## is fixed
-
-#  unicorn/prefer-prototype-methods: 2
 
 ## React
 
