@@ -14,11 +14,6 @@
   "scripts": {
     "test": "gulp test"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "gulp -LL check --full"
-    }
-  },
   "description": "ESLint configuration for my own projects",
   "keywords": [
     "eslint",
