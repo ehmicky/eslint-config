@@ -330,6 +330,7 @@ rules:
   max-classes-per-file: 0
   fp/no-class: 2
   fp/no-this: 2
+  unicorn/no-array-method-this-argument: 2
 
   ## Arrays
   array-callback-return:
@@ -382,6 +383,7 @@ rules:
   require-await: 2
   no-await-in-loop: 2
   require-atomic-updates: 2
+  unicorn/prefer-top-level-await: 2
   no-sync: 2
   node/prefer-promises/fs: 2
   node/prefer-promises/dns: 2
@@ -602,6 +604,7 @@ rules:
   unicorn/prefer-dom-node-dataset: 2
   unicorn/prefer-modern-dom-apis: 2
   unicorn/no-document-cookie: 2
+  unicorn/require-post-message-target-origin: 2
 
   # AVA
   ava/no-unknown-modifiers: 2
@@ -1160,6 +1163,10 @@ rules:
 
 #  unicorn/prefer-string-replace-all: 2
 
+## `Array.at()` is not possible in Node.js yet
+
+#  unicorn/prefer-at: 2
+
 ## This rule encourages creating functions where it is not needed
 
 #  unicorn/no-array-callback-reference: 2
@@ -1272,7 +1279,6 @@ overrides:
   - files: ['**/*.cjs']
     rules:
       import/no-commonjs: 0
-      unicorn/prefer-module: 0
       import/unambiguous: 0
 
   # Markdown files
