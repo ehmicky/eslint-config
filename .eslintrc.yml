@@ -299,6 +299,7 @@ rules:
   unicorn/prefer-default-parameters: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
+  unicorn/no-useless-spread: 2
   prefer-rest-params: 2
   fp/no-arguments: 2
   require-yield: 2
@@ -321,6 +322,7 @@ rules:
   no-unsafe-optional-chaining:
     - 2
     - disallowArithmeticOperators: true
+  unicorn/prefer-object-from-entries: 2
 
   ## Inheritance
   no-constructor-return: 2
@@ -346,6 +348,7 @@ rules:
   unicorn/prefer-array-find: 2
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
+  unicorn/no-useless-length-check: 2
   unicorn/no-array-push-push: 2
   unicorn/prefer-set-has: 2
   unicorn/require-array-join-separator: 2
