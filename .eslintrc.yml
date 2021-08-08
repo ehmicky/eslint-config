@@ -324,7 +324,6 @@ rules:
   no-unsafe-optional-chaining:
     - 2
     - disallowArithmeticOperators: true
-  unicorn/prefer-object-from-entries: 2
 
   ## Inheritance
   no-constructor-return: 2
@@ -1109,6 +1108,7 @@ rules:
 ## Array.reduce() is sometimes useful in stateful logic
 
 #  unicorn/no-array-reduce: 2
+#  unicorn/prefer-object-from-entries: 2
 
 ## This makes RegExps more verbose
 
