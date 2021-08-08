@@ -123,7 +123,9 @@ rules:
     - max: 2
   import/max-dependencies:
     - 2
-    - ignoreTypeImports: true
+    ## This does not seem to work at the moment
+    ## TODO: re-enable
+    # - ignoreTypeImports: true
   complexity:
     - 2
     - 4
