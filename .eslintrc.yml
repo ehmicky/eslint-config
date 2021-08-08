@@ -436,9 +436,7 @@ rules:
   #     #   - entry points
   #     ignoreExports:
   #       - '{ava.config.cjs,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
-  import/named:
-    - 2
-    - commonjs: true
+  import/named: 2
   import/default: 2
   import/namespace:
     - 2
