@@ -442,7 +442,11 @@ rules:
     - 2
     - allowComputed: true
   import/no-named-as-default: 2
-  import/no-named-as-default-member: 2
+
+  ## TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
+  ## `sinon` is using ES modules
+  # import/no-named-as-default-member: 2
+
   # All core Node.js libraries should be imported using destructuring
   unicorn/import-style:
     - 2
