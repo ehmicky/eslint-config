@@ -121,7 +121,9 @@ rules:
   max-statements-per-line:
     - 2
     - max: 2
-  import/max-dependencies: 2
+  import/max-dependencies:
+    - 2
+    - ignoreTypeImports: true
   complexity:
     - 2
     - 4
@@ -431,7 +433,9 @@ rules:
   #     #   - entry points
   #     ignoreExports:
   #       - '{ava.config.cjs,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmarks/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
-  import/named: 2
+  import/named:
+    - 2
+    - commonjs: true
   import/default: 2
   import/namespace:
     - 2
@@ -525,7 +529,9 @@ rules:
   import/newline-after-import: 2
   import/unambiguous: 2
   node/global-require: 2
-  import/no-dynamic-require: 2
+  import/no-dynamic-require:
+    - 2
+    - esmodule: true
   import/no-commonjs: 2
   import/no-amd: 2
   unicorn/prefer-module: 2
