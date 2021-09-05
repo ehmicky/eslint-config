@@ -12,7 +12,7 @@ module.exports = {
   // Same as default values
   quoteProps: 'as-needed',
   bracketSpacing: true,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   arrowParens: 'always',
   htmlWhitespaceSensitivity: 'css',
 
