@@ -46,7 +46,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.43",
+    "@ehmicky/dev-tasks": "^1.0.44",
     "execa": "^5.1.1"
   },
   "peerDependencies": {
