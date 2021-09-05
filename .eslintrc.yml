@@ -171,6 +171,7 @@ rules:
   operator-assignment: 2
   no-multi-assign: 2
   prefer-object-spread: 2
+  unicorn/no-useless-fallback-in-spread: 2
   no-param-reassign:
     - 2
     - props: true
@@ -603,6 +604,7 @@ rules:
   no-script-url: 2
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
+  unicorn/no-invalid-remove-event-listener: 2
   node/no-process-exit: 2
   unicorn/no-process-exit: 2
 
