@@ -89,6 +89,9 @@ rules:
       prev: '*'
       next: multiline-block-like
 
+  ## Indentation
+  unicorn/template-indent: 2
+
   ## Braces
   curly:
     - 2
