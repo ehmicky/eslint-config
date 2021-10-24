@@ -63,7 +63,7 @@
     "eslint-plugin-import": "^2.25.1",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-unicorn": "^37.0.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0",
     "prettier": "^2.4.1"
