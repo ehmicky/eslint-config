@@ -106,7 +106,7 @@ rules:
       ignoreStrings: true
       ignoreTemplateLiterals: true
       ignoreRegExpLiterals: true
-      ignorePattern: eslint-disable
+      ignorePattern: eslint-
   max-lines:
     - 2
     - max: 90
