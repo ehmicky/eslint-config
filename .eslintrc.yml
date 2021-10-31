@@ -448,10 +448,10 @@ rules:
     - 2
     - allowComputed: true
   import/no-named-as-default: 2
-
   ## TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
   ## `sinon` is using ES modules
   # import/no-named-as-default-member: 2
+  unicorn/prefer-export-from: 2
 
   # All core Node.js libraries should be imported using destructuring
   unicorn/import-style:
@@ -560,6 +560,7 @@ rules:
   unicorn/filename-case:
     - 2
     - case: snakeCase
+  unicorn/no-empty-file: 2
 
   ## Binary
   node/no-unpublished-bin: 2
