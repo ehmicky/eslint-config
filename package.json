@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^1.0.56",
-    "execa": "^5.1.1"
+    "execa": "^6.0.0"
   },
   "peerDependencies": {
     "eslint": "^7.32.0",
