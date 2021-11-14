@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url'
 
 import test from 'ava'
-import execa from 'execa'
+import { execa } from 'execa'
 
 const ESLINT_CONFIG = fileURLToPath(
   new URL('../../.eslintrc.yml', import.meta.url),
