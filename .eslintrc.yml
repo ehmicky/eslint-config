@@ -369,6 +369,7 @@ rules:
   unicorn/no-hex-escape: 2
   unicorn/escape-case: 2
   unicorn/no-console-spaces: 2
+  unicorn/prefer-code-point: 2
 
   ## RegExps
   unicorn/better-regex: 2
@@ -394,6 +395,7 @@ rules:
   no-promise-executor-return: 2
   require-await: 2
   no-await-in-loop: 2
+  unicorn/no-await-expression-member: 2
   require-atomic-updates: 2
   no-sync: 2
   node/prefer-promises/fs: 2
@@ -452,7 +454,9 @@ rules:
   ## TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
   ## `sinon` is using ES modules
   # import/no-named-as-default-member: 2
-  unicorn/prefer-export-from: 2
+  unicorn/prefer-export-from:
+    - 2
+    - ignoreUsedVariables: true
 
   # All core Node.js libraries should be imported using destructuring
   unicorn/import-style:
