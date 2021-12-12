@@ -1260,7 +1260,8 @@ rules:
 
 ## JavaScript feature not available in Node.js yet
 
-#  unicorn/prefer-object-has-own
+#  prefer-object-has-own: 2
+#  unicorn/prefer-object-has-own: 2
 
 ## Test titles do not follow any format
 
