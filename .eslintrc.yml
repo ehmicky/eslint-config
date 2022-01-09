@@ -370,6 +370,7 @@ rules:
   unicorn/escape-case: 2
   unicorn/no-console-spaces: 2
   unicorn/prefer-code-point: 2
+  unicorn/prefer-json-parse-buffer: 2
 
   ## RegExps
   unicorn/better-regex: 2
@@ -395,7 +396,9 @@ rules:
   no-promise-executor-return: 2
   require-await: 2
   no-await-in-loop: 2
+  unicorn/no-useless-promise-resolve-reject: 2
   unicorn/no-await-expression-member: 2
+  unicorn/no-thenable: 2
   require-atomic-updates: 2
   no-sync: 2
   node/prefer-promises/fs: 2
@@ -553,6 +556,7 @@ rules:
   unicorn/prefer-module: 2
   import/no-import-module-exports: 2
   import/no-deprecated: 2
+  unicorn/relative-url-style: 2
 
   ## Filenames
   filenames/match-regex:
@@ -1261,7 +1265,6 @@ rules:
 ## JavaScript feature not available in Node.js yet
 
 #  prefer-object-has-own: 2
-#  unicorn/prefer-object-has-own: 2
 
 ## Test titles do not follow any format
 
