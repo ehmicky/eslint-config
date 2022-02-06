@@ -35,21 +35,21 @@ plugins:
   - ava
 ## Added by standard/standard
 #  - import
-#  - node
+#  - n
 #  - promise
 
 rules:
   ## Globals
-  node/prefer-global/console: 2
-  node/prefer-global/url-search-params: 2
-  node/prefer-global/text-decoder: 2
-  node/prefer-global/text-encoder: 2
-  node/prefer-global/url: 2
+  n/prefer-global/console: 2
+  n/prefer-global/url-search-params: 2
+  n/prefer-global/text-decoder: 2
+  n/prefer-global/text-encoder: 2
+  n/prefer-global/url: 2
   ## We only use globals for globals also defined in the browser
-  node/prefer-global/buffer:
+  n/prefer-global/buffer:
     - 2
     - never
-  node/prefer-global/process:
+  n/prefer-global/process:
     - 2
     - never
 
@@ -336,8 +336,7 @@ rules:
   consistent-this: 2
   unicorn/no-this-assignment: 2
   unicorn/no-static-only-class: 2
-  # TODO: re-enable after upgrading to ESLint 8
-  # no-unused-private-class-members: 2
+  no-unused-private-class-members: 2
   max-classes-per-file: 0
   fp/no-class: 2
   fp/no-this: 2
@@ -392,7 +391,7 @@ rules:
   unicorn/require-number-to-fixed-digits-argument: 2
 
   ## Async
-  node/callback-return: 2
+  n/callback-return: 2
   no-promise-executor-return: 2
   require-await: 2
   no-await-in-loop: 2
@@ -401,8 +400,8 @@ rules:
   unicorn/no-thenable: 2
   require-atomic-updates: 2
   no-sync: 2
-  node/prefer-promises/fs: 2
-  node/prefer-promises/dns: 2
+  n/prefer-promises/fs: 2
+  n/prefer-promises/dns: 2
   promise/catch-or-return: 2
   promise/always-return: 2
   promise/valid-params: 2
@@ -420,12 +419,12 @@ rules:
   import/no-unresolved:
     - 2
     - ignore: ['@ehmicky/eslint-config']
-  node/no-missing-require: 2
-  node/no-unpublished-require: 2
-  node/no-missing-import:
+  n/no-missing-require: 2
+  n/no-unpublished-require: 2
+  n/no-missing-import:
     - 2
     - allowModules: ['@ehmicky/eslint-config']
-  node/no-unpublished-import: 2
+  n/no-unpublished-import: 2
   # TODO: there are two bugs that make this rule hard to work with at the moment
   #  - https://github.com/microsoft/vscode-eslint/issues/717
   #  - when renaming a file, an error popup shows up in VSCode
@@ -512,14 +511,14 @@ rules:
   import/no-named-default: 2
   import/no-anonymous-default-export: 2
   import/no-default-export: 2
-  node/exports-style:
+  n/exports-style:
     - 2
     - module.exports
   import/extensions:
     - 2
     - always
     - ignorePackages: true
-  node/file-extension-in-import: 2
+  n/file-extension-in-import: 2
   import/no-useless-path-segments: 2
   import/no-relative-packages: 2
   no-duplicate-imports:
@@ -527,17 +526,17 @@ rules:
     - includeExports: true
   import/no-self-import: 2
   import/no-cycle: 2
-  node/no-extraneous-require:
+  n/no-extraneous-require:
     - 2
     - allowModules: [ava]
-  node/no-extraneous-import:
+  n/no-extraneous-import:
     - 2
     - allowModules: [ava]
   sort-imports:
     - 2
     - ignoreMemberSort: true
       ignoreDeclarationSort: true
-  node/no-mixed-requires: 2
+  n/no-mixed-requires: 2
   import/order:
     - 2
     - newlines-between: always
@@ -547,7 +546,7 @@ rules:
       warnOnUnassignedImports: true
   import/newline-after-import: 2
   import/unambiguous: 2
-  node/global-require: 2
+  n/global-require: 2
   import/no-dynamic-require:
     - 2
     - esmodule: true
@@ -572,7 +571,7 @@ rules:
   unicorn/no-empty-file: 2
 
   ## Binary
-  node/no-unpublished-bin: 2
+  n/no-unpublished-bin: 2
 
   ## Denylist
   ## Avoid Node.js-specific global variables
@@ -595,11 +594,11 @@ rules:
     - paths:
         - name: assert
           message: Please throw an Error instead
-  node/no-restricted-require:
+  n/no-restricted-require:
     - 2
     - - name: assert
         message: Please throw an Error instead
-  node/no-restricted-import:
+  n/no-restricted-import:
     - 2
     - - name: assert
         message: Please throw an Error instead
@@ -614,12 +613,12 @@ rules:
   fp/no-events: 2
   no-buffer-constructor: 2
   unicorn/no-new-buffer: 2
-  node/no-process-env: 2
+  n/no-process-env: 2
   no-script-url: 2
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
   unicorn/no-invalid-remove-event-listener: 2
-  node/no-process-exit: 2
+  n/no-process-exit: 2
   unicorn/no-process-exit: 2
 
   ## DOM
@@ -681,7 +680,7 @@ rules:
     - 2
     - enforceForClassMembers: true
   ## In most cases, forward slashes are just fine on Windows
-  node/no-path-concat: 0
+  n/no-path-concat: 0
 
 ## Added by standard/standard
 
@@ -807,10 +806,10 @@ rules:
 #  no-var: 2
 #  no-void: 2
 #  no-with: 2
-#  node/handle-callback-err:
+#  n/handle-callback-err:
 #    - 2
 #    - '^(err|error)$'
-#  node/no-new-require: 2
+#  n/no-new-require: 2
 #  one-var:
 #    - 2
 #    - initialized: never
@@ -862,10 +861,10 @@ rules:
 #  import/no-absolute-path: 2
 #  import/no-duplicates: 2
 #  import/no-webpack-loader-syntax: 2
-#  node/no-callback-literal: 2
-#  node/no-deprecated-api: 2
-#  node/no-exports-assign: 2
-#  node/process-exit-as-throw: 2
+#  n/no-callback-literal: 2
+#  n/no-deprecated-api: 2
+#  n/no-exports-assign: 2
+#  n/process-exit-as-throw: 2
 #  promise/param-names: 2
 
 ## Might conflict with Prettier, i.e. disabled by eslint-config-prettier,
@@ -1106,7 +1105,7 @@ rules:
 
 #  import/no-internal-modules: 2
 
-## This does not allow excluding peerDependencies, so we only use node/no-extraneous-import
+## This does not allow excluding peerDependencies, so we only use n/no-extraneous-import
 
 # import/no-extraneous-dependencies:
 #   - 2
@@ -1177,7 +1176,7 @@ rules:
 
 ## We are symlinking shebang files so that they have the correct file extension
 
-#  node/shebang: 2
+#  n/shebang: 2
 
 ## We want to allow Promise.all() and Promise.race()
 
@@ -1250,9 +1249,9 @@ rules:
 
 ## Does not work when transpiling with Babel
 
-#  node/no-unsupported-features/es-syntax: 2
-#  node/no-unsupported-features/es-builtins: 2
-#  node/no-unsupported-features/node-builtins: 2
+#  n/no-unsupported-features/es-syntax: 2
+#  n/no-unsupported-features/es-builtins: 2
+#  n/no-unsupported-features/node-builtins: 2
 
 ## Not supported well by ESLint yet
 
@@ -1296,7 +1295,7 @@ rules:
 
 settings:
   # JSON files in `build` are compiled from YAML in `src` and `test`
-  node:
+  n:
     tryExtensions: [.js, .cjs, .mjs, .json, .node, .yml, .yaml]
   import/resolver:
     node:
@@ -1356,20 +1355,20 @@ overrides:
       # if the user just cloned the repository
       import/no-unresolved: 0
       import/no-extraneous-dependencies: 0
-      node/no-missing-require: 0
-      node/no-extraneous-require: 0
-      node/no-extraneous-import: 0
-      node/no-unpublished-require: 0
-      node/no-missing-import: 0
+      n/no-missing-require: 0
+      n/no-extraneous-require: 0
+      n/no-extraneous-import: 0
+      n/no-unpublished-require: 0
+      n/no-missing-import: 0
 
       # Examples sometimes use default exports
       import/no-default-export: 0
       import/no-anonymous-default-export: 0
 
       # Using those globals is simpler in documentation
-      node/prefer-global/buffer: 0
-      node/prefer-global/process: 0
-      node/prefer-global/url: 0
+      n/prefer-global/buffer: 0
+      n/prefer-global/process: 0
+      n/prefer-global/url: 0
 
       # Example test files
       ava/no-ignored-test-files: 0
@@ -1395,10 +1394,10 @@ overrides:
       no-restricted-imports:
         - 2
         - paths: []
-      node/no-restricted-require:
+      n/no-restricted-require:
         - 2
         - []
-      node/no-restricted-import:
+      n/no-restricted-import:
         - 2
         - []
 
@@ -1420,11 +1419,11 @@ overrides:
           patterns:
             - '**/../src/**'
             - '!**/../src/main.js'
-      node/no-restricted-require:
+      n/no-restricted-require:
         - 2
         - - name: assert
             message: Please throw an Error instead
-      node/no-restricted-import:
+      n/no-restricted-import:
         - 2
         - - name: assert
             message: Please throw an Error instead
@@ -1442,8 +1441,8 @@ overrides:
 
       # Self imports
       import/no-unresolved: 0
-      node/no-missing-import: 0
-      node/no-extraneous-import: 0
+      n/no-missing-import: 0
+      n/no-extraneous-import: 0
 
       # Empty functions can be useful in tests
       no-empty: 0
@@ -1468,9 +1467,9 @@ overrides:
   - files: [gulpfile.js]
     rules:
       import/no-unresolved: 0
-      node/no-missing-import: 0
-      node/no-extraneous-import: 0
-      node/no-unpublished-import: 0
+      n/no-missing-import: 0
+      n/no-extraneous-import: 0
+      n/no-unpublished-import: 0
 
   # Gulpfile and gulp tasks
   - files: [gulpfile.js, gulp/**/*.js]
@@ -1527,8 +1526,8 @@ overrides:
 
       # Self imports
       import/no-unresolved: 0
-      node/no-missing-import: 0
-      node/no-extraneous-import: 0
+      n/no-missing-import: 0
+      n/no-extraneous-import: 0
 
       # Unused expressions are useful in benchmarks
       no-unused-expressions: 0
