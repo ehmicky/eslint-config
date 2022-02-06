@@ -446,13 +446,13 @@ rules:
   #     # imported only in tests.
   #     # We use `README.md` as a catch-all for repositories without a `src`.
   #     src:
-  #       - '{README.md,src/**/*.js,ava.config.cjs,examples/**/*.js,test/**/*.js,benchmark/**/*.js,gulp/**/*.js,gulpfile.js}'
+  #       - '{README.md,src/**/*.js,ava.config.js,examples/**/*.js,test/**/*.js,benchmark/**/*.js,gulp/**/*.js,gulpfile.js}'
   #     # Excludes:
   #     #   - documentation/examples/benchmarks might not export anything
   #     #   - tests files are side-effects-only, i.e. do not export anything
   #     #   - entry points
   #     ignoreExports:
-  #       - '{ava.config.cjs,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmark/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
+  #       - '{ava.config.js,*.md,**/*.md,examples/**/*.js,test/**/*.js,benchmark/**/*.js,gulpfile.js,src/main.js,src/bin/main.js,src/bin.js}'
   import/named: 2
   import/default: 2
   import/namespace:
@@ -1461,12 +1461,9 @@ overrides:
       # importing anything
       import/unambiguous: 0
 
-  # ava.config.cjs requires a default export
-  - files: [ava.config.cjs]
+  # ava.config.js requires a default export
+  - files: [ava.config.js]
     rules:
-      filenames/match-exported: 0
-      import/no-extraneous-dependencies: 0
-      import/no-anonymous-default-export: 0
       import/no-default-export: 0
 
   # Gulpfile
