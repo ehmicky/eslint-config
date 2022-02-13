@@ -370,6 +370,7 @@ rules:
   unicorn/no-console-spaces: 2
   unicorn/prefer-code-point: 2
   unicorn/prefer-json-parse-buffer: 2
+  unicorn/text-encoding-identifier-case: 2
 
   ## RegExps
   unicorn/better-regex: 2
