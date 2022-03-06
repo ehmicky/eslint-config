@@ -185,6 +185,7 @@ rules:
         - request
         - res
         - response
+        - state
   fp/no-mutation:
     - 2
     - commonjs: true
@@ -196,6 +197,7 @@ rules:
         - object: request
         - object: res
         - object: response
+        - object: state
   fp/no-delete: 2
   import/no-unassigned-import:
     - 2
@@ -210,6 +212,7 @@ rules:
         - request
         - res
         - response
+        - state
         # gulp.watch() is flagged as mutable otherwise
         - gulp
 
@@ -1499,6 +1502,7 @@ overrides:
             - object: request
             - object: res
             - object: response
+            - object: state
             - property: description
 
   # Main entry point
