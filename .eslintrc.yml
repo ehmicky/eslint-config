@@ -97,6 +97,9 @@ rules:
     - 2
     - all
 
+  ## Parenthesis
+  unicorn/no-unreadable-iife: 2
+
   ## Complexity
   max-len:
     - 2
@@ -242,6 +245,7 @@ rules:
   unicorn/explicit-length-check:
     - 2
     - non-zero: not-equal
+  unicorn/prefer-native-coercion-functions: 2
   unicorn/new-for-builtins: 2
   fp/no-valueof-field: 2
 
@@ -275,6 +279,7 @@ rules:
       message:
         The comma operator is confusing and a common mistake. Don’t use it!
   default-case: 2
+  unicorn/no-useless-switch-case: 2
   unicorn/prefer-switch: 2
 
   ## Labels
@@ -392,6 +397,7 @@ rules:
   prefer-exponentiation-operator: 2
   no-bitwise: 2
   unicorn/prefer-math-trunc: 2
+  unicorn/prefer-modern-math-apis: 2
   unicorn/require-number-to-fixed-digits-argument: 2
 
   ## Async
