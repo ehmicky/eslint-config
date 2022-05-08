@@ -884,7 +884,7 @@ rules:
 #  promise/param-names: 2
 
 ## Might conflict with Prettier, i.e. disabled by eslint-config-prettier,
-## but overriden by us.
+## but overridden by us.
 
 #  max-len: 0
 #  no-tabs: 0
@@ -1072,7 +1072,7 @@ rules:
 #    - 2
 #    - both
 
-## Conclits with Prettier, i.e. disabled by eslint-config-prettier,
+## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
 ## otherwise we would add it (using those commented lines).
 
 #  array-bracket-newline:
@@ -1218,7 +1218,7 @@ rules:
 
 #  unicorn/string-content: 2
 
-## This rule produces bad stack straces
+## This rule produces bad stack traces
 ## See https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/returningpromises.md
 
 #  no-return-await: 2
