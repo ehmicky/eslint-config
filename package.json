@@ -52,7 +52,7 @@
   "peerDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0-1",
+    "eslint-config-standard": "^17.0.0",
     "eslint-formatter-codeframe": "^7.32.1",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-plugin-ava": "^13.2.0",
