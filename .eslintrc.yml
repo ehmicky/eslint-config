@@ -430,16 +430,18 @@ rules:
     - 2
     - ignore:
         - '@ehmicky/eslint-config'
-        # A bug in `chalk` seems to currently make that rule fail
+        # A bug in the following modules seems to currently make that rule fail
         - chalk
+        - got
   n/no-missing-require: 2
   n/no-unpublished-require: 2
   n/no-missing-import:
     - 2
     - allowModules:
         - '@ehmicky/eslint-config'
-        # A bug in `chalk` seems to currently make that rule fail
+        # A bug in the following modules seems to currently make that rule fail
         - chalk
+        - got
   n/no-unpublished-import: 2
   # TODO: there are two bugs that make this rule hard to work with at the moment
   #  - https://github.com/microsoft/vscode-eslint/issues/717
