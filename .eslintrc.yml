@@ -1407,6 +1407,9 @@ overrides:
       # Filenames do not always match in documentation
       filenames/match-exported: 0
 
+      # Short variables can be useful in examples
+      id-length: 0
+
   # Examples files
   - files: [examples/**/*.js]
     rules:
