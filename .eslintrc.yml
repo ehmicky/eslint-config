@@ -529,7 +529,11 @@ rules:
       extendDefaultStyles: false
   import/no-namespace: 2
   import/no-named-default: 2
-  import/no-anonymous-default-export: 2
+  import/no-anonymous-default-export:
+    - 2
+    - allowObject: true
+      allowArray: true
+      allowLiteral: true
   import/no-default-export: 2
   n/exports-style:
     - 2
