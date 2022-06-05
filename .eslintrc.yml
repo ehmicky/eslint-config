@@ -291,7 +291,9 @@ rules:
   ## Exceptions
   unicorn/throw-new-error: 2
   unicorn/error-message: 2
-  unicorn/catch-error-name: 2
+  unicorn/catch-error-name:
+    - 2
+    - ignore: [cause]
   unicorn/prefer-type-error: 2
   unicorn/prefer-optional-catch-binding: 2
   unicorn/custom-error-definition: 2
