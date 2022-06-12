@@ -296,7 +296,6 @@ rules:
     - ignore: [cause]
   unicorn/prefer-type-error: 2
   unicorn/prefer-optional-catch-binding: 2
-  unicorn/custom-error-definition: 2
 
   ## Functions
   func-style: 2
@@ -1278,6 +1277,10 @@ rules:
 ## This rule is too cumbersome:
 
 #  unicorn/no-keyword-prefix: 2
+
+## Recommends `error.name` being enumerable, which is incorrect
+
+#  unicorn/custom-error-definition: 2
 
 ## Does not work when transpiling with Babel
 
