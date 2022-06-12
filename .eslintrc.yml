@@ -620,13 +620,19 @@ rules:
     - paths:
         - name: assert
           message: Please throw an Error instead
+        - name: assert/strict
+          message: Please throw an Error instead
   n/no-restricted-require:
     - 2
     - - name: assert
         message: Please throw an Error instead
+      - name: assert/strict
+        message: Please throw an Error instead
   n/no-restricted-import:
     - 2
     - - name: assert
+        message: Please throw an Error instead
+      - name: assert/strict
         message: Please throw an Error instead
   # Using object destructuring is not a good solution
   you-dont-need-lodash-underscore/omit: 0
@@ -1445,6 +1451,8 @@ overrides:
         - paths:
             - name: assert
               message: Please throw an Error instead
+            - name: assert/strict
+              message: Please throw an Error instead
           patterns:
             - '**/../src/**'
             - '!**/../src/main.js'
@@ -1452,9 +1460,13 @@ overrides:
         - 2
         - - name: assert
             message: Please throw an Error instead
+          - name: assert/strict
+            message: Please throw an Error instead
       n/no-restricted-import:
         - 2
         - - name: assert
+            message: Please throw an Error instead
+          - name: assert/strict
             message: Please throw an Error instead
           - name:
               - '../src/**'
