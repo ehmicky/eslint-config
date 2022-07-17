@@ -636,7 +636,6 @@ rules:
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
   unicorn/no-invalid-remove-event-listener: 2
-  unicorn/prefer-event-target: 2
   n/no-process-exit: 2
   unicorn/no-process-exit: 2
 
@@ -1165,7 +1164,6 @@ rules:
 #  import/prefer-default-export: 0
 #  import/group-exports: 0
 #  import/exports-last: 0
-#  unicorn/import-index: 0
 
 ## Conflict with eslint-plugin-fp
 
@@ -1203,6 +1201,7 @@ rules:
 
 ## Requires Node 15.0.0
 
+#  unicorn/prefer-event-target: 2
 #  unicorn/prefer-string-replace-all: 2
 
 ## `Array.at()` is not possible in Node.js yet
