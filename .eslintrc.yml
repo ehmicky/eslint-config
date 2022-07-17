@@ -259,6 +259,7 @@ rules:
   no-dupe-else-if: 2
   no-nested-ternary: 2
   unicorn/prefer-ternary: 2
+  unicorn/prefer-logical-operator-over-ternary: 2
 
   ## Structures
   no-lonely-if: 2
