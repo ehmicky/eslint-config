@@ -616,23 +616,9 @@ rules:
   # work in browsers
   no-restricted-imports:
     - 2
-    - paths:
-        - name: assert
+    - patterns:
+        - group: [assert, assert/strict]
           message: Please throw an Error instead
-        - name: assert/strict
-          message: Please throw an Error instead
-  n/no-restricted-require:
-    - 2
-    - - name: assert
-        message: Please throw an Error instead
-      - name: assert/strict
-        message: Please throw an Error instead
-  n/no-restricted-import:
-    - 2
-    - - name: assert
-        message: Please throw an Error instead
-      - name: assert/strict
-        message: Please throw an Error instead
   # Using object destructuring is not a good solution
   you-dont-need-lodash-underscore/omit: 0
 
@@ -1288,6 +1274,10 @@ rules:
 #  n/no-unsupported-features/es-builtins: 2
 #  n/no-unsupported-features/node-builtins: 2
 
+## Already covered by no-restricted-imports
+#  n/no-restricted-require: 0
+#  n/no-restricted-import: 0
+
 ## Not supported well by ESLint yet
 
 #  unicorn/prefer-top-level-await: 2
@@ -1431,13 +1421,7 @@ overrides:
       # We allow asserts as they are simple in examples
       no-restricted-imports:
         - 2
-        - paths: []
-      n/no-restricted-require:
-        - 2
-        - []
-      n/no-restricted-import:
-        - 2
-        - []
+        - patterns: []
 
   # Test files
   - files: [test/**/*.js]
@@ -1451,37 +1435,11 @@ overrides:
       # Enforce integration testing
       no-restricted-imports:
         - 2
-        - paths:
-            - name: assert
+        - patterns:
+            - group: [assert, assert/strict]
               message: Please throw an Error instead
-            - name: assert/strict
-              message: Please throw an Error instead
-          patterns:
-            - '**/../src/**'
-            - '!**/../src/main.js'
-      n/no-restricted-require:
-        - 2
-        - - name: assert
-            message: Please throw an Error instead
-          - name: assert/strict
-            message: Please throw an Error instead
-      n/no-restricted-import:
-        - 2
-        - - name: assert
-            message: Please throw an Error instead
-          - name: assert/strict
-            message: Please throw an Error instead
-          - name:
-              - '../src/**'
-              - '../../src/**'
-              - '../../../src/**'
-              - '../../../../src/**'
-              - '../../../../../src/**'
-              - '!../src/main.js'
-              - '!../../src/main.js'
-              - '!../../../src/main.js'
-              - '!../../../../../src/main.js'
-            message: Only ../src/main.js should be imported in tests
+            - group: ['**/../src/**', '!**/../src/main.js']
+              message: Only ../src/main.js should be imported in tests
 
       # Self imports
       import/no-unresolved: 0
