@@ -1416,6 +1416,9 @@ overrides:
       # Short variables can be useful in examples
       id-length: 0
 
+      # Only useful runtime, not in documentation
+      symbol-description: 0
+
   # Examples files
   - files: [examples/**/*.js]
     rules:
