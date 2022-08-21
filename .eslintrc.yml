@@ -291,7 +291,6 @@ rules:
 
   ## Exceptions
   unicorn/throw-new-error: 2
-  unicorn/error-message: 2
   unicorn/catch-error-name:
     - 2
     - ignore: [cause]
@@ -1264,6 +1263,10 @@ rules:
 ## This rule is too cumbersome:
 
 #  unicorn/no-keyword-prefix: 2
+
+## Empty error messages are used by `modern-errors`
+
+#  unicorn/error-message: 0
 
 ## Recommends `error.name` being enumerable, which is incorrect
 
