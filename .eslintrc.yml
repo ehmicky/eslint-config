@@ -1422,10 +1422,7 @@ overrides:
       # Only useful runtime, not in documentation
       symbol-description: 0
 
-  # Examples files
-  - files: [examples/**/*.js]
-    rules:
-      # We allow asserts as they are simple in examples
+      # We allow asserts as they are simple
       no-restricted-imports:
         - 2
         - patterns: []
