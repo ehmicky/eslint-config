@@ -1454,6 +1454,9 @@ overrides:
       no-empty: 0
       no-empty-function: 0
 
+      # Often tested as an invalid input
+      unicorn/no-null: 2
+
   # Test fixtures
   - files: [test/helpers/fixtures/**/*.js]
     rules:
