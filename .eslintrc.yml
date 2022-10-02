@@ -435,6 +435,7 @@ rules:
         # A bug in the following modules seems to currently make that rule fail
         - chalk
         - got
+        - mem
         - release-it
   n/no-missing-require: 2
   n/no-unpublished-require: 2
