@@ -166,7 +166,7 @@ rules:
   sort-vars: 2
   no-magic-numbers:
     - 2
-    - ignore: [-2, -1, 0, 1, 2, 3, 10]
+    - ignore: [-2, -1, 0, 1, 2, 3, 10, 0n, 1n]
       enforceConst: true
 
   ## Assignments
