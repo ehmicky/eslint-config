@@ -1428,9 +1428,10 @@ overrides:
   - files: [test/**/*.js]
     rules:
       # When using data-driven testing, an extra level of depth is implied
+      # Also, test() creates a depth level as well
       max-nested-callbacks:
         - 2
-        - 2
+        - 3
       max-lines-per-function: 0
 
       # Enforce integration testing
