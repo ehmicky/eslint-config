@@ -1,6 +1,7 @@
-[![Node](https://img.shields.io/node/v/@ehmicky/eslint-config.svg?logo=node.js&logoColor=66cc33)](https://www.npmjs.com/package/@ehmicky/eslint-config)
-[![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-brightgreen.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
-[![Medium](https://img.shields.io/badge/%E2%80%8B-medium-brightgreen.svg?logo=medium)](https://medium.com/@ehmicky)
+[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/@ehmicky/eslint-config)
+[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=404040)](https://www.npmjs.com/package/@ehmicky/eslint-config)
+[![Twitter](https://img.shields.io/badge/-Twitter-808080.svg?logo=twitter&colorA=404040)](https://twitter.com/intent/follow?screen_name=ehmicky)
+[![Medium](https://img.shields.io/badge/-Medium-808080.svg?logo=medium&colorA=404040)](https://medium.com/@ehmicky)
 
 [ESLint](https://eslint.org/) configuration for my own projects.
 
