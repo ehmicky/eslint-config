@@ -247,6 +247,7 @@ rules:
     - 2
     - non-zero: not-equal
   unicorn/prefer-native-coercion-functions: 2
+  no-new-native-nonconstructor: 2
   unicorn/new-for-builtins: 2
   fp/no-valueof-field: 2
 
