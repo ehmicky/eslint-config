@@ -410,6 +410,7 @@ rules:
   no-promise-executor-return: 2
   require-await: 2
   no-await-in-loop: 2
+  unicorn/no-unnecessary-await: 2
   unicorn/no-useless-promise-resolve-reject: 2
   unicorn/no-await-expression-member: 2
   unicorn/no-thenable: 2
