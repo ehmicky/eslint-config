@@ -257,6 +257,7 @@ rules:
     - enforceForOrderingRelations: true
   unicorn/no-instanceof-array: 2
   no-negated-condition: 2
+  unicorn/no-negated-condition: 2
   no-constant-binary-expression: 2
   no-dupe-else-if: 2
   no-nested-ternary: 2
