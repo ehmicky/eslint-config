@@ -375,6 +375,7 @@ rules:
   unicorn/no-useless-length-check: 2
   unicorn/no-array-push-push: 2
   unicorn/prefer-set-has: 2
+  unicorn/prefer-set-size: 2
   unicorn/require-array-join-separator: 2
 
   ## String
