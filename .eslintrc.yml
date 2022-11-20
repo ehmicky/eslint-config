@@ -365,7 +365,10 @@ rules:
   unicorn/prefer-array-flat-map: 2
   unicorn/prefer-array-flat: 2
   unicorn/prefer-negative-index: 2
-  unicorn/prefer-array-find: 2
+  unicorn/prefer-array-find:
+    - 2
+    # TODO: enable after dropping support for Node <18.0.0
+    - checkFromLast: false
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
   unicorn/no-useless-length-check: 2
