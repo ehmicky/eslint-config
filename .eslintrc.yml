@@ -175,6 +175,7 @@ rules:
     - 2
     - allowForLoopAfterthoughts: true
   operator-assignment: 2
+  logical-assignment-operators: 2
   no-multi-assign: 2
   prefer-object-spread: 2
   unicorn/no-useless-fallback-in-spread: 2
