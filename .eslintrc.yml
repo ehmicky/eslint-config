@@ -285,6 +285,7 @@ rules:
   default-case: 2
   unicorn/no-useless-switch-case: 2
   unicorn/prefer-switch: 2
+  unicorn/switch-case-braces: 2
 
   ## Labels
   no-unused-labels: 2
