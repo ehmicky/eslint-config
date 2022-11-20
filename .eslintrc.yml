@@ -348,6 +348,7 @@ rules:
   consistent-this: 2
   unicorn/no-this-assignment: 2
   unicorn/no-static-only-class: 2
+  no-empty-static-block: 2
   no-unused-private-class-members: 2
   max-classes-per-file: 0
   fp/no-class: 2
