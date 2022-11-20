@@ -636,6 +636,7 @@ rules:
   ## To avoid
   unicorn/no-null: 2
   unicorn/no-useless-undefined: 2
+  unicorn/no-typeof-undefined: 2
   no-continue: 2
   no-console: 2
   fp/no-events: 2
