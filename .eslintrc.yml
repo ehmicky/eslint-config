@@ -676,10 +676,10 @@ rules:
   ava/no-identical-title: 2
   ava/no-ignored-test-files:
     - 2
-    - files: [test/**/*.js, '!test/helpers/**/*.js']
+    - files: [src/**/*.test.js, '!src/{helpers,fixtures,snapshots}/**/*.js']
   ava/no-import-test-files:
     - 2
-    - files: [test/**/*.js, '!test/helpers/**/*.js']
+    - files: [src/**/*.test.js, '!src/{helpers,fixtures,snapshots}/**/*.js']
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
@@ -1140,7 +1140,7 @@ rules:
 
 # import/no-extraneous-dependencies:
 #   - 2
-#   - devDependencies: [test/**, gulp/**, benchmark/**, gulpfile.js]
+#   - devDependencies: [src/**.test.js, gulp/**, benchmark/**, gulpfile.js]
 
 ## This is too restrictive
 
@@ -1436,8 +1436,8 @@ overrides:
         - 2
         - patterns: []
 
-  # Test files
-  - files: [test/**/*.js]
+  # Test files, including helpers
+  - files: [src/**/*.test.js]
     rules:
       # When using data-driven testing, an extra level of depth is implied
       # Also, test() creates a depth level as well
@@ -1452,8 +1452,10 @@ overrides:
         - patterns:
             - group: [assert, assert/strict]
               message: Please throw an Error instead
-            - group: ['**/../src/**', '!**/../src/main.js']
-              message: Only ../src/main.js should be imported in tests
+            - group: ['**/../**', '!**/../{helpers,fixtures}/**']
+              message:
+                Individual files should not be imported in tests. Instead please
+                use import the main module.
 
       # Self imports
       import/no-unresolved: 0
@@ -1468,7 +1470,7 @@ overrides:
       unicorn/no-null: 0
 
   # Test fixtures
-  - files: [test/fixtures/**/*.js]
+  - files: [src/fixtures/**/*.js]
     rules:
       # Fixture files are sometimes executed by a CLI without exporting nor
       # importing anything
