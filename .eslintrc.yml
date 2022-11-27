@@ -676,10 +676,10 @@ rules:
   ava/no-identical-title: 2
   ava/no-ignored-test-files:
     - 2
-    - files: [src/**/*.test.js, '!src/{helpers,fixtures,snapshots}/**/*.js']
+    - files: [src/**/*.test.js, '!src/helpers/**/*.js']
   ava/no-import-test-files:
     - 2
-    - files: [src/**/*.test.js, '!src/{helpers,fixtures,snapshots}/**/*.js']
+    - files: [src/**/*.test.js, '!src/helpers/**/*.js']
   ava/no-only-test: 2
   ava/no-skip-test: 2
   ava/no-skip-assert: 2
