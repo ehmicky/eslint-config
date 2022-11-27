@@ -1,5 +1,7 @@
+// eslint-disable-next-line ava/no-ignored-test-files
 import { fileURLToPath } from 'node:url'
 
+// eslint-disable-next-line import/no-unresolved
 import test from 'ava'
 import { execa } from 'execa'
 
