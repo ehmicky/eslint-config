@@ -1452,7 +1452,7 @@ overrides:
         - patterns:
             - group: [assert, assert/strict]
               message: Please throw an Error instead
-            - group: ['**/../**', '!**/../{helpers,fixtures}/**']
+            - group: ['./*', '!./helpers', '!./fixtures']
               message:
                 Individual files should not be imported in tests. Instead please
                 use import the main module.
