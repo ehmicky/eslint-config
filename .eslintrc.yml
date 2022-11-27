@@ -1468,7 +1468,7 @@ overrides:
       unicorn/no-null: 0
 
   # Test fixtures
-  - files: [test/helpers/fixtures/**/*.js]
+  - files: [test/fixtures/**/*.js]
     rules:
       # Fixture files are sometimes executed by a CLI without exporting nor
       # importing anything
