@@ -1469,6 +1469,12 @@ overrides:
       # Often tested as an invalid input
       unicorn/no-null: 0
 
+  # Test helpers and fixtures
+  - files: [src/helpers/**/*.js, src/fixtures/**/*.js]
+    rules:
+      # Allow including sibling files
+      no-restricted-imports: 0
+
   # Test fixtures
   - files: [src/fixtures/**/*.js]
     rules:
