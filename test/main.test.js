@@ -7,7 +7,7 @@ const ESLINT_CONFIG = fileURLToPath(
   new URL('../../.eslintrc.yml', import.meta.url),
 )
 const TEST_FILE = fileURLToPath(
-  new URL('../../test/helpers/valid.js', import.meta.url),
+  new URL('../../test/helpers/valid.test.js', import.meta.url),
 )
 
 test('Smoke test', async (t) => {
