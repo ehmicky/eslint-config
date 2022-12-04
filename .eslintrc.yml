@@ -1635,8 +1635,9 @@ overrides:
         - 2
         - args: none
 
-      # Unusual functions or methods or are useful in type tests
-      'class-methods-use-this': 0
+      # Unusual names, functions or methods or are useful in type tests
+      class-methods-use-this: 0
+      id-length: 0
       '@typescript-eslint/no-useless-constructor': 0
       '@typescript-eslint/no-empty-function': 0
 
