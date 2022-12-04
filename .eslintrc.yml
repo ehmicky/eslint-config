@@ -1515,6 +1515,9 @@ overrides:
                 Individual files should not be imported in tests. Instead please
                 use import the main module.
 
+      # Fix Ava linting with TypeScript files
+      ava/no-ignored-test-files: 0
+
   # Test helpers and fixtures
   - files: ['src/helpers/**/*.{js,cjs,mjs}', 'src/fixtures/**/*.{js,cjs,mjs}']
     rules:
