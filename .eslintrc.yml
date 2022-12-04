@@ -110,9 +110,7 @@ rules:
   max-statements-per-line:
     - 2
     - max: 2
-  import/max-dependencies:
-    - 2
-    - ignoreTypeImports: true
+  import/max-dependencies: 2
   complexity:
     - 2
     - 4
@@ -1290,6 +1288,11 @@ overrides:
         - max: 120
           skipBlankLines: true
           skipComments: true
+
+      # Ignore Type imports too
+      import/max-dependencies:
+        - 2
+        - ignoreTypeImports: true
 
       # TypeScript already checks for missing imports.
       # Also this does not work when importing:
