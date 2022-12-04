@@ -1641,6 +1641,10 @@ overrides:
       '@typescript-eslint/no-useless-constructor': 0
       '@typescript-eslint/no-empty-function': 0
 
+      # Allow testing callbacks
+      n/handle-callback-err: 0
+      promise/prefer-await-to-callbacks: 0
+
       # `test-d` is dasherized, but rest must use underscores
       filenames/match-regex:
         - 2
@@ -1655,9 +1659,8 @@ overrides:
       # TypeScript, which can be tested
       unicorn/no-useless-undefined: 0
 
-      # Allow testing callbacks
-      promise/prefer-await-to-callbacks: 0
-      n/handle-callback-err: 0
+      # Often tested as an invalid input
+      unicorn/no-null: 0
 
   # Files that are sibling to a `*.js` or `*.ts`
   - files: ['**/*.{test.{js,cjs,mjs,ts,cts,mts},d.ts,test-d.ts}']
