@@ -430,7 +430,9 @@ rules:
     - 2
     - allowComputed: true
   import/no-named-as-default: 2
-  import/no-named-as-default-member: 2
+  ## TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
+  ## `sinon` is using ES modules
+  import/no-named-as-default-member: 0
   unicorn/prefer-export-from:
     - 2
     - ignoreUsedVariables: true
