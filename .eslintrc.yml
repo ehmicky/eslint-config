@@ -630,7 +630,7 @@ rules:
   no-restricted-imports:
     - 2
     - patterns:
-        - group: [assert, assert/strict]
+        - group: ['node:assert', assert, 'node:assert/strict', assert/strict]
           message: Please throw an Error instead
   # Using object destructuring is not a good solution
   you-dont-need-lodash-underscore/omit: 0
@@ -855,7 +855,6 @@ rules:
 #    - 2
 #    - single
 #    - avoidEscape: true
-#      allowTemplateLiterals: false
 #  spaced-comment:
 #    - 2
 #    - always
@@ -902,8 +901,6 @@ rules:
 ## but overridden by us.
 
 #  max-len: 0
-#  no-tabs: 0
-#  quotes: 0
 
 ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
 ## although added by standard/standard.
@@ -1454,7 +1451,7 @@ overrides:
       no-restricted-imports:
         - 2
         - patterns:
-            - group: [assert, assert/strict]
+            - group: ['node:assert', assert, 'node:assert/strict', assert/strict]
               message: Please throw an Error instead
             - group: ['./*', '!./helpers', '!./fixtures']
               message:
