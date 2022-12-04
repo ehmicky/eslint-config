@@ -1451,7 +1451,8 @@ overrides:
       no-restricted-imports:
         - 2
         - patterns:
-            - group: ['node:assert', assert, 'node:assert/strict', assert/strict]
+            - group:
+                ['node:assert', assert, 'node:assert/strict', assert/strict]
               message: Please throw an Error instead
             - group: ['./*', '!./helpers', '!./fixtures']
               message:
