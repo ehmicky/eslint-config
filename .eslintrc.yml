@@ -661,400 +661,360 @@ rules:
   ## In most cases, forward slashes are just fine on Windows
   n/no-path-concat: 0
 
-## Added by standard/standard
-
-#  accessor-pairs: 2
-#  array-bracket-spacing: 0
-#  camelcase:
-#    - 2
-#    - allow: ['^UNSAFE_']
-#      properties: never
-#      ignoreGlobals: true
-#  constructor-super: 2
-#  default-case-last: 2
-#  eqeqeq:
-#    - 2
-#    - always
-#    - 'null': ignore
-#  multiline-ternary:
-#    - 2
-#    - always-multiline
-#  new-cap:
-#    - 2
-#    - capIsNew: false
-#  no-async-promise-executor: 2
-#  no-caller: 2
-#  no-case-declarations: 2
-#  no-class-assign: 2
-#  no-compare-neg-zero: 2
-#  no-cond-assign: 2
-#  no-const-assign: 2
-#  no-constant-condition:
-#    - 2
-#    - checkLoops: false
-#  no-control-regex: 2
-#  no-debugger: 2
-#  no-delete-var: 2
-#  no-dupe-args: 2
-#  no-dupe-keys: 2
-#  no-duplicate-case: 2
-#  no-empty:
-#    - 2
-#    - allowEmptyCatch: true
-#  no-empty-character-class: 2
-#  no-empty-pattern: 2
-#  no-eval: 2
-#  no-ex-assign: 2
-#  no-extend-native: 2
-#  no-extra-bind: 2
-#  no-extra-boolean-cast: 2
-#  no-fallthrough: 2
-#  no-func-assign: 2
-#  no-global-assign: 2
-#  no-import-assign: 2
-#  no-invalid-regexp: 2
-#  no-irregular-whitespace: 2
-#  no-iterator: 2
-#  no-labels:
-#    - 2
-#    - allowLoop: false
-#      allowSwitch: false
-#  no-lone-blocks: 2
-#  no-misleading-character-class: 2
-#  no-multi-str: 2
-#  no-new: 2
-#  no-new-func: 2
-#  no-new-object: 2
-#  no-new-symbol: 2
-#  no-new-wrappers: 2
-#  no-obj-calls: 2
-#  no-octal: 2
-#  no-octal-escape: 2
-#  no-proto: 2
-#  no-prototype-builtins: 2
-#  no-regex-spaces: 2
-#  no-return-assign:
-#    - 2
-#    - except-parens
-#  no-self-assign: 2
-#  no-self-compare: 2
-#  no-sequences: 2
-#  no-shadow-restricted-names: 2
-#  no-sparse-arrays: 2
-#  no-tabs: 2
-#  no-template-curly-in-string: 2
-#  no-this-before-super: 2
-#  no-undef-init: 2
-#  no-unmodified-loop-condition: 2
-#  no-unneeded-ternary:
-#    - 2
-#    - defaultAssignment: false
-#  no-unreachable: 2
-#  no-unreachable-loop: 2
-#  no-unsafe-finally: 2
-#  no-useless-backreference: 2
-#  no-useless-call: 2
-#  no-useless-catch: 2
-#  no-useless-escape: 2
-#  no-useless-rename: 2
-#  no-useless-return: 2
-#  no-var: 2
-#  no-void: 2
-#  no-with: 2
-#  n/handle-callback-err:
-#    - 2
-#    - '^(err|error)$'
-#  n/no-new-require: 2
-#  one-var:
-#    - 2
-#    - initialized: never
-#  prefer-const:
-#    - 2
-#    - destructuring: all
-#  prefer-promise-reject-errors: 2
-#  prefer-regex-literals:
-#    - 2
-#    - disallowRedundantWrapping: true
-#  spaced-comment:
-#    - 2
-#    - always
-#    - line:
-#        markers:
-#          - '*package'
-#          - '!'
-#          - '/'
-#          - ','
-#          - '='
-#      block:
-#        balanced: true
-#        markers:
-#          - '*package'
-#          - '!'
-#          - ','
-#          - ':'
-#          - '::'
-#          - flow-include
-#        exceptions:
-#          - '*'
-#  symbol-description: 2
-#  use-isnan:
-#    - 2
-#    - enforceForIndexOf: true
-#  valid-typeof:
-#    - 2
-#    - requireStringLiterals: true
-#  yoda:
-#    - 2
-#    - never
-#  import/export: 2
-#  import/first: 2
-#  import/no-absolute-path: 2
-#  import/no-duplicates: 2
-#  import/no-webpack-loader-syntax: 2
-#  n/no-callback-literal: 2
-#  n/no-deprecated-api: 2
-#  n/no-exports-assign: 2
-#  n/process-exit-as-throw: 2
-#  promise/param-names: 2
-
-## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
-## although added by standard/standard.
-
-#  no-mixed-operators: 0
-#  no-unexpected-multiline: 0
-#  arrow-spacing: 0
-#  block-spacing: 0
-#  comma-style: 0
-#  computed-property-spacing: 0
-#  dot-location: 0
-#  eol-last: 0
-#  generator-star-spacing: 0
-#  key-spacing: 0
-#  new-parens: 0
-#  no-floating-decimal: 0
-#  no-mixed-spaces-and-tabs: 0
-#  no-multi-spaces: 0
-#  no-multiple-empty-lines: 0
-#  no-trailing-spaces: 0
-#  no-whitespace-before-property: 0
-#  object-curly-newline: 0
-#  object-property-newline: 0
-#  operator-linebreak: 0
-#  padded-blocks: 0
-#  quote-props: 0
-#  rest-spread-spacing: 0
-#  semi-spacing: 0
-#  space-in-parens: 0
-#  space-unary-ops: 0
-#  template-curly-spacing: 0
-#  template-tag-spacing: 0
-#  unicode-bom: 0
-#  wrap-iife: 0
-#  yield-star-spacing: 0
-
-## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
-## otherwise we would add it
-
-#  array-bracket-newline: 0
-#  array-element-newline: 0
-#  arrow-parens: 0
-#  function-paren-newline: 0
-#  function-call-argument-newline: 0
-#  implicit-arrow-linebreak: 0
-#  jsx-quotes: 0
-#  linebreak-style: 0
-#  lines-around-comment: 0
-#  max-len: 0
-#  newline-per-chained-call: 0
-#  no-confusing-arrow: 0
-#  nonblock-statement-body-position: 0
-#  one-var-declaration-per-line: 0
-#  semi-style: 0
-#  switch-colon-spacing: 0
-#  wrap-regex: 0
-#  unicorn/empty-brace-spaces: 0
-#  unicorn/number-literal-case: 0
-
-## The only difference from pure functional programming is that we
-## allow exceptions to avoid cumbersome code
-
-#  fp/no-throw: 0
-
-## Those rules should be picked for a fully functional codebase.
-## However, we want to allow throwing exceptions, because monads would
-## be too verbose.
-
-#  fp/no-nil: 0
-#  no-undefined: 0
-#  fp/no-unused-expression: 0
-#  consistent-return: 0
-
-## This does not work with the way we import files
-
-#  import/no-internal-modules: 0
-
-## This does not allow excluding peerDependencies, so we only use n/no-extraneous-import
-
-# import/no-extraneous-dependencies: 0
-
-## This is too restrictive
-
-#  unicorn/no-unsafe-regex: 0
-#  import/no-relative-parent-imports: 0
-
-## Array.reduce() is sometimes useful in stateful logic
-
-#  unicorn/no-array-reduce: 0
-#  unicorn/prefer-object-from-entries: 0
-
-## This makes RegExps more verbose
-
-#  prefer-named-capture-group: 0
-
-## The no-nested-ternary ESLint rule is stricter/better
-
-#  unicorn/no-nested-ternary: 0
-
-## This is in conflict with no-useless-escape rule
-
-#  no-div-regex: 0
-
-## This makes commenting/uncommenting code tedious
-
-#  capitalized-comments: 0
-
-## This does not match our import/export style
-
-#  import/no-named-export: 0
-#  import/prefer-default-export: 0
-#  import/group-exports: 0
-#  import/exports-last: 0
-
-## Conflict with eslint-plugin-fp
-
-#  unicorn/no-array-for-each: 0
-
-## We sort object keys by type, not by name
-
-#  sort-keys: 0
-
-## We want rest parameters to allow passing around arguments unchanged
-
-#  fp/no-rest-parameters: 0
-
-## We allow ternaries, they can make code look cleaner
-
-#  no-ternary: 0
-
-## We allow TODO comments
-
-#  no-warning-comments: 0
-#  unicorn/expiring-todo-comments: 0
-
-## This requires putting comments on the same line as the ESLint directive,
-## but we prefer to put the comment on the previous line
-
-#  eslint-comments/require-description: 0
-
-## We are symlinking shebang files so that they have the correct file extension
-
-#  n/shebang: 0
-
-## We want to allow Promise.all() and Promise.race()
-
-#  promise/no-native: 0
-
-## Requires Node 15.0.0
-
-#  unicorn/prefer-event-target: 0
-#  unicorn/prefer-string-replace-all: 0
-
-## `Array.at()` is not possible in Node.js yet
-
-#  unicorn/prefer-at: 0
-
-## This rule encourages creating functions where it is not needed
-
-#  unicorn/no-array-callback-reference: 0
-
-## It conflicts with `prefer-destructuring` rule
-
-#  unicorn/no-unreadable-array-destructuring: 0
-
-## This is not useful at the moment
-
-#  unicorn/string-content: 0
-
-## This rule should be turned on in the future
-
-#  valid-jsdoc: 0
-#  require-jsdoc: 0
-
-## This rule is too unstable for the moment:
-##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
-##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
-#  unicorn/prevent-abbreviation: 0
-
-## `Array.from()` is slower than `new Array()` followed by a `for` loop
-
-#  unicorn/no-new-array: 0
-
-## This rule is too cumbersome:
-
-#  unicorn/no-keyword-prefix: 0
-
-## Empty error messages are used by `modern-errors`
-
-#  unicorn/error-message: 0
-
-## Recommends `error.name` being enumerable, which is incorrect
-
-#  unicorn/custom-error-definition: 0
-
-## Does not work when transpiling with Babel
-
-#  n/no-unsupported-features/es-syntax: 0
-#  n/no-unsupported-features/es-builtins: 0
-#  n/no-unsupported-features/node-builtins: 0
-
-## Already covered by no-restricted-imports
-#  n/no-restricted-require: 0
-#  n/no-restricted-import: 0
-
-## Not supported well by ESLint yet
-
-#  unicorn/prefer-top-level-await: 0
-
-## Do not use Power assert directly
-
-#  ava/prefer-power-assert: 0
-
-## JavaScript feature not available in Node.js yet
-
-#  prefer-object-has-own: 0
-
-## Test titles do not follow any format
-
-#  ava/test-title-format: 0
-
-## Rules for client-side code only
-
-#  import/no-nodejs-modules: 0
-
-## This forbids `func.bind()`
-
-#  unicorn/prefer-prototype-methods: 0
-
-## React
-
-#  react/*: 0
-
-## No use for those rules
-
-#  id-denylist: 0
-#  no-restricted-properties: 0
-#  no-restricted-exports: 0
-#  import/no-restricted-paths: 0
+  ## Added by standard/standard
+
+  #  accessor-pairs: 2
+  #  array-bracket-spacing: 0
+  #  camelcase:
+  #    - 2
+  #    - allow: ['^UNSAFE_']
+  #      properties: never
+  #      ignoreGlobals: true
+  #  constructor-super: 2
+  #  default-case-last: 2
+  #  eqeqeq:
+  #    - 2
+  #    - always
+  #    - 'null': ignore
+  #  multiline-ternary:
+  #    - 2
+  #    - always-multiline
+  #  new-cap:
+  #    - 2
+  #    - capIsNew: false
+  #  no-async-promise-executor: 2
+  #  no-caller: 2
+  #  no-case-declarations: 2
+  #  no-class-assign: 2
+  #  no-compare-neg-zero: 2
+  #  no-cond-assign: 2
+  #  no-const-assign: 2
+  #  no-constant-condition:
+  #    - 2
+  #    - checkLoops: false
+  #  no-control-regex: 2
+  #  no-debugger: 2
+  #  no-delete-var: 2
+  #  no-dupe-args: 2
+  #  no-dupe-keys: 2
+  #  no-duplicate-case: 2
+  #  no-empty:
+  #    - 2
+  #    - allowEmptyCatch: true
+  #  no-empty-character-class: 2
+  #  no-empty-pattern: 2
+  #  no-eval: 2
+  #  no-ex-assign: 2
+  #  no-extend-native: 2
+  #  no-extra-bind: 2
+  #  no-extra-boolean-cast: 2
+  #  no-fallthrough: 2
+  #  no-func-assign: 2
+  #  no-global-assign: 2
+  #  no-import-assign: 2
+  #  no-invalid-regexp: 2
+  #  no-irregular-whitespace: 2
+  #  no-iterator: 2
+  #  no-labels:
+  #    - 2
+  #    - allowLoop: false
+  #      allowSwitch: false
+  #  no-lone-blocks: 2
+  #  no-misleading-character-class: 2
+  #  no-multi-str: 2
+  #  no-new: 2
+  #  no-new-func: 2
+  #  no-new-object: 2
+  #  no-new-symbol: 2
+  #  no-new-wrappers: 2
+  #  no-obj-calls: 2
+  #  no-octal: 2
+  #  no-octal-escape: 2
+  #  no-proto: 2
+  #  no-prototype-builtins: 2
+  #  no-regex-spaces: 2
+  #  no-return-assign:
+  #    - 2
+  #    - except-parens
+  #  no-self-assign: 2
+  #  no-self-compare: 2
+  #  no-sequences: 2
+  #  no-shadow-restricted-names: 2
+  #  no-sparse-arrays: 2
+  #  no-tabs: 2
+  #  no-template-curly-in-string: 2
+  #  no-this-before-super: 2
+  #  no-undef-init: 2
+  #  no-unmodified-loop-condition: 2
+  #  no-unneeded-ternary:
+  #    - 2
+  #    - defaultAssignment: false
+  #  no-unreachable: 2
+  #  no-unreachable-loop: 2
+  #  no-unsafe-finally: 2
+  #  no-useless-backreference: 2
+  #  no-useless-call: 2
+  #  no-useless-catch: 2
+  #  no-useless-escape: 2
+  #  no-useless-rename: 2
+  #  no-useless-return: 2
+  #  no-var: 2
+  #  no-void: 2
+  #  no-with: 2
+  #  n/handle-callback-err:
+  #    - 2
+  #    - '^(err|error)$'
+  #  n/no-new-require: 2
+  #  one-var:
+  #    - 2
+  #    - initialized: never
+  #  prefer-const:
+  #    - 2
+  #    - destructuring: all
+  #  prefer-promise-reject-errors: 2
+  #  prefer-regex-literals:
+  #    - 2
+  #    - disallowRedundantWrapping: true
+  #  spaced-comment:
+  #    - 2
+  #    - always
+  #    - line:
+  #        markers:
+  #          - '*package'
+  #          - '!'
+  #          - '/'
+  #          - ','
+  #          - '='
+  #      block:
+  #        balanced: true
+  #        markers:
+  #          - '*package'
+  #          - '!'
+  #          - ','
+  #          - ':'
+  #          - '::'
+  #          - flow-include
+  #        exceptions:
+  #          - '*'
+  #  symbol-description: 2
+  #  use-isnan:
+  #    - 2
+  #    - enforceForIndexOf: true
+  #  valid-typeof:
+  #    - 2
+  #    - requireStringLiterals: true
+  #  yoda:
+  #    - 2
+  #    - never
+  #  import/export: 2
+  #  import/first: 2
+  #  import/no-absolute-path: 2
+  #  import/no-duplicates: 2
+  #  import/no-webpack-loader-syntax: 2
+  #  n/no-callback-literal: 2
+  #  n/no-deprecated-api: 2
+  #  n/no-exports-assign: 2
+  #  n/process-exit-as-throw: 2
+  #  promise/param-names: 2
+
+  ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
+  ## although added by standard/standard.
+  no-mixed-operators: 0
+  no-unexpected-multiline: 0
+  arrow-spacing: 0
+  block-spacing: 0
+  comma-style: 0
+  computed-property-spacing: 0
+  dot-location: 0
+  eol-last: 0
+  generator-star-spacing: 0
+  key-spacing: 0
+  new-parens: 0
+  no-floating-decimal: 0
+  no-mixed-spaces-and-tabs: 0
+  no-multi-spaces: 0
+  no-multiple-empty-lines: 0
+  no-trailing-spaces: 0
+  no-whitespace-before-property: 0
+  object-curly-newline: 0
+  object-property-newline: 0
+  operator-linebreak: 0
+  padded-blocks: 0
+  quote-props: 0
+  rest-spread-spacing: 0
+  semi-spacing: 0
+  space-in-parens: 0
+  space-unary-ops: 0
+  template-curly-spacing: 0
+  template-tag-spacing: 0
+  unicode-bom: 0
+  wrap-iife: 0
+  yield-star-spacing: 0
+
+  # Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
+  # otherwise we would add it
+  array-bracket-newline: 0
+  array-element-newline: 0
+  arrow-parens: 0
+  function-paren-newline: 0
+  function-call-argument-newline: 0
+  implicit-arrow-linebreak: 0
+  jsx-quotes: 0
+  linebreak-style: 0
+  lines-around-comment: 0
+  max-len: 0
+  newline-per-chained-call: 0
+  no-confusing-arrow: 0
+  nonblock-statement-body-position: 0
+  one-var-declaration-per-line: 0
+  semi-style: 0
+  switch-colon-spacing: 0
+  wrap-regex: 0
+  unicorn/empty-brace-spaces: 0
+  unicorn/number-literal-case: 0
+
+  ## The only difference from pure functional programming is that we
+  ## allow exceptions to avoid cumbersome code
+  fp/no-throw: 0
+
+  ## Those rules should be picked for a fully functional codebase.
+  ## However, we want to allow throwing exceptions, because monads would
+  ## be too verbose.
+  fp/no-nil: 0
+  no-undefined: 0
+  fp/no-unused-expression: 0
+  consistent-return: 0
+
+  ## This does not work with the way we import files
+  import/no-internal-modules: 0
+
+  ## This does not allow excluding peerDependencies, so we only use n/no-extraneous-import
+  import/no-extraneous-dependencies: 0
+
+  ## This is too restrictive
+  unicorn/no-unsafe-regex: 0
+  import/no-relative-parent-imports: 0
+
+  ## Array.reduce() is sometimes useful in stateful logic
+  unicorn/no-array-reduce: 0
+  unicorn/prefer-object-from-entries: 0
+
+  ## This makes RegExps more verbose
+  prefer-named-capture-group: 0
+
+  ## The no-nested-ternary ESLint rule is stricter/better
+  unicorn/no-nested-ternary: 0
+
+  ## This is in conflict with no-useless-escape rule
+  no-div-regex: 0
+
+  ## This makes commenting/uncommenting code tedious
+  capitalized-comments: 0
+
+  ## This does not match our import/export style
+  import/no-named-export: 0
+  import/prefer-default-export: 0
+  import/group-exports: 0
+  import/exports-last: 0
+
+  ## Conflict with eslint-plugin-fp
+  unicorn/no-array-for-each: 0
+
+  ## We sort object keys by type, not by name
+  sort-keys: 0
+
+  ## We want rest parameters to allow passing around arguments unchanged
+  fp/no-rest-parameters: 0
+
+  ## We allow ternaries, they can make code look cleaner
+  no-ternary: 0
+
+  ## We allow TODO comments
+  no-warning-comments: 0
+  unicorn/expiring-todo-comments: 0
+
+  ## This requires putting comments on the same line as the ESLint directive,
+  ## but we prefer to put the comment on the previous line
+  eslint-comments/require-description: 0
+
+  ## We are symlinking shebang files so that they have the correct file extension
+  n/shebang: 0
+
+  ## We want to allow Promise.all() and Promise.race()
+  promise/no-native: 0
+
+  ## Requires Node 15.0.0
+  unicorn/prefer-event-target: 0
+  unicorn/prefer-string-replace-all: 0
+
+  ## `Array.at()` is not possible in Node.js yet
+  unicorn/prefer-at: 0
+
+  ## This rule encourages creating functions where it is not needed
+  unicorn/no-array-callback-reference: 0
+
+  ## It conflicts with `prefer-destructuring` rule
+  unicorn/no-unreadable-array-destructuring: 0
+
+  ## This is not useful at the moment
+  unicorn/string-content: 0
+
+  ## This rule should be turned on in the future
+  valid-jsdoc: 0
+  require-jsdoc: 0
+
+  ## This rule is too unstable for the moment:
+  ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
+  ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
+  unicorn/prevent-abbreviation: 0
+
+  ## `Array.from()` is slower than `new Array()` followed by a `for` loop
+  unicorn/no-new-array: 0
+
+  ## This rule is too cumbersome:
+  unicorn/no-keyword-prefix: 0
+
+  ## Empty error messages are used by `modern-errors`
+  unicorn/error-message: 0
+
+  ## Recommends `error.name` being enumerable, which is incorrect
+  unicorn/custom-error-definition: 0
+
+  ## Does not work when transpiling with Babel
+  n/no-unsupported-features/es-syntax: 0
+  n/no-unsupported-features/es-builtins: 0
+  n/no-unsupported-features/node-builtins: 0
+
+  ## Already covered by no-restricted-imports
+  n/no-restricted-require: 0
+  n/no-restricted-import: 0
+
+  ## Not supported well by ESLint yet
+  unicorn/prefer-top-level-await: 0
+
+  ## Do not use Power assert directly
+  ava/prefer-power-assert: 0
+
+  ## JavaScript feature not available in Node.js yet
+  prefer-object-has-own: 0
+
+  ## Test titles do not follow any format
+  ava/test-title-format: 0
+
+  ## Rules for client-side code only
+  import/no-nodejs-modules: 0
+
+  ## This forbids `func.bind()`
+  unicorn/prefer-prototype-methods: 0
+
+  ## React
+  react/*: 0
+
+  ## No use for those rules
+  id-denylist: 0
+  no-restricted-properties: 0
+  no-restricted-exports: 0
+  import/no-restricted-paths: 0
 
 settings:
   # JSON files in `build` are compiled from YAML in `src` and `test`
