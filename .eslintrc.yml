@@ -1584,6 +1584,12 @@ overrides:
       filenames/match-exported: 0
       import/no-default-export: 0
 
+  # Main TypeScript entry point
+  - files: ['src/main.{ts,d.ts}']
+    rules:
+      # Allow overloaded main exports
+      import/export: 0
+
   # CLI
   - files:
       - 'src/bin/**/*.{js,cjs,mjs,ts,cts,mts}'
