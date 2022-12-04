@@ -1446,6 +1446,10 @@ overrides:
         - 3
       max-lines-per-function: 0
 
+      # Each source file should have a single sibling test file, regardless of
+      # its size
+      max-lines: 0
+
       # Enforce integration testing
       no-restricted-imports:
         - 2
