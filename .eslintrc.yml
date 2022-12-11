@@ -653,7 +653,7 @@ rules:
   unicorn/no-await-expression-member: 2
   unicorn/no-thenable: 2
   require-atomic-updates: 2
-  no-sync: 2
+  n/no-sync: 2
   n/prefer-promises/fs: 2
   n/prefer-promises/dns: 2
   promise/catch-or-return: 2
@@ -881,7 +881,6 @@ rules:
   no-continue: 2
   no-console: 2
   fp/no-events: 2
-  no-buffer-constructor: 2
   unicorn/no-new-buffer: 2
   n/no-process-env: 2
   no-script-url: 2
