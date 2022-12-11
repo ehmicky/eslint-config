@@ -296,6 +296,8 @@ rules:
   eslint-comments/no-unlimited-disable: 2
   unicorn/no-abusive-eslint-disable: 2
   eslint-comments/no-aggregating-enable: 2
+  # No use
+  eslint-comments/no-restricted-disable: 0
   eslint-comments/no-use:
     - 2
     - allow:
@@ -435,7 +437,7 @@ rules:
   # Too unstable for the moment:
   #   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
   #   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
-  unicorn/prevent-abbreviation: 0
+  unicorn/prevent-abbreviations: 0
   # Too cumbersome
   unicorn/no-keyword-prefix: 0
   # No use
@@ -454,6 +456,8 @@ rules:
   fp/no-valueof-field: 2
 
   ## Tests
+  # == null is sometimes a good shorthand
+  no-eq-null: 0
   unicorn/no-instanceof-array: 2
   no-negated-condition: 2
   unicorn/no-negated-condition: 2
@@ -643,6 +647,9 @@ rules:
   unicorn/prefer-modern-math-apis: 2
   unicorn/require-number-to-fixed-digits-argument: 2
 
+  ## Date
+  unicorn/prefer-date-now: 2
+
   ## Async
   n/callback-return: 2
   no-promise-executor-return: 2
@@ -816,6 +823,8 @@ rules:
   unicorn/prefer-module: 2
   import/no-import-module-exports: 2
   import/no-deprecated: 2
+  # No use
+  import/dynamic-import-chunkname: 0
   # No use
   import/no-restricted-paths: 0
   unicorn/prefer-node-protocol: 2
