@@ -48,7 +48,7 @@ rules:
   n/prefer-global/text-decoder: 2
   n/prefer-global/text-encoder: 2
   n/prefer-global/url: 2
-  ## We only use globals for globals also defined in the browser
+  # We only use globals for globals also defined in the browser
   n/prefer-global/buffer:
     - 2
     - never
@@ -62,13 +62,16 @@ rules:
     - 2
     - separate-lines
   line-comment-position: 2
-
-  ## ESLint comments
+  # This makes commenting/uncommenting code tedious
+  capitalized-comments: 0
+  # We allow TODO comments
+  no-warning-comments: 0
+  unicorn/expiring-todo-comments: 0
   eslint-comments/disable-enable-pair: 2
   eslint-comments/no-unused-enable: 2
-  eslint-comments/no-unused-disable: 2
   eslint-comments/no-duplicate-disable: 2
   eslint-comments/no-unlimited-disable: 2
+  unicorn/no-abusive-eslint-disable: 2
   eslint-comments/no-aggregating-enable: 2
   eslint-comments/no-use:
     - 2
@@ -77,7 +80,10 @@ rules:
         - eslint-disable
         - eslint-enable
         - eslint-env
-  unicorn/no-abusive-eslint-disable: 2
+  # This requires putting comments on the same line as the ESLint directive,
+  # but we prefer to put the comment on the previous line
+  eslint-comments/require-description: 0
+  eslint-comments/no-unused-disable: 2
 
   ## Strictness
   strict: 2
@@ -166,9 +172,6 @@ rules:
         - object: response
         - object: state
   fp/no-delete: 2
-  import/no-unassigned-import:
-    - 2
-    - allow: ['@ehmicky/dev-tasks/register.js']
   fp/no-mutating-assign: 2
   fp/no-mutating-methods:
     - 2
@@ -182,6 +185,11 @@ rules:
         - state
         # gulp.watch() is flagged as mutable otherwise
         - gulp
+  # This is too strict
+  fp/no-unused-expression: 0
+  import/no-unassigned-import:
+    - 2
+    - allow: ['@ehmicky/dev-tasks/register.js']
 
   ## Naming
   id-length:
@@ -201,6 +209,14 @@ rules:
     - enforceInMethodNames: true
       # Often used in several libraries
       allow: [_id]
+  # Too unstable for the moment:
+  #   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
+  #   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
+  unicorn/prevent-abbreviation: 0
+  # Too cumbersome
+  unicorn/no-keyword-prefix: 0
+  # No use
+  id-denylist: 0
 
   ## Typecasting
   no-implicit-coercion:
@@ -221,6 +237,8 @@ rules:
   no-constant-binary-expression: 2
   no-dupe-else-if: 2
   no-nested-ternary: 2
+  # We allow ternaries, they can make code look cleaner
+  no-ternary: 0
   unicorn/prefer-ternary: 2
   unicorn/prefer-logical-operator-over-ternary: 2
 
@@ -259,7 +277,12 @@ rules:
     - 2
     - ignore: [cause]
   unicorn/prefer-type-error: 2
+  unicorn/error-message: 2
   unicorn/prefer-optional-catch-binding: 2
+  # Too strict
+  fp/no-throw: 0
+  # Recommends `error.name` being enumerable, which is incorrect
+  unicorn/custom-error-definition: 0
 
   ## Functions
   func-style: 2
@@ -272,6 +295,8 @@ rules:
   prefer-arrow-callback:
     - 2
     - allowNamedFunctions: true
+  # This rule encourages creating functions where it is not needed
+  unicorn/no-array-callback-reference: 0
   arrow-body-style: 2
   max-params: 2
   unicorn/prefer-default-parameters: 2
@@ -280,6 +305,8 @@ rules:
   unicorn/no-useless-spread: 2
   prefer-rest-params: 2
   fp/no-arguments: 2
+  # We want rest parameters to allow passing around arguments unchanged
+  fp/no-rest-parameters: 0
   require-yield: 2
   grouped-accessor-pairs:
     - 2
@@ -288,16 +315,26 @@ rules:
   no-setter-return: 2
   fp/no-get-set: 2
   fp/no-proxy: 2
+  # Too strict
+  consistent-return: 0
   unicorn/consistent-function-scoping: 2
   unicorn/prefer-reflect-apply: 2
 
   ## Objects
+  # We sort object keys by type, not by name
+  sort-keys: 0
   prefer-destructuring: 2
   unicorn/consistent-destructuring: 2
+  # It conflicts with `prefer-destructuring` rule
+  unicorn/no-unreadable-array-destructuring: 0
   unicorn/no-object-as-default-parameter: 2
   no-unsafe-optional-chaining:
     - 2
     - disallowArithmeticOperators: true
+  # Requires Node.js 16.9.0
+  prefer-object-has-own: 0
+  # Array.reduce() is sometimes useful in stateful logic
+  unicorn/prefer-object-from-entries: 0
 
   ## Inheritance
   no-constructor-return: 2
@@ -306,6 +343,8 @@ rules:
   unicorn/no-this-assignment: 2
   unicorn/no-static-only-class: 2
   no-empty-static-block: 2
+  # This forbids `func.bind()`
+  unicorn/prefer-prototype-methods: 0
   no-unused-private-class-members: 2
   max-classes-per-file: 0
   fp/no-class: 2
@@ -316,6 +355,8 @@ rules:
   unicorn/prefer-includes: 2
   unicorn/prefer-array-flat-map: 2
   unicorn/prefer-array-flat: 2
+  # Array.reduce() is sometimes useful in stateful logic
+  unicorn/no-array-reduce: 0
   unicorn/prefer-negative-index: 2
   unicorn/prefer-array-find:
     - 2
@@ -324,7 +365,11 @@ rules:
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
   unicorn/no-useless-length-check: 2
+  # We prefer `forEach()` over loops
+  unicorn/no-array-for-each: 0
   unicorn/no-array-push-push: 2
+  # `Array.from()` is slower than `new Array()` followed by a `for` loop
+  unicorn/no-new-array: 0
   unicorn/prefer-set-has: 2
   unicorn/prefer-set-size: 2
   unicorn/require-array-join-separator: 2
@@ -335,16 +380,28 @@ rules:
   unicorn/prefer-string-starts-ends-with: 2
   unicorn/prefer-string-trim-start-end: 2
   unicorn/prefer-string-slice: 2
+  # Requires Node 15.0.0
+  unicorn/prefer-string-replace-all: 0
+  # Requires Node 16.6.0
+  unicorn/prefer-at: 0
   unicorn/no-hex-escape: 2
   unicorn/escape-case: 2
   unicorn/no-console-spaces: 2
+  # Not useful at the moment
+  unicorn/string-content: 0
   unicorn/prefer-code-point: 2
   unicorn/prefer-json-parse-buffer: 2
   unicorn/text-encoding-identifier-case: 2
 
   ## RegExps
   unicorn/better-regex: 2
+  # Too strict
+  unicorn/no-unsafe-regex: 0
+  # This is in conflict with no-useless-escape rule
+  no-div-regex: 0
   require-unicode-regexp: 2
+  # This makes RegExps more verbose
+  prefer-named-capture-group: 0
   unicorn/prefer-regexp-test: 2
 
   ## Number
@@ -368,6 +425,7 @@ rules:
   no-await-in-loop: 2
   unicorn/no-unnecessary-await: 2
   unicorn/no-useless-promise-resolve-reject: 2
+  unicorn/prefer-top-level-await: 2
   unicorn/no-await-expression-member: 2
   unicorn/no-thenable: 2
   require-atomic-updates: 2
@@ -378,6 +436,8 @@ rules:
   promise/always-return: 2
   promise/valid-params: 2
   promise/no-new-statics: 2
+  # We want to allow Promise.all() and Promise.race()
+  promise/no-native: 0
   promise/no-return-wrap: 2
   promise/no-return-in-finally: 2
   promise/no-nesting: 2
@@ -418,8 +478,8 @@ rules:
     - 2
     - allowComputed: true
   import/no-named-as-default: 2
-  ## TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
-  ## `sinon` is using ES modules
+  # TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
+  # `sinon` is using ES modules
   import/no-named-as-default-member: 0
   unicorn/prefer-export-from:
     - 2
@@ -474,6 +534,9 @@ rules:
       extendDefaultStyles: false
   import/no-namespace: 2
   import/no-named-default: 2
+  # This does not match our import/export style
+  import/no-named-export: 0
+  import/prefer-default-export: 0
   import/no-anonymous-default-export:
     - 2
     - allowObject: true
@@ -488,16 +551,25 @@ rules:
     - always
     - ignorePackages: true
   n/file-extension-in-import: 2
+  # This does not work with the way we import files
+  import/no-internal-modules: 0
+  import/no-relative-parent-imports: 0
   import/no-useless-path-segments: 2
   import/no-relative-packages: 2
   import/no-self-import: 2
   import/no-cycle: 2
+  # This does not match our import/export style
+  import/group-exports: 0
+  # This does not allow excluding peerDependencies, so we only use n/no-extraneous-import
+  import/no-extraneous-dependencies: 0
   n/no-extraneous-require:
     - 2
     - allowModules: [ava, tsd]
   n/no-extraneous-import:
     - 2
     - allowModules: [ava, tsd]
+  # This does not match our import/export style
+  import/exports-last: 0
   sort-imports:
     - 2
     - ignoreMemberSort: true
@@ -521,6 +593,8 @@ rules:
   unicorn/prefer-module: 2
   import/no-import-module-exports: 2
   import/no-deprecated: 2
+  # No use
+  import/no-restricted-paths: 0
   unicorn/prefer-node-protocol: 2
   unicorn/relative-url-style: 2
 
@@ -539,19 +613,36 @@ rules:
 
   ## Binary
   n/no-unpublished-bin: 2
+  # We are symlinking shebang files so that they have the correct file extension
+  n/shebang: 0
+
+  ## Compatibility
+  # Does not work when transpiling with Babel
+  n/no-unsupported-features/es-syntax: 0
+  n/no-unsupported-features/es-builtins: 0
+  n/no-unsupported-features/node-builtins: 0
 
   ## Denylist
-  ## Avoid Node.js-specific global variables
+  # No use
+  no-restricted-exports: 0
+  # Already covered by no-restricted-imports
+  n/no-restricted-require: 0
+  n/no-restricted-import: 0
+  # Rules for client-side code only
+  import/no-nodejs-modules: 0
+  # No use
+  no-restricted-properties: 0
+  # Avoid Node.js-specific global variables
   no-restricted-globals:
     - 2
-    ## No global variables
+    # No global variables
     - global
     - GLOBAL
-    ## Use console wrapper instead
+    # Use console wrapper instead
     - console
-    ## Use module.exports instead
+    # Use module.exports instead
     - exports
-    ## Use require('process|buffer') instead
+    # Use require('process|buffer') instead
     - process
     - Buffer
   # Using object destructuring is not a good solution
@@ -559,6 +650,9 @@ rules:
 
   ## To avoid
   unicorn/no-null: 2
+  # `undefined` is too useful to avoid entirely
+  fp/no-nil: 0
+  no-undefined: 0
   unicorn/no-useless-undefined: 2
   unicorn/no-typeof-undefined: 2
   no-continue: 2
@@ -571,6 +665,8 @@ rules:
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
   unicorn/no-invalid-remove-event-listener: 2
+  # Requires Node 15.0.0
+  unicorn/prefer-event-target: 0
   n/no-process-exit: 2
   unicorn/no-process-exit: 2
 
@@ -596,6 +692,8 @@ rules:
     - message: never
   ava/test-title: 2
   ava/no-identical-title: 2
+  # Test titles do not follow any format
+  ava/test-title-format: 0
   ava/no-ignored-test-files:
     - 2
     - files: [src/**/*.test.js, '!src/helpers/**/*.js']
@@ -608,6 +706,8 @@ rules:
   ava/no-todo-test: 2
   ava/use-true-false: 2
   ava/prefer-t-regex: 2
+  # Do not use Power assert directly
+  ava/prefer-power-assert: 0
   ava/hooks-order: 2
   ava/no-inline-assertions: 2
   ava/max-asserts: [2, 5]
@@ -617,6 +717,9 @@ rules:
   ava/prefer-async-await: 2
   ava/no-async-fn-without-await: 2
   ava/use-t-throws-async-well: 2
+
+  ## React
+  react/*: 0
 
   ## Added by eslint-config-standard
   array-bracket-spacing: 2
@@ -848,146 +951,6 @@ rules:
   ## Warned against, but allowed by eslint-config-prettier
   no-tabs: 2
 
-  ## The only difference from pure functional programming is that we
-  ## allow exceptions to avoid cumbersome code
-  fp/no-throw: 0
-
-  ## Those rules should be picked for a fully functional codebase.
-  ## However, we want to allow throwing exceptions, because monads would
-  ## be too verbose.
-  fp/no-nil: 0
-  no-undefined: 0
-  fp/no-unused-expression: 0
-  consistent-return: 0
-
-  ## This does not work with the way we import files
-  import/no-internal-modules: 0
-
-  ## This does not allow excluding peerDependencies, so we only use n/no-extraneous-import
-  import/no-extraneous-dependencies: 0
-
-  ## This is too restrictive
-  unicorn/no-unsafe-regex: 0
-  import/no-relative-parent-imports: 0
-
-  ## Array.reduce() is sometimes useful in stateful logic
-  unicorn/no-array-reduce: 0
-  unicorn/prefer-object-from-entries: 0
-
-  ## This makes RegExps more verbose
-  prefer-named-capture-group: 0
-
-  ## This is in conflict with no-useless-escape rule
-  no-div-regex: 0
-
-  ## This makes commenting/uncommenting code tedious
-  capitalized-comments: 0
-
-  ## This does not match our import/export style
-  import/no-named-export: 0
-  import/prefer-default-export: 0
-  import/group-exports: 0
-  import/exports-last: 0
-
-  ## Conflict with eslint-plugin-fp
-  unicorn/no-array-for-each: 0
-
-  ## We sort object keys by type, not by name
-  sort-keys: 0
-
-  ## We want rest parameters to allow passing around arguments unchanged
-  fp/no-rest-parameters: 0
-
-  ## We allow ternaries, they can make code look cleaner
-  no-ternary: 0
-
-  ## We allow TODO comments
-  no-warning-comments: 0
-  unicorn/expiring-todo-comments: 0
-
-  ## This requires putting comments on the same line as the ESLint directive,
-  ## but we prefer to put the comment on the previous line
-  eslint-comments/require-description: 0
-
-  ## We are symlinking shebang files so that they have the correct file extension
-  n/shebang: 0
-
-  ## We want to allow Promise.all() and Promise.race()
-  promise/no-native: 0
-
-  ## Requires Node 15.0.0
-  unicorn/prefer-event-target: 0
-  unicorn/prefer-string-replace-all: 0
-
-  ## `Array.at()` is not possible in Node.js yet
-  unicorn/prefer-at: 0
-
-  ## This rule encourages creating functions where it is not needed
-  unicorn/no-array-callback-reference: 0
-
-  ## It conflicts with `prefer-destructuring` rule
-  unicorn/no-unreadable-array-destructuring: 0
-
-  ## This is not useful at the moment
-  unicorn/string-content: 0
-
-  ## This rule should be turned on in the future
-  valid-jsdoc: 0
-  require-jsdoc: 0
-
-  ## This rule is too unstable for the moment:
-  ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/269
-  ##   https://github.com/sindresorhus/eslint-plugin-unicorn/issues/270
-  unicorn/prevent-abbreviation: 0
-
-  ## `Array.from()` is slower than `new Array()` followed by a `for` loop
-  unicorn/no-new-array: 0
-
-  ## This rule is too cumbersome:
-  unicorn/no-keyword-prefix: 0
-
-  ## Empty error messages are used by `modern-errors`
-  unicorn/error-message: 0
-
-  ## Recommends `error.name` being enumerable, which is incorrect
-  unicorn/custom-error-definition: 0
-
-  ## Does not work when transpiling with Babel
-  n/no-unsupported-features/es-syntax: 0
-  n/no-unsupported-features/es-builtins: 0
-  n/no-unsupported-features/node-builtins: 0
-
-  ## Already covered by no-restricted-imports
-  n/no-restricted-require: 0
-  n/no-restricted-import: 0
-
-  ## Not supported well by ESLint yet
-  unicorn/prefer-top-level-await: 0
-
-  ## Do not use Power assert directly
-  ava/prefer-power-assert: 0
-
-  ## JavaScript feature not available in Node.js yet
-  prefer-object-has-own: 0
-
-  ## Test titles do not follow any format
-  ava/test-title-format: 0
-
-  ## Rules for client-side code only
-  import/no-nodejs-modules: 0
-
-  ## This forbids `func.bind()`
-  unicorn/prefer-prototype-methods: 0
-
-  ## React
-  react/*: 0
-
-  ## No use for those rules
-  id-denylist: 0
-  no-restricted-properties: 0
-  no-restricted-exports: 0
-  import/no-restricted-paths: 0
-
 settings:
   # JSON files in `build` are compiled from YAML in `src` and `test`
   n:
@@ -1041,8 +1004,8 @@ overrides:
 
       ## Async
       require-await: 2
-      ## This rule produces bad stack traces
-      ## See https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/returningpromises.md
+      # This rule produces bad stack traces
+      # See https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/returningpromises.md
       no-return-await: 0
 
       ## Modules
@@ -1258,7 +1221,7 @@ overrides:
           leadingUnderscore: forbid
           trailingUnderscore: forbid
 
-      # ## Typecasting
+      ## Typecasting
       '@typescript-eslint/no-base-to-string': 2
       # `${...}` is useful in validation error messages where input might be
       # unknown or of many different types
@@ -1513,6 +1476,9 @@ overrides:
       # Example test files
       ava/no-ignored-test-files: 0
 
+      # Empty error messages are simpler in documentation
+      unicorn/error-message: 0
+
       # Too verbose for documentation
       strict: 0
 
@@ -1627,6 +1593,9 @@ overrides:
 
       # Often tested as an invalid input
       unicorn/no-null: 0
+
+      # Empty error messages are simpler in tests
+      unicorn/error-message: 0
 
   - files: ['src/**/*.test.{js,cjs,mjs}']
     rules:
@@ -1805,6 +1774,9 @@ overrides:
       # Passing `undefined` is handled differently than passing no argument by
       # TypeScript, which can be tested
       unicorn/no-useless-undefined: 0
+
+      # Empty error messages are simpler in tests
+      unicorn/error-message: 0
 
       # Often tested as an invalid input
       unicorn/no-null: 0
