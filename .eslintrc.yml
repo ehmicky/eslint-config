@@ -29,14 +29,15 @@ globals:
   window: readonly
 
 plugins:
+  - '@typescript-eslint'
+  - ava
   - eslint-comments
   - filenames
   - fp
   - html
   - markdown
+  - prefer-arrow-functions
   - unicorn
-  - ava
-  - '@typescript-eslint'
   ## Added by eslint-config-standard
   - import
   - n
@@ -506,6 +507,7 @@ rules:
 
   ## Functions
   func-style: 2
+  prefer-arrow-functions/prefer-arrow-functions: 2
   func-names:
     - 2
     - as-needed

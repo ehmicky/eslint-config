@@ -74,5 +74,8 @@
   },
   "engines": {
     "node": ">=14.18.0"
+  },
+  "dependencies": {
+    "eslint-plugin-prefer-arrow-functions": "^3.1.4"
   }
 }
