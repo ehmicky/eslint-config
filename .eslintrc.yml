@@ -10,7 +10,8 @@ parserOptions:
   sourceType: module
   ecmaVersion: 2022
   ecmaFeatures:
-    jsx: true
+    ## Difference with eslint-config-standard
+    jsx: false
   ## For TypeScript ESLint
   project: tsconfig.json
 
@@ -58,9 +59,6 @@ rules:
   multiline-ternary:
     - 2
     - always-multiline
-  new-cap:
-    - 2
-    - capIsNew: false
   no-async-promise-executor: 2
   no-caller: 2
   no-case-declarations: 2
@@ -68,9 +66,6 @@ rules:
   no-compare-neg-zero: 2
   no-cond-assign: 2
   no-const-assign: 2
-  no-constant-condition:
-    - 2
-    - checkLoops: false
   no-control-regex: 2
   no-debugger: 2
   no-delete-var: 2
@@ -86,7 +81,6 @@ rules:
   no-ex-assign: 2
   no-extend-native: 2
   no-extra-bind: 2
-  no-extra-boolean-cast: 2
   no-fallthrough: 2
   no-func-assign: 2
   no-global-assign: 2
@@ -94,10 +88,7 @@ rules:
   no-invalid-regexp: 2
   no-irregular-whitespace: 2
   no-iterator: 2
-  no-labels:
-    - 2
-    - allowLoop: false
-      allowSwitch: false
+  no-labels: 2
   no-lone-blocks: 2
   no-misleading-character-class: 2
   no-multi-str: 2
@@ -112,9 +103,6 @@ rules:
   no-proto: 2
   no-prototype-builtins: 2
   no-regex-spaces: 2
-  no-return-assign:
-    - 2
-    - except-parens
   no-self-assign: 2
   no-self-compare: 2
   no-sequences: 2
@@ -141,9 +129,6 @@ rules:
   one-var:
     - 2
     - initialized: never
-  prefer-const:
-    - 2
-    - destructuring: all
   prefer-promise-reject-errors: 2
   prefer-regex-literals:
     - 2
@@ -173,12 +158,8 @@ rules:
   use-isnan:
     - 2
     - enforceForIndexOf: true
-  valid-typeof:
-    - 2
-    - requireStringLiterals: true
-  yoda:
-    - 2
-    - never
+  valid-typeof: 2
+  yoda: 2
   import/export: 2
   import/first: 2
   import/no-absolute-path: 2
@@ -201,6 +182,12 @@ rules:
     - allowImplicit: true
       checkForEach: true
   curly: 2
+  new-cap: 2
+  no-constant-condition: 2
+  no-extra-boolean-cast:
+    - 2
+    - enforceForLogicalOperands: true
+  no-return-assign: 2
   no-undef:
     - 2
     - typeof: true
@@ -212,6 +199,7 @@ rules:
     - enforceForClassMembers: true
   no-var: 2
   object-shorthand: 2
+  prefer-const: 2
   n/no-path-concat: 0
 
   ## Disabled by eslint-config-prettier although added by eslint-config-standard
@@ -974,24 +962,16 @@ overrides:
       no-dupe-class-members: 2
       no-implied-eval: 2
       no-loss-of-precision: 2
-      no-redeclare:
-        - 2
-        - builtinGlobals: false
       no-throw-literal: 2
-      no-unused-expressions:
-        - 2
-        - allowShortCircuit: true
-          allowTernary: true
-          allowTaggedTemplates: true
-      no-use-before-define:
-        - 2
-        - functions: false
-          classes: false
-          variables: false
       no-useless-constructor: 2
 
       ## Differences with eslint-config-standard
-      no-unused-vars: 2
+      no-redeclare: 2
+      no-unused-expressions: 2
+      no-unused-vars:
+        - 2
+        - caughtErrors: all
+      no-use-before-define: 2
 
       ## Disabled by eslint-config-prettier
       brace-style: 0
