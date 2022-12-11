@@ -1,30 +1,31 @@
 extends:
-  ## The rules added by standard/standard are shown as comments below
-  - standard
   - plugin:you-dont-need-lodash-underscore/all
-  ## The rules disabled by eslint-config-prettier are shown as comments below
-  - prettier
+  ## The rules added by eslint-config-standard and eslint-config-prettier are
+  ## inlined instead to be explicit
+  # - standard
+  # - prettier
 
 parserOptions:
+  ## Added by eslint-config-standard
   sourceType: module
+  ecmaVersion: 2021
+  ecmaFeatures:
+    jsx: true
+  ## For TypeScript ESLint
   project: tsconfig.json
-## Added by standard/standard
-#  ecmaVersion: 2021
-#  ecmaFeatures:
-#    jsx: true
 
 reportUnusedDisableDirectives: true
 
-## Added by standard/standard
-#env:
-#  node: true
-#  es2021: true
+## Added by eslint-config-standard
+env:
+  node: true
+  es2021: true
 
-## Added by standard/standard
-#globals:
-#  document: readonly
-#  navigator: readonly
-#  window: readonly
+## Added by eslint-config-standard
+globals:
+  document: readonly
+  navigator: readonly
+  window: readonly
 
 plugins:
   - eslint-comments
@@ -35,10 +36,10 @@ plugins:
   - unicorn
   - ava
   - '@typescript-eslint'
-## Added by standard/standard
-#  - import
-#  - n
-#  - promise
+  ## Added by eslint-config-standard
+  - import
+  - n
+  - promise
 
 rules:
   ## Globals
@@ -83,11 +84,6 @@ rules:
 
   ## Indentation
   unicorn/template-indent: 2
-
-  ## Braces
-  curly:
-    - 2
-    - all
 
   ## Parenthesis
   unicorn/no-unreadable-iife: 2
@@ -219,9 +215,6 @@ rules:
   fp/no-valueof-field: 2
 
   ## Tests
-  no-unsafe-negation:
-    - 2
-    - enforceForOrderingRelations: true
   unicorn/no-instanceof-array: 2
   no-negated-condition: 2
   unicorn/no-negated-condition: 2
@@ -299,7 +292,6 @@ rules:
   unicorn/prefer-reflect-apply: 2
 
   ## Objects
-  object-shorthand: 2
   prefer-destructuring: 2
   unicorn/consistent-destructuring: 2
   unicorn/no-object-as-default-parameter: 2
@@ -321,10 +313,6 @@ rules:
   unicorn/no-array-method-this-argument: 2
 
   ## Arrays
-  array-callback-return:
-    - 2
-    - allowImplicit: true
-      checkForEach: true
   unicorn/prefer-includes: 2
   unicorn/prefer-array-flat-map: 2
   unicorn/prefer-array-flat: 2
@@ -630,179 +618,181 @@ rules:
   ava/no-async-fn-without-await: 2
   ava/use-t-throws-async-well: 2
 
-  ## Differences from standard/standard
+  ## Added by eslint-config-standard
+  array-bracket-spacing: 2
+  camelcase:
+    - 2
+    - allow: ['^UNSAFE_']
+      properties: never
+      ignoreGlobals: true
+  constructor-super: 2
+  default-case-last: 2
+  eqeqeq:
+    - 2
+    - always
+    - 'null': ignore
+  multiline-ternary:
+    - 2
+    - always-multiline
+  new-cap:
+    - 2
+    - capIsNew: false
+  no-async-promise-executor: 2
+  no-caller: 2
+  no-case-declarations: 2
+  no-class-assign: 2
+  no-compare-neg-zero: 2
+  no-cond-assign: 2
+  no-const-assign: 2
+  no-constant-condition:
+    - 2
+    - checkLoops: false
+  no-control-regex: 2
+  no-debugger: 2
+  no-delete-var: 2
+  no-dupe-args: 2
+  no-dupe-keys: 2
+  no-duplicate-case: 2
+  no-empty:
+    - 2
+    - allowEmptyCatch: true
+  no-empty-character-class: 2
+  no-empty-pattern: 2
+  no-eval: 2
+  no-ex-assign: 2
+  no-extend-native: 2
+  no-extra-bind: 2
+  no-extra-boolean-cast: 2
+  no-fallthrough: 2
+  no-func-assign: 2
+  no-global-assign: 2
+  no-import-assign: 2
+  no-invalid-regexp: 2
+  no-irregular-whitespace: 2
+  no-iterator: 2
+  no-labels:
+    - 2
+    - allowLoop: false
+      allowSwitch: false
+  no-lone-blocks: 2
+  no-misleading-character-class: 2
+  no-multi-str: 2
+  no-new: 2
+  no-new-func: 2
+  no-new-object: 2
+  no-new-symbol: 2
+  no-new-wrappers: 2
+  no-obj-calls: 2
+  no-octal: 2
+  no-octal-escape: 2
+  no-proto: 2
+  no-prototype-builtins: 2
+  no-regex-spaces: 2
+  no-return-assign:
+    - 2
+    - except-parens
+  no-self-assign: 2
+  no-self-compare: 2
+  no-sequences: 2
+  no-shadow-restricted-names: 2
+  no-sparse-arrays: 2
+  no-tabs: 2
+  no-template-curly-in-string: 2
+  no-this-before-super: 2
+  no-undef-init: 2
+  no-unmodified-loop-condition: 2
+  no-unneeded-ternary:
+    - 2
+    - defaultAssignment: false
+  no-unreachable: 2
+  no-unreachable-loop: 2
+  no-unsafe-finally: 2
+  no-useless-backreference: 2
+  no-useless-call: 2
+  no-useless-catch: 2
+  no-useless-escape: 2
+  no-useless-rename: 2
+  no-useless-return: 2
+  no-void: 2
+  no-with: 2
+  one-var:
+    - 2
+    - initialized: never
+  prefer-const:
+    - 2
+    - destructuring: all
+  prefer-promise-reject-errors: 2
+  prefer-regex-literals:
+    - 2
+    - disallowRedundantWrapping: true
+  spaced-comment:
+    - 2
+    - always
+    - line:
+        markers:
+          - '*package'
+          - '!'
+          - '/'
+          - ','
+          - '='
+      block:
+        balanced: true
+        markers:
+          - '*package'
+          - '!'
+          - ','
+          - ':'
+          - '::'
+          - flow-include
+        exceptions:
+          - '*'
+  symbol-description: 2
+  use-isnan:
+    - 2
+    - enforceForIndexOf: true
+  valid-typeof:
+    - 2
+    - requireStringLiterals: true
+  yoda:
+    - 2
+    - never
+  import/export: 2
+  import/first: 2
+  import/no-absolute-path: 2
+  import/no-duplicates: 2
+  import/no-webpack-loader-syntax: 2
+  n/handle-callback-err:
+    - 2
+    - '^(err|error)$'
+  n/no-callback-literal: 2
+  n/no-deprecated-api: 2
+  n/no-exports-assign: 2
+  n/no-new-require: 2
+  n/process-exit-as-throw: 2
+  promise/param-names: 2
 
-  ## standard/standard does not check `typeof`
+  ## Differences with eslint-config-standard
+  accessor-pairs: 2
+  array-callback-return:
+    - 2
+    - allowImplicit: true
+      checkForEach: true
+  curly: 2
   no-undef:
     - 2
     - typeof: true
-  ## Stricter than standard/standard
+  no-unsafe-negation:
+    - 2
+    - enforceForOrderingRelations: true
   no-useless-computed-key:
     - 2
     - enforceForClassMembers: true
-  ## In most cases, forward slashes are just fine on Windows
+  no-var: 2
+  object-shorthand: 2
   n/no-path-concat: 0
 
-  ## Added by standard/standard
-
-  #  accessor-pairs: 2
-  #  array-bracket-spacing: 0
-  #  camelcase:
-  #    - 2
-  #    - allow: ['^UNSAFE_']
-  #      properties: never
-  #      ignoreGlobals: true
-  #  constructor-super: 2
-  #  default-case-last: 2
-  #  eqeqeq:
-  #    - 2
-  #    - always
-  #    - 'null': ignore
-  #  multiline-ternary:
-  #    - 2
-  #    - always-multiline
-  #  new-cap:
-  #    - 2
-  #    - capIsNew: false
-  #  no-async-promise-executor: 2
-  #  no-caller: 2
-  #  no-case-declarations: 2
-  #  no-class-assign: 2
-  #  no-compare-neg-zero: 2
-  #  no-cond-assign: 2
-  #  no-const-assign: 2
-  #  no-constant-condition:
-  #    - 2
-  #    - checkLoops: false
-  #  no-control-regex: 2
-  #  no-debugger: 2
-  #  no-delete-var: 2
-  #  no-dupe-args: 2
-  #  no-dupe-keys: 2
-  #  no-duplicate-case: 2
-  #  no-empty:
-  #    - 2
-  #    - allowEmptyCatch: true
-  #  no-empty-character-class: 2
-  #  no-empty-pattern: 2
-  #  no-eval: 2
-  #  no-ex-assign: 2
-  #  no-extend-native: 2
-  #  no-extra-bind: 2
-  #  no-extra-boolean-cast: 2
-  #  no-fallthrough: 2
-  #  no-func-assign: 2
-  #  no-global-assign: 2
-  #  no-import-assign: 2
-  #  no-invalid-regexp: 2
-  #  no-irregular-whitespace: 2
-  #  no-iterator: 2
-  #  no-labels:
-  #    - 2
-  #    - allowLoop: false
-  #      allowSwitch: false
-  #  no-lone-blocks: 2
-  #  no-misleading-character-class: 2
-  #  no-multi-str: 2
-  #  no-new: 2
-  #  no-new-func: 2
-  #  no-new-object: 2
-  #  no-new-symbol: 2
-  #  no-new-wrappers: 2
-  #  no-obj-calls: 2
-  #  no-octal: 2
-  #  no-octal-escape: 2
-  #  no-proto: 2
-  #  no-prototype-builtins: 2
-  #  no-regex-spaces: 2
-  #  no-return-assign:
-  #    - 2
-  #    - except-parens
-  #  no-self-assign: 2
-  #  no-self-compare: 2
-  #  no-sequences: 2
-  #  no-shadow-restricted-names: 2
-  #  no-sparse-arrays: 2
-  #  no-tabs: 2
-  #  no-template-curly-in-string: 2
-  #  no-this-before-super: 2
-  #  no-undef-init: 2
-  #  no-unmodified-loop-condition: 2
-  #  no-unneeded-ternary:
-  #    - 2
-  #    - defaultAssignment: false
-  #  no-unreachable: 2
-  #  no-unreachable-loop: 2
-  #  no-unsafe-finally: 2
-  #  no-useless-backreference: 2
-  #  no-useless-call: 2
-  #  no-useless-catch: 2
-  #  no-useless-escape: 2
-  #  no-useless-rename: 2
-  #  no-useless-return: 2
-  #  no-var: 2
-  #  no-void: 2
-  #  no-with: 2
-  #  n/handle-callback-err:
-  #    - 2
-  #    - '^(err|error)$'
-  #  n/no-new-require: 2
-  #  one-var:
-  #    - 2
-  #    - initialized: never
-  #  prefer-const:
-  #    - 2
-  #    - destructuring: all
-  #  prefer-promise-reject-errors: 2
-  #  prefer-regex-literals:
-  #    - 2
-  #    - disallowRedundantWrapping: true
-  #  spaced-comment:
-  #    - 2
-  #    - always
-  #    - line:
-  #        markers:
-  #          - '*package'
-  #          - '!'
-  #          - '/'
-  #          - ','
-  #          - '='
-  #      block:
-  #        balanced: true
-  #        markers:
-  #          - '*package'
-  #          - '!'
-  #          - ','
-  #          - ':'
-  #          - '::'
-  #          - flow-include
-  #        exceptions:
-  #          - '*'
-  #  symbol-description: 2
-  #  use-isnan:
-  #    - 2
-  #    - enforceForIndexOf: true
-  #  valid-typeof:
-  #    - 2
-  #    - requireStringLiterals: true
-  #  yoda:
-  #    - 2
-  #    - never
-  #  import/export: 2
-  #  import/first: 2
-  #  import/no-absolute-path: 2
-  #  import/no-duplicates: 2
-  #  import/no-webpack-loader-syntax: 2
-  #  n/no-callback-literal: 2
-  #  n/no-deprecated-api: 2
-  #  n/no-exports-assign: 2
-  #  n/process-exit-as-throw: 2
-  #  promise/param-names: 2
-
   ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
-  ## although added by standard/standard.
-  no-mixed-operators: 0
-  no-unexpected-multiline: 0
+  ## although added by eslint-config-standard.
   arrow-spacing: 0
   block-spacing: 0
   comma-style: 0
@@ -813,10 +803,12 @@ rules:
   key-spacing: 0
   new-parens: 0
   no-floating-decimal: 0
+  no-mixed-operators: 0
   no-mixed-spaces-and-tabs: 0
   no-multi-spaces: 0
   no-multiple-empty-lines: 0
   no-trailing-spaces: 0
+  no-unexpected-multiline: 0
   no-whitespace-before-property: 0
   object-curly-newline: 0
   object-property-newline: 0
@@ -1068,40 +1060,37 @@ overrides:
                 ['node:assert', assert, 'node:assert/strict', assert/strict]
               message: Please throw an Error instead
 
-      ## Differences from standard/standard
-      ## standard/standard does not check arguments for unused-vars
-      no-unused-vars:
+      ## Added by eslint-config-standard
+      dot-notation: 2
+      lines-between-class-members:
         - 2
-        - {}
+        - always
+        - exceptAfterSingleLine: true
+      no-array-constructor: 2
+      no-dupe-class-members: 2
+      no-implied-eval: 2
+      no-loss-of-precision: 2
+      no-redeclare:
+        - 2
+        - builtinGlobals: false
+      no-throw-literal: 2
+      no-unused-expressions:
+        - 2
+        - allowShortCircuit: true
+          allowTernary: true
+          allowTaggedTemplates: true
+      no-use-before-define:
+        - 2
+        - functions: false
+          classes: false
+          variables: false
+      no-useless-constructor: 2
 
-      ## Added by standard/standard
-      #  dot-notation: 2
-      #  lines-between-class-members: 2
-      #    - 2
-      #    - always
-      #    - exceptAfterSingleLine: true
-      #  no-array-constructor: 2
-      #  no-dupe-class-members: 2
-      #  no-implied-eval: 2
-      #  no-loss-of-precision: 2
-      #  no-redeclare:
-      #    - 2
-      #    - builtinGlobals: false
-      #  no-throw-literal: 2
-      #  no-unused-expressions:
-      #    - 2
-      #    - allowShortCircuit: true
-      #      allowTernary: true
-      #      allowTaggedTemplates: true
-      #  no-use-before-define:
-      #    - 2
-      #    - functions: false
-      #      classes: false
-      #      variables: false
-      #  no-useless-constructor: 2
+      ## Differences with eslint-config-standard
+      no-unused-vars: 2
 
       ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
-      ## although added by standard/standard.
+      ## although added by eslint-config-standard.
       brace-style: 0
       comma-dangle: 0
       comma-spacing: 0
@@ -1220,7 +1209,7 @@ overrides:
       '@typescript-eslint/no-extra-semi': 0
 
       ## Conflicts with Prettier, i.e. disabled by eslint-config-prettier,
-      ## although added by standard/standard.
+      ## although added by eslint-config-standard.
       '@typescript-eslint/member-delimiter-style': 0
       '@typescript-eslint/type-annotation-spacing': 0
 
