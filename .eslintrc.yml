@@ -1160,6 +1160,10 @@ overrides:
         - 2
         - ignoreTypeImports: true
 
+      # Already fixed by other rules and does not seem to work rule with my
+      # TypeScript setup
+      import/extensions: 0
+
       # TypeScript already checks for missing imports.
       # Also this does not work when importing:
       #  - A `*.d.ts` without a sibling `.js`
