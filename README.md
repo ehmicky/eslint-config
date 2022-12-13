@@ -45,7 +45,7 @@ Code should be split into small files and functions:
 - object spreading: `{ ...object }` instead of `Object.assign({}, ...object)`
 - arguments spreading: `funcName(...args)` instead of
   `funcName.call(this, ...args)`
-- parameters spreading: `function(...args)` instead of `function(arguments)`
+- parameters spreading: `(...args) => ...` instead of `(arguments) => ...`
 - template strings instead of concatenation.
 - `async`/`await` instead of explicit promises or callbacks.
 - vanilla JavaScript instead of Lodash/Underscore.
@@ -70,7 +70,7 @@ you find bugs and maintain a consistent coding style:
 
 - named parameters (i.e. passing an object as single parameter) instead of
   positional parameters.
-- function declarations should be `const funcName = function() { ... }`
+- arrow functions should be preferred
 
 # Support
 
