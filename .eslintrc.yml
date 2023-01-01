@@ -432,6 +432,8 @@ rules:
   no-underscore-dangle:
     - 2
     - enforceInMethodNames: true
+      allowInArrayDestructuring: false
+      allowInObjectDestructuring: false
       # Often used in several libraries
       allow: [_id]
   # Too unstable for the moment:
