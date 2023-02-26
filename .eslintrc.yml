@@ -764,6 +764,7 @@ rules:
         assert: { named: true, default: true }
         module: { named: true, default: true }
       extendDefaultStyles: false
+  import/no-empty-named-blocks: 2
   import/no-namespace: 2
   import/no-named-default: 2
   # This does not match our import/export style
@@ -814,7 +815,9 @@ rules:
         order: asc
         caseInsensitive: true
       warnOnUnassignedImports: true
-  import/newline-after-import: 2
+  import/newline-after-import:
+    - 2
+    - considerComments: true
   import/unambiguous: 2
   n/global-require: 2
   import/no-dynamic-require:
@@ -829,6 +832,8 @@ rules:
   import/dynamic-import-chunkname: 0
   # No use
   import/no-restricted-paths: 0
+  # Prefer @typescript-eslint/consistent-type-imports
+  import/consistent-type-specifier-style: 0
   unicorn/prefer-node-protocol: 2
   unicorn/relative-url-style: 2
 
