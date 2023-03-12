@@ -812,9 +812,7 @@ rules:
         order: asc
         caseInsensitive: true
       warnOnUnassignedImports: true
-  import/newline-after-import:
-    - 2
-    - considerComments: true
+  import/newline-after-import: 2
   import/unambiguous: 2
   n/global-require: 2
   import/no-dynamic-require:
@@ -1539,6 +1537,7 @@ overrides:
       '@typescript-eslint/no-implied-eval': 0
       '@typescript-eslint/no-meaningless-void-operator': 0
       '@typescript-eslint/no-misused-promises': 0
+      '@typescript-eslint/no-mixed-enums': 0
       '@typescript-eslint/non-nullable-type-assertion-style': 0
       '@typescript-eslint/no-redundant-type-constituents': 0
       '@typescript-eslint/no-throw-literal': 0
