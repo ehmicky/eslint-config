@@ -207,13 +207,11 @@ rules:
 
   ## Disabled by eslint-config-prettier although added by eslint-config-standard
   arrow-spacing: 0
-  block-spacing: 0
   comma-style: 0
   computed-property-spacing: 0
   dot-location: 0
   eol-last: 0
   generator-star-spacing: 0
-  key-spacing: 0
   new-parens: 0
   no-floating-decimal: 0
   no-mixed-operators: 0
@@ -248,7 +246,6 @@ rules:
   implicit-arrow-linebreak: 0
   jsx-quotes: 0
   linebreak-style: 0
-  lines-around-comment: 0
   max-len: 0
   newline-per-chained-call: 0
   no-confusing-arrow: 0
@@ -999,12 +996,15 @@ overrides:
         - caughtErrors: all
 
       ## Disabled by eslint-config-prettier
+      block-spacing: 0
       brace-style: 0
       comma-dangle: 0
       comma-spacing: 0
       func-call-spacing: 0
       indent: 0
+      key-spacing: 0
       keyword-spacing: 0
+      lines-around-comment: 0
       no-extra-parens: 0
       no-extra-semi: 0
       object-curly-spacing: 0
@@ -1097,12 +1097,15 @@ overrides:
       '@typescript-eslint/no-unused-vars':
         - 2
         - caughtErrors: all
+      '@typescript-eslint/block-spacing': 0
       '@typescript-eslint/brace-style': 0
       '@typescript-eslint/comma-dangle': 0
       '@typescript-eslint/comma-spacing': 0
       '@typescript-eslint/func-call-spacing': 0
       '@typescript-eslint/indent': 0
+      '@typescript-eslint/key-spacing': 0
       '@typescript-eslint/keyword-spacing': 0
+      '@typescript-eslint/lines-around-comment': 0
       '@typescript-eslint/no-extra-parens': 0
       '@typescript-eslint/no-extra-semi': 0
       '@typescript-eslint/object-curly-spacing': 0
@@ -1307,6 +1310,7 @@ overrides:
       '@typescript-eslint/consistent-type-imports':
         - 2
         - fixStyle: inline-type-imports
+      '@typescript-eslint/no-import-type-side-effects': 2
       '@typescript-eslint/no-require-imports': 2
       '@typescript-eslint/no-var-requires': 2
       '@typescript-eslint/no-useless-empty-export': 2
@@ -1362,6 +1366,7 @@ overrides:
       '@typescript-eslint/prefer-enum-initializers': 2
       '@typescript-eslint/prefer-literal-enum-member': 2
       '@typescript-eslint/no-duplicate-enum-values': 2
+      '@typescript-eslint/no-mixed-enums': 2
       '@typescript-eslint/no-unnecessary-qualifier': 2
 
       ## Readonly
