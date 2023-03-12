@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^2.0.60",
-    "execa": "^7.1.0",
+    "execa": "^7.1.1",
     "sinon": "^15.0.1"
   },
   "peerDependencies": {
