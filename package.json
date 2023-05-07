@@ -47,7 +47,7 @@
   "devDependencies": {
     "@ehmicky/dev-tasks": "^2.0.74",
     "execa": "^7.1.1",
-    "sinon": "^15.0.2"
+    "sinon": "^15.0.4"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.55.0",
