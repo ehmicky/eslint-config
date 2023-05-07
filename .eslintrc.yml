@@ -1030,6 +1030,10 @@ overrides:
           allow:
             - process
             - Buffer
+            # From 'node:timers/promises'
+            - setTimeout
+            - setInterval
+            - setImmediate
 
       ## Declarations
       no-magic-numbers:
@@ -1127,7 +1131,6 @@ overrides:
           allow:
             - process
             - Buffer
-            # From 'node:timers/promises'
             - setTimeout
             - setInterval
             - setImmediate
