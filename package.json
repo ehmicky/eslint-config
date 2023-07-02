@@ -3,12 +3,12 @@
   "version": "18.0.34",
   "type": "module",
   "exports": {
-    ".": "./.prettierrc.cjs",
+    ".": "./.prettierrc.js",
     "./.eslintrc.yml": "./.eslintrc.yml"
   },
-  "main": "./.prettierrc.cjs",
+  "main": "./.prettierrc.js",
   "files": [
-    ".prettierrc.cjs",
+    ".prettierrc.js",
     ".eslintrc.yml",
     ".editorconfig"
   ],

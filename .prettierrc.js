@@ -2,8 +2,7 @@
 // We use JavaScript instead of JSON or YAML so that this file can be exported
 // as the package's main file. We need to do that so it can be a shareable
 // configuration.
-// Prettier config file does not support ES modules yet.
-module.exports = {
+export default {
   // Same as .editorconfig (and also default values)
   printWidth: 80,
   tabWidth: 2,
