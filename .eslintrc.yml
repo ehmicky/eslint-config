@@ -1149,9 +1149,6 @@ overrides:
       '@typescript-eslint/no-invalid-this': 2
       '@typescript-eslint/require-await': 2
       '@typescript-eslint/return-await': 2
-      '@typescript-eslint/no-duplicate-imports':
-        - 2
-        - includeExports: true
       '@typescript-eslint/no-restricted-imports':
         - 2
         - patterns:
