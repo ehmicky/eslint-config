@@ -1158,7 +1158,7 @@ overrides:
             - group:
                 ['node:assert', assert, 'node:assert/strict', assert/strict]
               message: Please throw an Error instead
-          allowTypeImports: true
+              allowTypeImports: true
 
       ## Disabled by eslint-config-prettier
       '@typescript-eslint/member-delimiter-style': 0
@@ -1750,7 +1750,7 @@ overrides:
       # @ts-expect-error is useful in type tests
       '@typescript-eslint/ban-ts-comment':
         - 2
-        - ts-expect-error: 0
+        - ts-expect-error: false
 
       # Allow using `expectType<void>(...)`
       '@typescript-eslint/no-invalid-void-type': 0
