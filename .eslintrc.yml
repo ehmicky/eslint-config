@@ -622,8 +622,6 @@ rules:
 
   ## RegExps
   unicorn/better-regex: 2
-  # Too strict
-  unicorn/no-unsafe-regex: 0
   # This is in conflict with no-useless-escape rule
   no-div-regex: 0
   require-unicode-regexp: 2
