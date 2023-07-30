@@ -1053,9 +1053,6 @@ overrides:
 
       ## Async
       require-await: 2
-      # This rule produces bad stack traces
-      # See https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/returningpromises.md
-      no-return-await: 0
 
       ## Modules
       no-duplicate-imports:
