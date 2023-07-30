@@ -1503,12 +1503,16 @@ overrides:
       # We allow asserts as they are simple
       no-restricted-imports: 0
 
+      # `this` is sometimes omitting for example purpose
+      class-methods-use-this: 0
+
   - files: ['**/*.md/*.ts', 'examples/**/*.{ts,cts,mts}']
     rules:
       # Same rules as in JavaScript files
       '@typescript-eslint/no-magic-numbers': 0
       '@typescript-eslint/no-empty-function': 0
       '@typescript-eslint/no-restricted-imports': 0
+      '@typescript-eslint/class-methods-use-this': 0
 
       # Documentation and examples sometimes used unused variables
       '@typescript-eslint/no-unused-vars': 0
@@ -1746,6 +1750,9 @@ overrides:
       # Allow using `expectType<void>(...)`
       '@typescript-eslint/no-invalid-void-type': 0
       '@typescript-eslint/no-confusing-void-expression': 0
+
+      # `this` is sometimes omitting for example purpose
+      '@typescript-eslint/class-methods-use-this': 0
 
   # Files that are sibling to a `*.js` or `*.ts`
   - files: ['**/*.{test.{js,cjs,mjs,ts,cts,mts},d.ts,test-d.ts}']
