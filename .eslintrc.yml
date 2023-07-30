@@ -159,6 +159,7 @@ rules:
         exceptions:
           - '*'
   symbol-description: 2
+  unicode-bom: 2
   use-isnan:
     - 2
     - enforceForIndexOf: true
@@ -232,7 +233,6 @@ rules:
   space-unary-ops: 0
   template-curly-spacing: 0
   template-tag-spacing: 0
-  unicode-bom: 0
   wrap-iife: 0
   yield-star-spacing: 0
   unicorn/no-nested-ternary: 0
@@ -247,6 +247,7 @@ rules:
   jsx-quotes: 0
   linebreak-style: 0
   max-len: 0
+  max-statements-per-line: 0
   newline-per-chained-call: 0
   no-confusing-arrow: 0
   nonblock-statement-body-position: 0
@@ -331,9 +332,6 @@ rules:
   max-statements:
     - 2
     - 10
-  max-statements-per-line:
-    - 2
-    - max: 2
   import/max-dependencies: 2
   complexity:
     - 2
