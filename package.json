@@ -36,7 +36,10 @@
   ],
   "license": "Apache-2.0",
   "homepage": "https://www.github.com/ehmicky/eslint-config",
-  "repository": "ehmicky/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/eslint-config.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/eslint-config/issues"
   },
