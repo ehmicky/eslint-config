@@ -16,6 +16,7 @@ test('Smoke test', async (t) => {
     [FIXTURE_FILE, '--config', ESLINT_CONFIG],
     { preferLocal: true },
   )
+
   t.is(exitCode, 0)
   t.is(stdout, '')
   t.is(stderr, '')
