@@ -1538,6 +1538,9 @@ overrides:
     # `eslint-config-markdown` does not work with `parserOptions.project`, which
     # removes some rules
     extends: ['plugin:@typescript-eslint/disable-type-checked']
+    # Currently missing from `disable-type-checked` config
+    rules:
+      '@typescript-eslint/prefer-destructuring': 0
 
   # Test files, including helpers
   - files: ['src/**/*.test.{js,cjs,mjs,ts,cts,mts}']
