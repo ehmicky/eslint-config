@@ -554,8 +554,7 @@ rules:
   no-unsafe-optional-chaining:
     - 2
     - disallowArithmeticOperators: true
-  # Requires Node.js 16.9.0
-  prefer-object-has-own: 0
+  prefer-object-has-own: 2
   # Array.reduce() is sometimes useful in stateful logic
   unicorn/prefer-object-from-entries: 0
 
@@ -582,8 +581,7 @@ rules:
   unicorn/prefer-negative-index: 2
   unicorn/prefer-array-find:
     - 2
-    # TODO: enable after dropping support for Node <18.0.0
-    - checkFromLast: false
+    - checkFromLast: true
   unicorn/prefer-array-some: 2
   unicorn/prefer-array-index-of: 2
   unicorn/no-useless-length-check: 2
@@ -602,10 +600,8 @@ rules:
   unicorn/prefer-string-starts-ends-with: 2
   unicorn/prefer-string-trim-start-end: 2
   unicorn/prefer-string-slice: 2
-  # Requires Node 15.0.0
-  unicorn/prefer-string-replace-all: 0
-  # Requires Node 16.6.0
-  unicorn/prefer-at: 0
+  unicorn/prefer-string-replace-all: 2
+  unicorn/prefer-at: 2
   unicorn/no-hex-escape: 2
   unicorn/escape-case: 2
   unicorn/no-console-spaces: 2
@@ -701,9 +697,7 @@ rules:
     - 2
     - allowComputed: true
   import/no-named-as-default: 2
-  # TODO: re-enable once it stops reporting errors for `sinon`, i.e. once
-  # `sinon` is using ES modules
-  import/no-named-as-default-member: 0
+  import/no-named-as-default-member: 2
   unicorn/prefer-export-from:
     - 2
     - ignoreUsedVariables: true
@@ -891,8 +885,7 @@ rules:
   no-alert: 2
   unicorn/prefer-add-event-listener: 2
   unicorn/no-invalid-remove-event-listener: 2
-  # Requires Node 15.0.0
-  unicorn/prefer-event-target: 0
+  unicorn/prefer-event-target: 2
   n/no-process-exit: 2
   unicorn/no-process-exit: 2
 
