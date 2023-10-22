@@ -98,7 +98,6 @@ rules:
   no-multi-str: 2
   no-new: 2
   no-new-func: 2
-  no-new-object: 2
   no-new-symbol: 2
   no-new-wrappers: 2
   no-obj-calls: 2
@@ -523,7 +522,6 @@ rules:
   # This rule encourages creating functions where it is not needed
   unicorn/no-array-callback-reference: 0
   arrow-body-style: 2
-  max-params: 2
   unicorn/prefer-default-parameters: 2
   prefer-spread: 2
   unicorn/prefer-spread: 2
@@ -548,11 +546,11 @@ rules:
   ## Objects
   # We sort object keys by type, not by name
   sort-keys: 0
-  prefer-destructuring: 2
   unicorn/consistent-destructuring: 2
   # It conflicts with `prefer-destructuring` rule
   unicorn/no-unreadable-array-destructuring: 0
   unicorn/no-object-as-default-parameter: 2
+  no-object-constructor: 2
   no-unsafe-optional-chaining:
     - 2
     - disallowArithmeticOperators: true
@@ -1042,8 +1040,14 @@ overrides:
 
       ## Functions
       no-loop-func: 2
+      max-params: 2
       default-param-last: 2
       no-empty-function: 2
+
+      ## Objects
+      prefer-destructuring:
+        - 2
+        - enforceForDeclarationWithTypeAnnotation: true
 
       ## Inheritance
       class-methods-use-this: 2
@@ -1137,8 +1141,10 @@ overrides:
           ignoreTypeIndexes: true
       '@typescript-eslint/init-declarations': 2
       '@typescript-eslint/no-loop-func': 2
+      '@typescript-eslint/max-params': 2
       '@typescript-eslint/default-param-last': 2
       '@typescript-eslint/no-empty-function': 2
+      '@typescript-eslint/prefer-destructuring': 2
       '@typescript-eslint/class-methods-use-this': 2
       '@typescript-eslint/no-invalid-this': 2
       '@typescript-eslint/require-await': 2
