@@ -8,9 +8,9 @@ extends:
 parserOptions:
   ## Added by eslint-config-standard
   sourceType: module
-  ecmaVersion: 2022
+  ## Difference with eslint-config-standard
+  ecmaVersion: latest
   ecmaFeatures:
-    ## Difference with eslint-config-standard
     jsx: false
   ## For TypeScript ESLint
   project: tsconfig.json
@@ -20,7 +20,7 @@ reportUnusedDisableDirectives: true
 env:
   ## Added by eslint-config-standard
   node: true
-  es2022: true
+  es2024: true
 
 globals:
   ## Added by eslint-config-standard
