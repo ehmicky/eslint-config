@@ -1045,9 +1045,7 @@ overrides:
       no-empty-function: 2
 
       ## Objects
-      prefer-destructuring:
-        - 2
-        - enforceForDeclarationWithTypeAnnotation: true
+      prefer-destructuring: 2
 
       ## Inheritance
       class-methods-use-this: 2
@@ -1144,7 +1142,11 @@ overrides:
       '@typescript-eslint/max-params': 2
       '@typescript-eslint/default-param-last': 2
       '@typescript-eslint/no-empty-function': 2
-      '@typescript-eslint/prefer-destructuring': 2
+      '@typescript-eslint/prefer-destructuring':
+        - 2
+        ## TODO: uncomment this. This is currently failing due to a bug with
+        ## @typescript-eslint/eslint-parser for this rule
+        # - enforceForDeclarationWithTypeAnnotation: true
       '@typescript-eslint/class-methods-use-this': 2
       '@typescript-eslint/no-invalid-this': 2
       '@typescript-eslint/require-await': 2
