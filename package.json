@@ -48,7 +48,7 @@
     "lib": "src"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^2.0.122",
+    "@ehmicky/dev-tasks": "^2.0.123",
     "execa": "^9.0.1",
     "sinon": "^17.0.0"
   },
