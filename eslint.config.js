@@ -237,7 +237,6 @@ export default [
       'eslint-comments': eslintComments,
       filenames,
       fp,
-      markdown,
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
       import: importPlugin,
@@ -1310,6 +1309,7 @@ export default [
   {
     files: ['**/*.md'],
     processor: 'markdown/markdown',
+    plugins: { markdown },
   },
 
   {
