@@ -2,7 +2,7 @@ import { builtinModules } from 'node:module'
 import stylisticJs from '@stylistic/eslint-plugin-js'
 import stylisticTs from '@stylistic/eslint-plugin-ts'
 import stylisticPlus from '@stylistic/eslint-plugin-plus'
-import typescriptEslint from '@typescript-eslint/eslint-plugin'
+import typescriptEslint from 'typescript-eslint'
 import ava from 'eslint-plugin-ava'
 import eslintComments from 'eslint-plugin-eslint-comments'
 import filenames from 'eslint-plugin-filenames'
@@ -15,7 +15,6 @@ import importPlugin from 'eslint-plugin-import'
 import n from 'eslint-plugin-n'
 import promise from 'eslint-plugin-promise'
 import globals from 'globals'
-import tsParser from '@typescript-eslint/parser'
 
 // Prefer `if` + `throw new Error()` instead of `assert()` as it does not work
 // in browsers
@@ -143,14 +142,12 @@ const javaScriptRules = {
   'init-declarations': 2,
   'no-unused-expressions': 2,
 
-  // Exceptions
-  'no-throw-literal': 2,
-
   // Functions
   'no-loop-func': 2,
   'max-params': 2,
   'default-param-last': 2,
   'no-empty-function': 2,
+  'consistent-return': 2,
 
   // Objects
   'dot-notation': 2,
@@ -232,7 +229,6 @@ export default [
       '@stylistic/js': stylisticJs,
       '@stylistic/ts': stylisticJs,
       '@stylistic/plus': stylisticJs,
-      '@typescript-eslint': typescriptEslint,
       ava,
       'eslint-comments': eslintComments,
       filenames,
@@ -580,10 +576,11 @@ export default [
       'no-label-var': 2,
 
       // Exceptions
+      'no-throw-literal': 2,
       'unicorn/throw-new-error': 2,
-      'unicorn/catch-error-name': [2, { ignore: ['cause'] }],
       'unicorn/prefer-type-error': 2,
       'unicorn/error-message': 2,
+      'unicorn/catch-error-name': [2, { ignore: ['cause'] }],
       'no-ex-assign': 2,
       'no-useless-catch': 2,
       'unicorn/prefer-optional-catch-binding': 2,
@@ -1043,7 +1040,8 @@ export default [
   // TypeScript files
   {
     files: ['**/*.{ts,cts,mts}'],
-    languageOptions: { parser: tsParser },
+    plugins: { '@typescript-eslint': typescriptEslint.plugin },
+    languageOptions: { parser: typescriptEslint.parser },
     rules: {
       ...typeScriptRules,
 
@@ -1073,7 +1071,6 @@ export default [
 
       // Comments
       '@typescript-eslint/ban-ts-comment': 2,
-      '@typescript-eslint/prefer-ts-expect-error': 2,
       '@typescript-eslint/ban-tslint-comment': 2,
 
       // Declarations
@@ -1148,6 +1145,9 @@ export default [
         { requireDefaultForNonUnion: true },
       ],
 
+      // Exceptions
+      '@typescript-eslint/only-throw-error': 2
+
       // Functions
       '@typescript-eslint/method-signature-style': 2,
       '@typescript-eslint/prefer-function-type': 2,
@@ -1218,6 +1218,7 @@ export default [
       '@typescript-eslint/promise-function-async': 2,
       '@typescript-eslint/no-floating-promises': 2,
       '@typescript-eslint/return-await': 2,
+      '@typescript-eslint/use-unknown-in-catch-callback-variable': 2
 
       // Modules
       '@typescript-eslint/consistent-type-exports': [
