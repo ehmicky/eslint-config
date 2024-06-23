@@ -316,6 +316,7 @@ export default [
       'unicorn/no-nested-ternary': 0,
       'unicorn/empty-brace-spaces': 0,
       'unicorn/number-literal-case': 0,
+      'unicorn/template-indent': 0,
 
       // Warned against, but allowed by eslint-config-prettier
       '@stylistic/js/no-tabs': 2,
@@ -379,7 +380,6 @@ export default [
       strict: 2,
 
       // Indentation
-      'unicorn/template-indent': 2,
       '@stylistic/plus/indent-binary-ops': 0,
 
       // Whitespaces
