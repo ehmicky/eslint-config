@@ -1226,7 +1226,8 @@ overrides:
       # `${...}` is useful in validation error messages where input might be
       # unknown or of many different types
       '@typescript-eslint/restrict-template-expressions': 0
-      '@typescript-eslint/no-unnecessary-template-expression': 2
+      # Has a bug: considers that JSDoc comments are template expressions
+      '@typescript-eslint/no-unnecessary-template-expression': 0
 
       ## Tests
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 2
