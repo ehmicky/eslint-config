@@ -237,7 +237,6 @@ export default [
       'eslint-comments': eslintComments,
       filenames,
       fp,
-      html,
       markdown,
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
@@ -1420,6 +1419,11 @@ export default [
       // Only useful runtime, not in documentation
       'symbol-description': 0,
     },
+  },
+
+  {
+    files: ['**/*.html'],
+    plugins: { html },
   },
 
   {
