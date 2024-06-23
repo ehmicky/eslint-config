@@ -56,8 +56,6 @@
     "@stylistic/eslint-plugin-js": "^2.3.0",
     "@stylistic/eslint-plugin-plus": "^2.3.0",
     "@stylistic/eslint-plugin-ts": "^2.3.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-codeframe": "^7.32.1",
@@ -75,7 +73,8 @@
     "eslint-plugin-promise": "^6.2.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.6.0",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.2",
+    "typescript-eslint": "^7.14.1"
   },
   "engines": {
     "node": ">=18.18.0"
