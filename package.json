@@ -78,6 +78,6 @@
     "node": ">=18.18.0"
   },
   "dependencies": {
-    "eslint-plugin-prefer-arrow-functions": "^3.2.4"
+    "eslint-plugin-prefer-arrow-functions": "^3.3.2"
   }
 }
