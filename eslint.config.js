@@ -524,6 +524,7 @@ export default [
       eqeqeq: [2, 'always', { null: 'ignore' }],
       // == null is sometimes a good shorthand
       'no-eq-null': 0,
+      'unicorn/no-negation-in-equality-check': 2
       'valid-typeof': 2,
       'unicorn/no-instanceof-array': 2,
       'no-negated-condition': 2,
@@ -671,16 +672,18 @@ export default [
       'unicorn/prefer-includes': 2,
       'unicorn/prefer-array-flat-map': 2,
       'unicorn/prefer-array-flat': 2,
+      'unicorn/no-magic-array-flat-depth': 2,
       // Array.reduce() is sometimes useful in stateful logic
       'unicorn/no-array-reduce': 0,
       'unicorn/prefer-negative-index': 2,
-      'unicorn/prefer-array-find': [2, { checkFromLast: true }],
+      'unicorn/prefer-array-find': 2,
       'unicorn/prefer-array-some': 2,
       'unicorn/prefer-array-index-of': 2,
       'unicorn/no-useless-length-check': 2,
       // We prefer `forEach()` over loops
       'unicorn/no-array-for-each': 0,
       'unicorn/no-array-push-push': 2,
+      'unicorn/consistent-empty-array-spread': 2
       // `Array.from()` is slower than `new Array()` followed by a `for` loop
       'unicorn/no-new-array': 0,
       'unicorn/prefer-set-has': 2,
@@ -718,6 +721,8 @@ export default [
       'no-useless-backreference': 2,
       'no-invalid-regexp': 2,
       'prefer-regex-literals': [2, { disallowRedundantWrapping: true }],
+      // Too verbose
+      'unicorn/prefer-string-raw': 0
       'require-unicode-regexp': 2,
       // This makes RegExps more verbose
       'prefer-named-capture-group': 0,
@@ -731,7 +736,7 @@ export default [
       'no-nonoctal-decimal-escape': 2,
       'prefer-numeric-literals': 2,
       radix: [2, 'as-needed'],
-      'unicorn/prefer-number-properties': 2,
+      'unicorn/prefer-number-properties': [2, {checkInfinity: true}],
       'use-isnan': [2, { enforceForIndexOf: true }],
       'no-compare-neg-zero': 2,
       'prefer-exponentiation-operator': 2,
@@ -751,6 +756,8 @@ export default [
       'n/callback-return': 2,
       'n/no-callback-literal': 2,
       'no-promise-executor-return': 2,
+      'unicorn/no-single-promise-in-promise-methods': 2
+      'unicorn/no-await-in-promise-methods': 2
       'no-await-in-loop': 2,
       'unicorn/no-unnecessary-await': 2,
       'no-async-promise-executor': 2,
@@ -832,6 +839,8 @@ export default [
         2,
         { allowObject: true, allowArray: true, allowLiteral: true },
       ],
+      // Better covered by `import/no-anonymous-default-export`
+      'unicorn/no-anonymous-default-export': 0
       'import/no-default-export': 2,
       'n/exports-style': [2, 'module.exports'],
       'n/no-exports-assign': 2,
@@ -912,6 +921,7 @@ export default [
       'n/no-unsupported-features/node-builtins': 0,
       'n/no-unsupported-features/node-globals': 0,
       'n/no-deprecated-api': 2,
+      'unicorn/no-unnecessary-polyfills': 2
 
       // Denylist
       // No use
@@ -955,6 +965,8 @@ export default [
       'n/no-process-exit': 2,
       'n/process-exit-as-throw': 2,
       'unicorn/no-process-exit': 2,
+      'unicorn/prefer-structured-clone': 2
+      'unicorn/no-invalid-fetch-options': 2
       'no-script-url': 2,
       'no-alert': 2,
       'unicorn/prefer-add-event-listener': 2,
