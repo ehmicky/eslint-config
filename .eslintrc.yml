@@ -238,6 +238,7 @@ rules:
   no-inner-declarations:
     - 2
     - functions
+    - blockScopedFunctions: disallow
   sort-vars: 2
 
   ## Assignments
@@ -290,6 +291,7 @@ rules:
         - state
         # gulp.watch() is flagged as mutable otherwise
         - gulp
+  no-useless-assignment: 2
   # This is too strict
   fp/no-unused-expression: 0
   no-new: 2
@@ -335,7 +337,7 @@ rules:
   ## Typecasting
   no-extra-boolean-cast:
     - 2
-    - enforceForLogicalOperands: true
+    - enforceForInnerExpressions: true
   no-implicit-coercion:
     - 2
     - disallowTemplateShorthand: true
@@ -362,9 +364,7 @@ rules:
   unicorn/no-instanceof-array: 2
   no-negated-condition: 2
   unicorn/no-negated-condition: 2
-  no-constant-condition:
-    - 2
-    - checkLoops: false
+  no-constant-condition: 2
   no-constant-binary-expression: 2
   no-self-compare: 2
   no-dupe-else-if: 2
@@ -478,9 +478,7 @@ rules:
   no-dupe-keys: 2
   # We sort object keys by type, not by name
   sort-keys: 0
-  no-useless-computed-key:
-    - 2
-    - enforceForClassMembers: true
+  no-useless-computed-key: 2
   object-shorthand: 2
   no-useless-rename: 2
   unicorn/consistent-destructuring: 2
@@ -605,7 +603,6 @@ rules:
   unicorn/require-number-to-fixed-digits-argument: 2
 
   ## Symbols
-  no-new-symbol: 2
   symbol-description: 2
 
   ## Date
@@ -989,9 +986,7 @@ overrides:
         - exceptAfterSingleLine: true
 
       ## Referencing
-      no-unused-vars:
-        - 2
-        - caughtErrors: all
+      no-unused-vars: 2
       no-redeclare: 2
       no-shadow:
         - 2
@@ -1102,9 +1097,7 @@ overrides:
         - exceptAfterSingleLine: true
       '@stylistic/plus/type-generic-spacing': 0
       '@stylistic/plus/type-named-tuple-spacing': 0
-      '@typescript-eslint/no-unused-vars':
-        - 2
-        - caughtErrors: all
+      '@typescript-eslint/no-unused-vars': 2
       '@typescript-eslint/no-redeclare':
         - 2
         - ignoreDeclarationMerge: true
