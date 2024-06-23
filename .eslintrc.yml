@@ -29,6 +29,9 @@ globals:
   window: readonly
 
 plugins:
+  - '@stylistic/js'
+  - '@stylistic/ts'
+  - '@stylistic/plus'
   - '@typescript-eslint'
   - ava
   - eslint-comments
@@ -45,7 +48,7 @@ plugins:
 
 rules:
   ## Added by eslint-config-standard
-  array-bracket-spacing: 2
+  '@stylistic/js/array-bracket-spacing': 2
   camelcase:
     - 2
     - allow: ['^UNSAFE_']
@@ -57,7 +60,7 @@ rules:
     - 2
     - always
     - 'null': ignore
-  multiline-ternary:
+  '@stylistic/js/multiline-ternary':
     - 2
     - always-multiline
   no-async-promise-executor: 2
@@ -136,7 +139,7 @@ rules:
   prefer-regex-literals:
     - 2
     - disallowRedundantWrapping: true
-  spaced-comment:
+  '@stylistic/js/spaced-comment':
     - 2
     - always
     - line:
@@ -206,59 +209,59 @@ rules:
   n/no-path-concat: 0
 
   ## Disabled by eslint-config-prettier although added by eslint-config-standard
-  arrow-spacing: 0
-  comma-style: 0
-  computed-property-spacing: 0
-  dot-location: 0
-  eol-last: 0
-  generator-star-spacing: 0
-  new-parens: 0
-  no-floating-decimal: 0
-  no-mixed-operators: 0
-  no-mixed-spaces-and-tabs: 0
-  no-multi-spaces: 0
-  no-multiple-empty-lines: 0
-  no-trailing-spaces: 0
+  '@stylistic/js/arrow-spacing': 0
+  '@stylistic/js/comma-style': 0
+  '@stylistic/js/computed-property-spacing': 0
+  '@stylistic/js/dot-location': 0
+  '@stylistic/js/eol-last': 0
+  '@stylistic/js/generator-star-spacing': 0
+  '@stylistic/js/new-parens': 0
+  '@stylistic/js/no-floating-decimal': 0
+  '@stylistic/js/no-mixed-operators': 0
+  '@stylistic/js/no-mixed-spaces-and-tabs': 0
+  '@stylistic/js/no-multi-spaces': 0
+  '@stylistic/js/no-multiple-empty-lines': 0
+  '@stylistic/js/no-trailing-spaces': 0
+  '@stylistic/js/no-whitespace-before-property': 0
+  '@stylistic/js/object-curly-newline': 0
+  '@stylistic/js/object-property-newline': 0
+  '@stylistic/js/operator-linebreak': 0
+  '@stylistic/js/padded-blocks': 0
+  '@stylistic/js/quote-props': 0
+  '@stylistic/js/rest-spread-spacing': 0
+  '@stylistic/js/semi-spacing': 0
+  '@stylistic/js/space-in-parens': 0
+  '@stylistic/js/space-unary-ops': 0
+  '@stylistic/js/template-curly-spacing': 0
+  '@stylistic/js/template-tag-spacing': 0
+  '@stylistic/js/wrap-iife': 0
+  '@stylistic/js/yield-star-spacing': 0
   no-unexpected-multiline: 0
-  no-whitespace-before-property: 0
-  object-curly-newline: 0
-  object-property-newline: 0
-  operator-linebreak: 0
-  padded-blocks: 0
-  quote-props: 0
-  rest-spread-spacing: 0
-  semi-spacing: 0
-  space-in-parens: 0
-  space-unary-ops: 0
-  template-curly-spacing: 0
-  template-tag-spacing: 0
-  wrap-iife: 0
-  yield-star-spacing: 0
   unicorn/no-nested-ternary: 0
 
   # Disabled by eslint-config-prettier
-  array-bracket-newline: 0
-  array-element-newline: 0
-  arrow-parens: 0
-  function-paren-newline: 0
-  function-call-argument-newline: 0
-  implicit-arrow-linebreak: 0
-  jsx-quotes: 0
-  linebreak-style: 0
-  max-len: 0
-  max-statements-per-line: 0
-  newline-per-chained-call: 0
-  no-confusing-arrow: 0
-  nonblock-statement-body-position: 0
-  one-var-declaration-per-line: 0
-  semi-style: 0
-  switch-colon-spacing: 0
-  wrap-regex: 0
+  '@stylistic/js/array-bracket-newline': 0
+  '@stylistic/js/array-element-newline': 0
+  '@stylistic/js/arrow-parens': 0
+  '@stylistic/js/function-call-argument-newline': 0
+  '@stylistic/js/function-paren-newline': 0
+  '@stylistic/js/implicit-arrow-linebreak': 0
+  '@stylistic/js/jsx-quotes': 0
+  '@stylistic/js/linebreak-style': 0
+  '@stylistic/js/max-len': 0
+  '@stylistic/js/max-statements-per-line': 0
+  '@stylistic/js/newline-per-chained-call': 0
+  '@stylistic/js/no-confusing-arrow': 0
+  '@stylistic/js/nonblock-statement-body-position': 0
+  '@stylistic/js/one-var-declaration-per-line': 0
+  '@stylistic/js/semi-style': 0
+  '@stylistic/js/switch-colon-spacing': 0
+  '@stylistic/js/wrap-regex': 0
   unicorn/empty-brace-spaces: 0
   unicorn/number-literal-case: 0
 
   ## Warned against, but allowed by eslint-config-prettier
-  no-tabs: 2
+  '@stylistic/js/no-tabs': 2
 
   ## Globals
   n/prefer-global/console: 2
@@ -278,10 +281,10 @@ rules:
   no-inline-comments:
     - 2
     - ignorePattern: c8
-  multiline-comment-style:
+  '@stylistic/js/multiline-comment-style':
     - 2
     - separate-lines
-  line-comment-position: 2
+  '@stylistic/js/line-comment-position': 2
   # This makes commenting/uncommenting code tedious
   capitalized-comments: 0
   # We allow TODO comments
@@ -312,6 +315,7 @@ rules:
 
   ## Indentation
   unicorn/template-indent: 2
+  '@stylistic/plus/indent-binary-ops': 0
 
   ## Parenthesis
   unicorn/no-unreadable-iife: 2
@@ -957,7 +961,7 @@ overrides:
     rules:
       ## Added by eslint-config-standard
       dot-notation: 2
-      lines-between-class-members:
+      '@stylistic/js/lines-between-class-members':
         - 2
         - always
         - exceptAfterSingleLine: true
@@ -981,26 +985,26 @@ overrides:
         - caughtErrors: all
 
       ## Disabled by eslint-config-prettier
-      block-spacing: 0
-      brace-style: 0
-      comma-dangle: 0
-      comma-spacing: 0
-      func-call-spacing: 0
-      indent: 0
-      key-spacing: 0
-      keyword-spacing: 0
-      lines-around-comment: 0
-      no-extra-parens: 0
-      no-extra-semi: 0
-      object-curly-spacing: 0
-      quotes: 0
-      semi: 0
-      space-before-blocks: 0
-      space-before-function-paren: 0
-      space-infix-ops: 0
+      '@stylistic/js/block-spacing': 0
+      '@stylistic/js/brace-style': 0
+      '@stylistic/js/comma-dangle': 0
+      '@stylistic/js/comma-spacing': 0
+      '@stylistic/js/function-call-spacing': 0
+      '@stylistic/js/indent': 0
+      '@stylistic/js/key-spacing': 0
+      '@stylistic/js/keyword-spacing': 0
+      '@stylistic/js/lines-around-comment': 0
+      '@stylistic/js/no-extra-parens': 0
+      '@stylistic/js/no-extra-semi': 0
+      '@stylistic/js/object-curly-spacing': 0
+      '@stylistic/js/quotes': 0
+      '@stylistic/js/semi': 0
+      '@stylistic/js/space-before-blocks': 0
+      '@stylistic/js/space-before-function-paren': 0
+      '@stylistic/js/space-infix-ops': 0
 
       ## Blank lines
-      padding-line-between-statements:
+      '@stylistic/js/padding-line-between-statements':
         - 2
         - blankLine: always
           prev: [multiline-block-like, directive]
@@ -1066,7 +1070,7 @@ overrides:
     rules:
       # Same rules as JavaScript files
       '@typescript-eslint/dot-notation': 2
-      '@typescript-eslint/lines-between-class-members':
+      '@stylistic/ts/lines-between-class-members':
         - 2
         - always
         - exceptAfterSingleLine: true
@@ -1088,24 +1092,26 @@ overrides:
       '@typescript-eslint/no-unused-vars':
         - 2
         - caughtErrors: all
-      '@typescript-eslint/block-spacing': 0
-      '@typescript-eslint/brace-style': 0
-      '@typescript-eslint/comma-dangle': 0
-      '@typescript-eslint/comma-spacing': 0
-      '@typescript-eslint/func-call-spacing': 0
-      '@typescript-eslint/indent': 0
-      '@typescript-eslint/key-spacing': 0
-      '@typescript-eslint/keyword-spacing': 0
-      '@typescript-eslint/lines-around-comment': 0
-      '@typescript-eslint/no-extra-parens': 0
-      '@typescript-eslint/no-extra-semi': 0
-      '@typescript-eslint/object-curly-spacing': 0
-      '@typescript-eslint/quotes': 0
-      '@typescript-eslint/semi': 0
-      '@typescript-eslint/space-before-blocks': 0
-      '@typescript-eslint/space-before-function-paren': 0
-      '@typescript-eslint/space-infix-ops': 0
-      '@typescript-eslint/padding-line-between-statements':
+      '@stylistic/ts/block-spacing': 0
+      '@stylistic/ts/brace-style': 0
+      '@stylistic/ts/comma-dangle': 0
+      '@stylistic/ts/comma-spacing': 0
+      '@stylistic/ts/function-call-spacing': 0
+      '@stylistic/ts/indent': 0
+      '@stylistic/ts/key-spacing': 0
+      '@stylistic/ts/keyword-spacing': 0
+      '@stylistic/ts/lines-around-comment': 0
+      '@stylistic/ts/no-extra-parens': 0
+      '@stylistic/ts/no-extra-semi': 0
+      '@stylistic/ts/object-curly-newline': 0
+      '@stylistic/ts/object-curly-spacing': 0
+      '@stylistic/ts/quote-props': 0
+      '@stylistic/ts/quotes': 0
+      '@stylistic/ts/semi': 0
+      '@stylistic/ts/space-before-blocks': 0
+      '@stylistic/ts/space-before-function-paren': 0
+      '@stylistic/ts/space-infix-ops': 0
+      '@stylistic/ts/padding-line-between-statements':
         - 2
         - blankLine: always
           prev: [multiline-block-like, directive, interface, type]
@@ -1113,6 +1119,8 @@ overrides:
         - blankLine: always
           prev: '*'
           next: multiline-block-like
+      '@stylistic/plus/type-generic-spacing': 0
+      '@stylistic/plus/type-named-tuple-spacing': 0
       '@typescript-eslint/no-shadow':
         - 2
         - builtinGlobals: true
@@ -1142,6 +1150,7 @@ overrides:
         # - enforceForDeclarationWithTypeAnnotation: true
       '@typescript-eslint/class-methods-use-this': 2
       '@typescript-eslint/no-invalid-this': 2
+      '@typescript-eslint/prefer-promise-reject-errors': 2
       '@typescript-eslint/require-await': 2
       '@typescript-eslint/return-await': 2
       '@typescript-eslint/no-restricted-imports':
@@ -1153,8 +1162,8 @@ overrides:
               allowTypeImports: true
 
       ## Disabled by eslint-config-prettier
-      '@typescript-eslint/member-delimiter-style': 0
-      '@typescript-eslint/type-annotation-spacing': 0
+      '@stylistic/ts/member-delimiter-style': 0
+      '@stylistic/ts/type-annotation-spacing': 0
 
       # Types requires more lines of code
       max-lines:
@@ -1217,6 +1226,7 @@ overrides:
       # `${...}` is useful in validation error messages where input might be
       # unknown or of many different types
       '@typescript-eslint/restrict-template-expressions': 0
+      '@typescript-eslint/no-unnecessary-template-expression': 2
 
       ## Tests
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 2
@@ -1237,7 +1247,9 @@ overrides:
       '@typescript-eslint/no-for-in-array': 2
 
       ## Switch
-      '@typescript-eslint/switch-exhaustiveness-check': 2
+      '@typescript-eslint/switch-exhaustiveness-check':
+        - 2
+        - requireDefaultForNonUnion: true
 
       ## Functions
       '@typescript-eslint/method-signature-style': 2
@@ -1282,6 +1294,7 @@ overrides:
 
       ## Arrays
       '@typescript-eslint/array-type': 2
+      '@typescript-eslint/prefer-find': 2
       '@typescript-eslint/prefer-includes': 2
       '@typescript-eslint/prefer-reduce-type-parameter': 2
       '@typescript-eslint/require-array-sort-compare':
@@ -1291,6 +1304,9 @@ overrides:
       ## Strings
       '@typescript-eslint/restrict-plus-operands': 2
       '@typescript-eslint/prefer-string-starts-ends-with': 2
+
+      ## Numbers
+      '@typescript-eslint/no-unsafe-unary-minus': 2
 
       ## RegExps
       '@typescript-eslint/prefer-regexp-exec': 2
@@ -1444,7 +1460,7 @@ overrides:
 
       # Inline comments can be nicer in documentation
       # Examples usually include the return value as inline comments
-      line-comment-position: 0
+      '@stylistic/js/line-comment-position': 0
       no-inline-comments: 0
 
       # Documentation often require the module itself.
