@@ -889,6 +889,7 @@ export default [
       // Prefer @typescript-eslint/consistent-type-imports
       'import/consistent-type-specifier-style': 0,
       'unicorn/prefer-node-protocol': 2,
+      'n/prefer-node-protocol': 2,
       'unicorn/relative-url-style': 2,
 
       // Filenames
@@ -902,13 +903,14 @@ export default [
       'n/no-unpublished-bin': 2,
       // We are symlinking shebang files so that they have the correct
       // file extension
-      'n/shebang': 0,
+      'n/hashbang': 0,
 
       // Compatibility
       // Does not work when transpiling with Babel
       'n/no-unsupported-features/es-syntax': 0,
       'n/no-unsupported-features/es-builtins': 0,
       'n/no-unsupported-features/node-builtins': 0,
+      'n/no-unsupported-features/node-globals': 0,
       'n/no-deprecated-api': 2,
 
       // Denylist
