@@ -1166,6 +1166,7 @@ export default [
         'index-signature',
       ],
       '@typescript-eslint/no-empty-interface': 2,
+      '@typescript-eslint/no-empty-object-type': 2,
       // Application-specific ordering is more relevant than type-specific
       '@typescript-eslint/member-ordering': 0,
       '@typescript-eslint/prefer-optional-chain': 2,
@@ -1181,6 +1182,7 @@ export default [
       '@typescript-eslint/prefer-readonly': 2,
       '@typescript-eslint/class-literal-property-style': [2, 'fields'],
       '@typescript-eslint/parameter-properties': 2,
+      '@typescript-eslint/no-unnecessary-parameter-property-assignment': 2,
       '@typescript-eslint/no-unsafe-declaration-merging': 2,
       '@typescript-eslint/no-extraneous-class': [
         2,
@@ -1299,6 +1301,7 @@ export default [
       // Generic
       '@typescript-eslint/consistent-generic-constructors': 2,
       '@typescript-eslint/no-unnecessary-type-arguments': 2,
+      '@typescript-eslint/no-unnecessary-type-parameters': 2,
       '@typescript-eslint/no-unnecessary-type-constraint': 2,
 
       // Type assertions
