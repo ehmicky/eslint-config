@@ -780,7 +780,7 @@ export default [
       'promise/no-multiple-resolved': 2,
       'promise/no-callback-in-promise': 2,
       'promise/avoid-new': 2,
-      'promise/prefer-await-to-then': 2,
+      'promise/prefer-await-to-then': [2, { strict: true }],
       'promise/prefer-await-to-callbacks': 2,
 
       // Modules
