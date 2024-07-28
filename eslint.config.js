@@ -673,6 +673,7 @@ export default [
       // Array.reduce() is sometimes useful in stateful logic
       'unicorn/no-array-reduce': 0,
       'unicorn/prefer-negative-index': 2,
+      'unicorn/no-length-as-slice-end': 2,
       'unicorn/prefer-array-find': 2,
       'unicorn/prefer-array-some': 2,
       'unicorn/prefer-array-index-of': 2,
