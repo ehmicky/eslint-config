@@ -70,7 +70,7 @@
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-n": "^17.9.0",
     "eslint-plugin-prefer-arrow-functions": "^3.3.2",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.6.0",
     "prettier": "^3.3.2",
