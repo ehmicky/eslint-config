@@ -250,7 +250,7 @@ export default [
       },
       parserOptions: {
         ecmaFeatures: { jsx: false },
-        project: 'tsconfig.json',
+        projectService: true,
       },
     },
     linterOptions: { reportUnusedDisableDirectives: true },
@@ -1235,7 +1235,6 @@ export default [
       ],
       '@typescript-eslint/no-import-type-side-effects': 2,
       '@typescript-eslint/no-require-imports': 2,
-      '@typescript-eslint/no-var-requires': 2,
       '@typescript-eslint/no-useless-empty-export': 2,
       '@typescript-eslint/triple-slash-reference': [
         2,
@@ -1243,17 +1242,8 @@ export default [
       ],
 
       // Forbid
-      '@typescript-eslint/ban-types': [
-        2,
-        {
-          extendDefaults: true,
-          types: {
-            // `{}` is useful as `{ ... } & {}` is reduced to `{ ... }`, unlike
-            // `{ ... } & object`
-            '{}': false,
-          },
-        },
-      ],
+      // Not currently useful
+      '@typescript-eslint/no-restricted-types': 0
 
       // Type declaration
       // `type` is useful
@@ -1489,7 +1479,7 @@ export default [
     files: ['**/*.md/*.ts'],
     languageOptions: {
       parserOptions: {
-        project: false,
+        projectService: false,
       },
     },
     // `eslint-config-markdown` does not work with `parserOptions.project`, which
