@@ -1152,6 +1152,7 @@ export default [
       // Functions
       '@typescript-eslint/method-signature-style': 2,
       '@typescript-eslint/prefer-function-type': 2,
+      '@typescript-eslint/no-unsafe-function-type': 2,
       // Prefer inferring return types instead
       '@typescript-eslint/explicit-function-return-type': 0,
       '@typescript-eslint/explicit-module-boundary-types': 0,
@@ -1266,6 +1267,7 @@ export default [
       '@typescript-eslint/no-unsafe-argument': 2,
       '@typescript-eslint/no-unsafe-call': 2,
       '@typescript-eslint/no-unsafe-return': 2,
+      '@typescript-eslint/no-wrapper-object-types': 2,
 
       // Undefined/null/void
       // `value!` assertions are useful, e.g. when accessing an array element
