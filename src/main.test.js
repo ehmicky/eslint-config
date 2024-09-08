@@ -1,17 +1,17 @@
 import { fileURLToPath } from 'node:url'
 
 import test from 'ava'
-import { execa } from 'execa'
+import spawn from 'nano-spawn'
 
 const ESLINT_CONFIG = fileURLToPath(
-  new URL('../../.eslintrc.yml', import.meta.url),
+  new URL('../../eslint.config.js', import.meta.url),
 )
 const FIXTURE_FILE = fileURLToPath(
   new URL('../../src/fixtures/valid.test.js', import.meta.url),
 )
 
 test('Smoke test', async (t) => {
-  const { exitCode, stdout, stderr } = await execa(
+  const { exitCode, stdout, stderr } = await spawn(
     'eslint',
     [FIXTURE_FILE, '--config', ESLINT_CONFIG],
     { preferLocal: true },
