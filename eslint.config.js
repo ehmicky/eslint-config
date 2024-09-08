@@ -8,7 +8,7 @@ import eslintComments from 'eslint-plugin-eslint-comments'
 import filenames from 'eslint-plugin-filenames'
 import fp from 'eslint-plugin-fp'
 import html from 'eslint-plugin-html'
-import markdown from 'eslint-plugin-markdown'
+import markdown from '@eslint/markdown'
 import preferArrowFunctions from 'eslint-plugin-prefer-arrow-functions'
 import unicorn from 'eslint-plugin-unicorn'
 import importPlugin from 'eslint-plugin-import'
@@ -1319,25 +1319,27 @@ export default [
   },
 
   // Markdown files
+  ...markdown.configs.processor,
+
   {
     files: ['**/*.md'],
-    processor: 'markdown/markdown',
-    plugins: { markdown },
+    language: 'markdown/gfm',
+    rules: {
+      'markdown/fenced-code-language': 2,
+      'markdown/heading-increment': 2,
+      'markdown/no-duplicate-headings': 2,
+      'markdown/no-empty-links': 2,
+      // We use HTML for <br/> and for the all-contributors table
+      'markdown/no-html': 0,
+      'markdown/no-invalid-label-refs': 2
+      'markdown/no-missing-label-refs': 2
+    },
   },
 
   {
     files: ['**/*.md/*.{js,ts}'],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          // `use strict` is too verbose in documentation
-          impliedStrict: true,
-        },
-      },
-    },
     rules: {
       // We want to keep Markdown code examples short
-      strict: 0,
       'import/newline-after-import': 0,
 
       // Markdown filenames do not match code examples
@@ -1345,27 +1347,6 @@ export default [
       'filenames/match-exported': 0,
       'filenames/match-regex': 0,
       'unicorn/filename-case': 0,
-
-      // Documentation code often misses context lines, leading to variables
-      // looking unused
-      'no-undef': 0,
-    },
-  },
-
-  {
-    files: ['**/*.md/*.js'],
-    rules: {
-      // Documentation code often misses context lines, leading to variables
-      // looking undefined
-      'no-unused-vars': 0,
-    },
-  },
-
-  {
-    files: ['**/*.md/*.ts'],
-    rules: {
-      // Same rules as in JavaScript files
-      '@typescript-eslint/no-unused-vars': 0,
     },
   },
 
