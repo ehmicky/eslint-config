@@ -721,6 +721,7 @@ export default [
       'prefer-regex-literals': [2, { disallowRedundantWrapping: true }],
       // Too verbose
       'unicorn/prefer-string-raw': 0,
+      // TODO: use requireFlag 'v' after dropping Node <20.0.0
       'require-unicode-regexp': 2,
       // This makes RegExps more verbose
       'prefer-named-capture-group': 0,
