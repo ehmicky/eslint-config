@@ -223,7 +223,7 @@ const typeScriptRules = {
 }
 
 export default [
-  ...importPlugin.flatConfigs.errors,
+  importPlugin.flatConfigs.errors,
   {
     // The rules added by eslint-config-prettier are inlined explicitly instead
     plugins: {
@@ -1245,7 +1245,8 @@ export default [
 
       // Forbid
       // Not currently useful
-      '@typescript-eslint/no-restricted-types': 0
+      '@typescript-eslint/no-restricted-types': 0,
+      '@typescript-eslint/no-deprecated': 2,
 
       // Type declaration
       // `type` is useful
@@ -1331,8 +1332,8 @@ export default [
       'markdown/no-empty-links': 2,
       // We use HTML for <br/> and for the all-contributors table
       'markdown/no-html': 0,
-      'markdown/no-invalid-label-refs': 2
-      'markdown/no-missing-label-refs': 2
+      'markdown/no-invalid-label-refs': 2,
+      'markdown/no-missing-label-refs': 2,
     },
   },
 
