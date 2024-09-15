@@ -223,6 +223,7 @@ const typeScriptRules = {
 }
 
 export default [
+  ...importPlugin.flatConfigs.errors,
   {
     // The rules added by eslint-config-prettier are inlined explicitly instead
     plugins: {
@@ -235,7 +236,6 @@ export default [
       fp,
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
-      import: importPlugin,
       n,
       promise,
     },
