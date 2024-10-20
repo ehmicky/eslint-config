@@ -401,7 +401,7 @@ export default [
       ],
       'max-statements': [2, 10],
       'import/max-dependencies': 2,
-      complexity: [2, 4],
+      complexity: [2, { max: 4, variant: 'modified' }],
       'max-depth': [2, 1],
       'max-nested-callbacks': [2, 1],
 
