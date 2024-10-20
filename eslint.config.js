@@ -812,6 +812,7 @@ export default [
             'chalk',
             'got',
           ],
+          ignoreTypeImport: true,
         },
       ],
       'n/no-unpublished-import': 2,
