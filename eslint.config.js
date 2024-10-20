@@ -678,6 +678,7 @@ export default [
       'unicorn/prefer-array-find': 2,
       'unicorn/prefer-array-some': 2,
       'unicorn/prefer-array-index-of': 2,
+      'unicorn/consistent-existence-index-check': 2,
       'unicorn/no-useless-length-check': 2,
       // We prefer `forEach()` over loops
       'unicorn/no-array-for-each': 0,
@@ -742,6 +743,7 @@ export default [
       'prefer-exponentiation-operator': 2,
       'no-bitwise': 2,
       'unicorn/prefer-math-trunc': 2,
+      'unicorn/prefer-math-min-max': 2,
       'unicorn/prefer-modern-math-apis': 2,
       'unicorn/require-number-to-fixed-digits-argument': 2,
 
@@ -925,6 +927,7 @@ export default [
       'n/no-unsupported-features/node-globals': 0,
       'n/no-deprecated-api': 2,
       'unicorn/no-unnecessary-polyfills': 2,
+      'unicorn/prefer-global-this': 2,
 
       // Denylist
       // No use
