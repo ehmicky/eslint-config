@@ -53,9 +53,9 @@
     "sinon": "^18.0.0"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin-js": "^2.8.0",
-    "@stylistic/eslint-plugin-plus": "^2.8.0",
-    "@stylistic/eslint-plugin-ts": "^2.8.0",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "@stylistic/eslint-plugin-plus": "^2.9.0",
+    "@stylistic/eslint-plugin-ts": "^2.9.0",
     "@eslint/markdown": "^6.1.0",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
