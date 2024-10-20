@@ -270,6 +270,7 @@ export default [
       '@stylistic/js/arrow-spacing': 0,
       '@stylistic/js/comma-style': 0,
       '@stylistic/js/computed-property-spacing': 0,
+      '@stylistic/js/curly-newline': 0,
       '@stylistic/js/dot-location': 0,
       '@stylistic/js/eol-last': 0,
       '@stylistic/js/function-call-argument-newline': 0,
