@@ -1,4 +1,6 @@
+/* eslint-disable id-length, no-magic-numbers */
 import { builtinModules } from 'node:module'
+
 import { fixupPluginRules } from '@eslint/compat'
 import markdown from '@eslint/markdown'
 import stylisticJs from '@stylistic/eslint-plugin-js'
@@ -1695,3 +1697,4 @@ export default [
     },
   },
 ]
+/* eslint-enable id-length, no-magic-numbers */
