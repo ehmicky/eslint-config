@@ -884,7 +884,7 @@ export default [
       'unicorn/relative-url-style': 2,
 
       // Filenames
-      // Setting options to `eslint-plugin-fp` does not work with ESLint 9
+      // Setting options to eslint-plugin-filenames does not work with ESLint 9
       'filenames/match-regex': 0,
       'filenames/match-exported': 0,
       'filenames/no-index': 2,
