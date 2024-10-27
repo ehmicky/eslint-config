@@ -3,14 +3,11 @@
   "version": "19.0.4",
   "type": "module",
   "exports": {
-    ".": "./.prettierrc.js",
-    "./eslint": "./eslint.config.js"
+    ".": "./eslint.config.js"
   },
-  "main": "./.prettierrc.js",
+  "main": "./eslint.config.js",
   "files": [
-    "eslint.config.js",
-    ".prettierrc.js",
-    ".editorconfig"
+    "eslint.config.js"
   ],
   "scripts": {
     "test": "gulp test"
@@ -19,12 +16,9 @@
   "keywords": [
     "eslint",
     "eslintconfig",
-    "prettierrc",
-    "prettier",
     "standard",
     "standard style",
     "JavaScript Standard Style",
-    "editorconfig",
     "lint",
     "config",
     "configuration",
@@ -73,7 +67,6 @@
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-unicorn": "^56.0.0",
     "globals": "^15.11.0",
-    "prettier": "^3.3.2",
     "typescript-eslint": "^8.11.0"
   },
   "engines": {

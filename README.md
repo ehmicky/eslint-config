@@ -3,7 +3,7 @@
 [![Mastodon](https://img.shields.io/badge/-Mastodon-808080.svg?logo=mastodon&colorA=404040&logoColor=9590F9)](https://fosstodon.org/@ehmicky)
 [![Medium](https://img.shields.io/badge/-Medium-808080.svg?logo=medium&colorA=404040)](https://medium.com/@ehmicky)
 
-[ESLint](https://eslint.org/) configuration for my own projects.
+[ESLint](https://eslint.org) configuration for my own projects.
 
 This is not meant to be shared and semantic versioning is not followed.
 
@@ -47,7 +47,7 @@ Code should be split into small files and functions:
 - branches/blocks should not be nested.
 - lines are at most 80 characters long.
 
-## Modern JavaScript
+## Modern JavaScript/TypeScript
 
 - ES modules. Exports should be named (no `export default`).
 - object and array destructuring.
@@ -57,9 +57,9 @@ Code should be split into small files and functions:
 - parameters spreading: `(...args) => ...` instead of `(arguments) => ...`
 - template strings instead of concatenation.
 - `async`/`await` instead of explicit promises or callbacks.
-- vanilla JavaScript instead of Lodash/Underscore.
-- only JavaScript features supported by the Node.js version specified in your
-  `package.json` `engines` field.
+- vanilla JavaScript/TypeScript instead of Lodash/Underscore.
+- only JavaScript/TypeScript features supported by the Node.js version specified
+  in your `package.json` `engines` field.
 
 ## Strictness
 
