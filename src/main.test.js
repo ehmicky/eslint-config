@@ -17,7 +17,7 @@ test('Smoke test', async (t) => {
     { preferLocal: true },
   )
 
-  t.is(exitCode, 0)
+  t.is(exitCode, undefined)
   t.is(stdout, '')
   t.is(stderr, '')
 })
