@@ -69,12 +69,12 @@ const importStyles = Object.fromEntries(
 )
 
 const forbiddenGlobals = [
-  // No global variables
+  // Use `globalThis` instead
   'global',
   'GLOBAL',
   // Use module.exports instead
   'exports',
-  // Use require('process|buffer') instead
+  // Use import ... from 'node:process|buffer' instead
   'process',
   'Buffer',
 ]
@@ -195,7 +195,9 @@ const typeScriptRules = {
     2,
     {
       blankLine: 'always',
-      prev: ['multiline-block-like', 'directive', 'interface', 'type'],
+      // TODO: replace with:
+      // prev: ['multiline-block-like', 'directive', 'interface', 'type'],
+      prev: ['multiline-block-like', 'directive'],
       next: '*',
     },
     { blankLine: 'always', prev: '*', next: 'multiline-block-like' },
@@ -235,6 +237,7 @@ export default [
       'eslint-comments': fixupPluginRules(eslintComments),
       filenames: fixupPluginRules(filenames),
       fp: fixupPluginRules(fp),
+      markdown,
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
       n,
@@ -254,7 +257,7 @@ export default [
         projectService: true,
       },
     },
-    linterOptions: { reportUnusedDisableDirectives: true },
+    linterOptions: { reportUnusedDisableDirectives: 'error' },
     settings: {
       n: { tryExtensions: nExtensions },
       'import/resolver': {
@@ -449,7 +452,7 @@ export default [
       'no-delete-var': 2,
       'fp/no-delete': 2,
       'fp/no-mutating-assign': 2,
-      // Does not work with ESLint 9
+      // Setting options to `eslint-plugin-fp` does not work with ESLint 9
       'fp/no-mutating-methods': 0,
       'no-useless-assignment': 2,
       // This is too strict
@@ -783,32 +786,12 @@ export default [
       'promise/spec-only': 2,
 
       // Modules
-      'import/no-unresolved': [
-        2,
-        {
-          ignore: [
-            '@ehmicky/eslint-config',
-            // A bug in the following modules currently makes that rule fail
-            'chalk',
-            'got',
-            'mem',
-            'release-it',
-          ],
-        },
-      ],
+      'import/no-unresolved': [2, { ignore: ['@ehmicky/eslint-config'] }],
       'n/no-missing-require': 2,
       'n/no-unpublished-require': 2,
       'n/no-missing-import': [
         2,
-        {
-          allowModules: [
-            '@ehmicky/eslint-config',
-            // A bug in the following modules currently makes that rule fail
-            'chalk',
-            'got',
-          ],
-          ignoreTypeImport: true,
-        },
+        { allowModules: ['@ehmicky/eslint-config'], ignoreTypeImport: true },
       ],
       'n/no-unpublished-import': 2,
       // TODO: there are two bugs that make this rule hard to work with at the moment
@@ -900,7 +883,7 @@ export default [
       'unicorn/relative-url-style': 2,
 
       // Filenames
-      // Does not work with ESLint 9
+      // Setting options to `eslint-plugin-fp` does not work with ESLint 9
       'filenames/match-regex': 0,
       'filenames/match-exported': 0,
       'filenames/no-index': 2,
@@ -1320,10 +1303,10 @@ export default [
   },
 
   // Markdown files
-  ...markdown.configs.processor,
-
+  // TODO: this block currently seems to be ignored
   {
     files: ['**/*.md'],
+    processor: 'markdown/markdown',
     language: 'markdown/gfm',
     rules: {
       'markdown/fenced-code-language': 2,
@@ -1355,9 +1338,6 @@ export default [
   {
     files: ['**/*.md/*.{js,ts}', 'examples/**/*.{js,cjs,mjs,ts,cts,mts}'],
     rules: {
-      // Examples sometimes start with a number
-      'filenames/match-regex': [2, '^[a-zA-Z0-9_][a-zA-Z0-9_.]+$'],
-
       // Examples print their output at the end of the file
       // It might happen in documentation as well
       'no-console': 0,
@@ -1466,13 +1446,9 @@ export default [
         projectService: false,
       },
     },
-    // `eslint-config-markdown` does not work with `parserOptions.project`, which
-    // removes some rules
+    // `eslint-config-markdown` does not work with `parserOptions.project`,
+    // which removes some rules
     ...typescriptEslint.configs.disableTypeChecked,
-    // Currently missing from `disable-type-checked` config
-    rules: {
-      '@typescript-eslint/prefer-destructuring': 0,
-    },
   },
 
   // Test files, including helpers
@@ -1679,7 +1655,6 @@ export default [
       'promise/prefer-await-to-callbacks': 0,
 
       // `test-d` is dasherized, but rest must use underscores
-      'filenames/match-regex': [2, '^[a-zA-Z_][a-zA-Z0-9_.]+\\.test-d$'],
       'unicorn/filename-case': [
         2,
         {
