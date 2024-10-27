@@ -217,9 +217,7 @@ const typeScriptRules = {
   ],
   '@typescript-eslint/prefer-destructuring': [
     2,
-    // TODO: uncomment this. This is currently failing due to a bug with
-    // @typescript-eslint/eslint-parser for this rule
-    // { enforceForDeclarationWithTypeAnnotation: true },
+    { enforceForDeclarationWithTypeAnnotation: true },
   ],
   '@typescript-eslint/no-restricted-imports': [
     2,
