@@ -1277,8 +1277,7 @@ export default [
 
       // Readonly
       '@typescript-eslint/prefer-as-const': 2,
-      // This rule seems to be buggy and produce false positives
-      '@typescript-eslint/prefer-readonly-parameter-types': 0,
+      '@typescript-eslint/prefer-readonly-parameter-types': 2,
 
       // Generic
       '@typescript-eslint/consistent-generic-constructors': 2,
