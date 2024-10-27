@@ -1537,7 +1537,7 @@ export default [
 
   // Files which require a default export
   {
-    files: ['**/ava.config.js', '**/eslint.config.js'],
+    files: ['**/ava.config.js', '**/eslint.config.js', '**/prettier.config.js'],
     rules: {
       'import/no-anonymous-default-export': 0,
       'import/no-default-export': 0,
