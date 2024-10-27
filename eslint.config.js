@@ -1336,6 +1336,9 @@ export default [
       'filenames/match-exported': 0,
       'filenames/match-regex': 0,
       'unicorn/filename-case': 0,
+
+      // Code blocks sometimes used variables defined in previous ones
+      'no-undef': 0,
     },
   },
 
@@ -1420,6 +1423,9 @@ export default [
 
       // `this` is sometimes omitting for example purpose
       'class-methods-use-this': 0,
+
+      // Documentation and examples sometimes used unused variables
+      'no-unused-vars': 0,
     },
   },
 
@@ -1431,8 +1437,6 @@ export default [
       '@typescript-eslint/no-empty-function': 0,
       '@typescript-eslint/no-restricted-imports': 0,
       '@typescript-eslint/class-methods-use-this': 0,
-
-      // Documentation and examples sometimes used unused variables
       '@typescript-eslint/no-unused-vars': 0,
 
       // Documentation and examples might be using `any`
