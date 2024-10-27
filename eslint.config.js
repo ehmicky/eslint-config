@@ -197,9 +197,7 @@ const typeScriptRules = {
     2,
     {
       blankLine: 'always',
-      // TODO: replace with:
-      // prev: ['multiline-block-like', 'directive', 'interface', 'type'],
-      prev: ['multiline-block-like', 'directive'],
+      prev: ['multiline-block-like', 'directive', 'interface', 'type'],
       next: '*',
     },
     { blankLine: 'always', prev: '*', next: 'multiline-block-like' },
