@@ -1307,6 +1307,7 @@ export default [
 
   // Markdown files
   // TODO: this block currently seems to be ignored
+  // See https://github.com/eslint/markdown/issues/297
   {
     files: ['**/*.md'],
     processor: 'markdown/markdown',
