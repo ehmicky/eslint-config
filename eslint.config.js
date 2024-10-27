@@ -408,15 +408,7 @@ export default [
       ],
       'max-statements': [2, 10],
       'import/max-dependencies': 2,
-      complexity: [
-        2,
-        {
-          max: 4,
-          // TODO: enable once it works better.
-          // At the moment, it seems to impact code that does not use `switch`
-          // variant: 'modified',
-        },
-      ],
+      complexity: [2, { max: 4, variant: 'modified' }],
       'max-depth': [2, 1],
       'max-nested-callbacks': [2, 1],
 
