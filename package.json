@@ -42,7 +42,7 @@
     "lib": "src"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^3.0.18",
+    "@ehmicky/dev-tasks": "^3.0.19",
     "nano-spawn": "^0.1.0"
   },
   "peerDependencies": {
