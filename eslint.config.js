@@ -225,6 +225,28 @@ const typeScriptRules = {
   ],
 }
 
+// TODO: remove once the following is released to `@eslint/compat`
+// https://github.com/eslint/rewrite/issues/127
+const fixupOldPluginRules = ({ rules, ...plugin }) => ({
+  ...plugin,
+  rules: Object.fromEntries(
+    Object.entries(rules).map(([ruleName, rule]) => [
+      ruleName,
+      fixupOldPluginRule(rule),
+    ]),
+  ),
+})
+
+const fixupOldPluginRule = (rule) => ({
+  ...rule,
+  create: typeof rule === 'function' ? rule : rule.create,
+  schema: undefined,
+  meta: {
+    ...rule.meta,
+    schema: rule.schema ?? rule.create?.schema ?? [{}],
+  },
+})
+
 export default [
   importPlugin.flatConfigs.errors,
   {
@@ -235,8 +257,8 @@ export default [
       '@stylistic/plus': stylisticPlus,
       ava,
       'eslint-comments': fixupPluginRules(eslintComments),
-      filenames: fixupPluginRules(filenames),
-      fp: fixupPluginRules(fp),
+      filenames: fixupPluginRules(fixupOldPluginRules(filenames)),
+      fp: fixupPluginRules(fixupOldPluginRules(fp)),
       markdown,
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
@@ -453,8 +475,16 @@ export default [
       'no-delete-var': 2,
       'fp/no-delete': 2,
       'fp/no-mutating-assign': 2,
-      // Setting options to `eslint-plugin-fp` does not work with ESLint 9
-      'fp/no-mutating-methods': 0,
+      'fp/no-mutating-methods': [
+        2,
+        {
+          allowedObjects: [
+            ...mutableObjects,
+            // gulp.watch() is flagged as mutable otherwise
+            'gulp',
+          ],
+        },
+      ],
       'no-useless-assignment': 2,
       // This is too strict
       'fp/no-unused-expression': 0,
@@ -885,8 +915,8 @@ export default [
 
       // Filenames
       // Setting options to eslint-plugin-filenames does not work with ESLint 9
-      'filenames/match-regex': 0,
-      'filenames/match-exported': 0,
+      'filenames/match-regex': [2, '^[a-zA-Z_][a-zA-Z0-9_.]+$'],
+      'filenames/match-exported': [2, 'snake'],
       'filenames/no-index': 2,
       'unicorn/filename-case': [2, { case: 'snakeCase' }],
       'unicorn/no-empty-file': 2,
