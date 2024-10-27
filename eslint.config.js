@@ -1,4 +1,5 @@
-/* eslint-disable id-length, no-magic-numbers */
+/* eslint-disable id-length, max-lines, no-magic-numbers,
+   import/max-dependencies, import/no-default-export */
 import { builtinModules } from 'node:module'
 
 import { fixupPluginRules } from '@eslint/compat'
@@ -1697,4 +1698,5 @@ export default [
     },
   },
 ]
-/* eslint-enable id-length, no-magic-numbers */
+/* eslint-enable id-length, max-lines, no-magic-numbers,
+   import/max-dependencies, import/no-default-export */
