@@ -8,8 +8,8 @@
   },
   "main": "./.prettierrc.js",
   "files": [
-    ".prettierrc.js",
     ".eslintrc.yml",
+    ".prettierrc.js",
     ".editorconfig"
   ],
   "scripts": {
