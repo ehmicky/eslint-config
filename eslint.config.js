@@ -1,5 +1,5 @@
 /* eslint-disable id-length, max-lines, no-magic-numbers,
-   import/max-dependencies, import/no-default-export */
+   import/max-dependencies */
 import { builtinModules } from 'node:module'
 
 import { fixupPluginRules } from '@eslint/compat'
@@ -1534,9 +1534,9 @@ export default [
     },
   },
 
-  // ava.config.js requires a default export
+  // Files which require a default export
   {
-    files: ['**/ava.config.js'],
+    files: ['**/ava.config.js', '**/eslint.config.js'],
     rules: {
       'import/no-anonymous-default-export': 0,
       'import/no-default-export': 0,
@@ -1701,4 +1701,4 @@ export default [
   },
 ]
 /* eslint-enable id-length, max-lines, no-magic-numbers,
-   import/max-dependencies, import/no-default-export */
+   import/max-dependencies */
