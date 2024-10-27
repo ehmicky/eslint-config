@@ -2,6 +2,7 @@ import { builtinModules } from 'node:module'
 import stylisticJs from '@stylistic/eslint-plugin-js'
 import stylisticTs from '@stylistic/eslint-plugin-ts'
 import stylisticPlus from '@stylistic/eslint-plugin-plus'
+import { fixupPluginRules } from '@eslint/compat'
 import typescriptEslint from 'typescript-eslint'
 import ava from 'eslint-plugin-ava'
 import eslintComments from 'eslint-plugin-eslint-comments'
@@ -231,9 +232,9 @@ export default [
       '@stylistic/ts': stylisticJs,
       '@stylistic/plus': stylisticJs,
       ava,
-      'eslint-comments': eslintComments,
-      filenames,
-      fp,
+      'eslint-comments': fixupPluginRules(eslintComments),
+      filenames: fixupPluginRules(filenames),
+      fp: fixupPluginRules(fp),
       'prefer-arrow-functions': preferArrowFunctions,
       unicorn,
       n,
@@ -448,16 +449,8 @@ export default [
       'no-delete-var': 2,
       'fp/no-delete': 2,
       'fp/no-mutating-assign': 2,
-      'fp/no-mutating-methods': [
-        2,
-        {
-          allowedObjects: [
-            ...mutableObjects,
-            // gulp.watch() is flagged as mutable otherwise
-            'gulp',
-          ],
-        },
-      ],
+      // Does not work with ESLint 9
+      'fp/no-mutating-methods': 0,
       'no-useless-assignment': 2,
       // This is too strict
       'fp/no-unused-expression': 0,
@@ -907,8 +900,9 @@ export default [
       'unicorn/relative-url-style': 2,
 
       // Filenames
-      'filenames/match-regex': [2, '^[a-zA-Z_][a-zA-Z0-9_.]+$'],
-      'filenames/match-exported': [2, 'snake'],
+      // Does not work with ESLint 9
+      'filenames/match-regex': 0,
+      'filenames/match-exported': 0,
       'filenames/no-index': 2,
       'unicorn/filename-case': [2, { case: 'snakeCase' }],
       'unicorn/no-empty-file': 2,
