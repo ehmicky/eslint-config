@@ -151,7 +151,6 @@ const javaScriptRules = {
   'max-params': 2,
   'default-param-last': 2,
   'no-empty-function': 2,
-  'consistent-return': 2,
 
   // Objects
   'dot-notation': 2,
