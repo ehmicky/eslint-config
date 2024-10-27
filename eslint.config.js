@@ -861,7 +861,8 @@ export default [
           'newlines-between': 'always',
           alphabetize: { order: 'asc', caseInsensitive: true },
           warnOnUnassignedImports: true,
-          named: { enabled: true, types: 'types-last' },
+          // TODO: enable
+          // named: { enabled: true, types: 'types-last' },
         },
       ],
       'import/newline-after-import': 2,
