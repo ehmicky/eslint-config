@@ -4,11 +4,11 @@
   "type": "module",
   "exports": {
     ".": "./.prettierrc.js",
-    "./.eslintrc.yml": "./.eslintrc.yml"
+    "./eslint": "./eslint.config.js"
   },
   "main": "./.prettierrc.js",
   "files": [
-    ".eslintrc.yml",
+    "eslint.config.js",
     ".prettierrc.js",
     ".editorconfig"
   ],
