@@ -1691,6 +1691,7 @@ export default [
       'promise/prefer-await-to-callbacks': 0,
 
       // `test-d` is dasherized, but rest must use underscores
+      'filenames/match-regex': [2, '^[a-zA-Z_][a-zA-Z0-9_.]+\\.test-d\\.ts$'],
       'unicorn/filename-case': [
         2,
         {
