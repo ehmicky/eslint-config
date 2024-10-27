@@ -1307,12 +1307,12 @@ export default [
   },
 
   // Markdown files
-  // TODO: this block currently seems to be ignored
-  // See https://github.com/eslint/markdown/issues/297
   {
     files: ['**/*.md'],
     processor: 'markdown/markdown',
     language: 'markdown/gfm',
+    // TODO: Those rules are currently ignored due to a bug
+    // See https://github.com/eslint/markdown/issues/297
     rules: {
       'markdown/fenced-code-language': 2,
       'markdown/heading-increment': 2,
