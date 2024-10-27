@@ -2,6 +2,7 @@
 // We use JavaScript instead of JSON or YAML so that this file can be exported
 // as the package's main file. We need to do that so it can be a shareable
 // configuration.
+// eslint-disable-next-line import/no-default-export
 export default {
   // Same as .editorconfig (and also default values)
   printWidth: 80,
@@ -13,6 +14,7 @@ export default {
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: 'always',
+  // eslint-disable-next-line id-length
   htmlWhitespaceSensitivity: 'css',
 
   // Same as default values and same as .editorconfig
