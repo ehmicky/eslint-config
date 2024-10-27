@@ -231,8 +231,8 @@ export default [
     // The rules added by eslint-config-prettier are inlined explicitly instead
     plugins: {
       '@stylistic/js': stylisticJs,
-      '@stylistic/ts': stylisticJs,
-      '@stylistic/plus': stylisticJs,
+      '@stylistic/ts': stylisticTs,
+      '@stylistic/plus': stylisticPlus,
       ava,
       'eslint-comments': fixupPluginRules(eslintComments),
       filenames: fixupPluginRules(filenames),
