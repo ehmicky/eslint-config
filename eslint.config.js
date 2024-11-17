@@ -1176,6 +1176,7 @@ export default [
       // Overloading functions is a more readable alternative to generic types
       // in some cases
       '@typescript-eslint/unified-signatures': 0,
+      '@typescript-eslint/related-getter-setter-pairs': 2,
 
       // Objects
       '@typescript-eslint/consistent-type-definitions': 2,
