@@ -1318,6 +1318,8 @@ export default [
       // Type assertions
       '@typescript-eslint/consistent-type-assertions': 2,
       '@typescript-eslint/no-unnecessary-type-assertion': 2,
+      // Too strict
+      '@typescript-eslint/no-unsafe-type-assertion': 0,
 
       // Namespaces
       '@typescript-eslint/no-namespace': [2, { allowDefinitionFiles: false }],
