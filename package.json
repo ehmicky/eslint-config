@@ -49,7 +49,7 @@
   "peerDependencies": {
     "@eslint/compat": "^1.2.2",
     "@eslint/markdown": "^6.2.1",
-    "@stylistic/eslint-plugin-js": "^2.10.1",
+    "@stylistic/eslint-plugin-js": "^2.11.0",
     "@stylistic/eslint-plugin-plus": "^2.10.1",
     "@stylistic/eslint-plugin-ts": "^2.10.1",
     "eslint": "^9.15.0",
