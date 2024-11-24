@@ -799,6 +799,7 @@ export default [
       'n/prefer-promises/fs': 2,
       'n/prefer-promises/dns': 2,
       'promise/catch-or-return': 2,
+      'promise/prefer-catch': 2,
       'promise/always-return': 2,
       'promise/param-names': 2,
       'promise/valid-params': 2,
