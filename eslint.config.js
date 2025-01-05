@@ -225,8 +225,7 @@ const typeScriptRules = {
   ],
 }
 
-// TODO: remove once the following is released to `@eslint/compat`
-// https://github.com/eslint/rewrite/issues/127
+// See https://github.com/eslint/rewrite/issues/127
 const fixupOldPluginRules = ({ rules, ...plugin }) => ({
   ...plugin,
   rules: Object.fromEntries(
