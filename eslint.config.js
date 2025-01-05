@@ -623,7 +623,9 @@ export default [
       'func-style': 2,
       'prefer-arrow-functions/prefer-arrow-functions': [
         2,
-        { allowObjectProperties: true },
+        // TODO: uncomment after upgrading eslint-plugin-prefer-arrow-functions
+        // See https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions/issues/51
+        // { allowObjectProperties: true },
       ],
       'no-func-assign': 2,
       'func-names': [2, 'as-needed'],
