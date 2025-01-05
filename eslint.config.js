@@ -259,7 +259,7 @@ export default [
       filenames: fixupPluginRules(fixupOldPluginRules(filenames)),
       fp: fixupPluginRules(fixupOldPluginRules(fp)),
       markdown,
-      'prefer-arrow-functions': preferArrowFunctions,
+      'prefer-arrow-functions': preferArrowFunctions.default,
       unicorn,
       n,
       promise,
