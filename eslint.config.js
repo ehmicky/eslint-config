@@ -621,7 +621,10 @@ export default [
 
       // Functions
       'func-style': 2,
-      'prefer-arrow-functions/prefer-arrow-functions': 2,
+      'prefer-arrow-functions/prefer-arrow-functions': [
+        2,
+        { allowObjectProperties: true },
+      ],
       'no-func-assign': 2,
       'func-names': [2, 'as-needed'],
       'func-name-matching': [2, { considerPropertyDescriptor: true }],
