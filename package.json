@@ -51,7 +51,7 @@
     "@eslint/markdown": "^6.2.1",
     "@stylistic/eslint-plugin-js": "^2.12.1",
     "@stylistic/eslint-plugin-plus": "^2.12.1",
-    "@stylistic/eslint-plugin-ts": "^2.11.0",
+    "@stylistic/eslint-plugin-ts": "^2.12.1",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-codeframe": "^7.32.1",
