@@ -1192,6 +1192,7 @@ export default [
       // Application-specific ordering is more relevant than type-specific
       '@typescript-eslint/member-ordering': 0,
       '@typescript-eslint/prefer-optional-chain': 2,
+      '@typescript-eslint/no-misused-spread': 2,
 
       // Classes
       '@typescript-eslint/unbound-method': 2,
