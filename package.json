@@ -50,7 +50,7 @@
     "@eslint/compat": "^1.2.5",
     "@eslint/markdown": "^6.2.2",
     "@stylistic/eslint-plugin-js": "^3.0.0",
-    "@stylistic/eslint-plugin-plus": "^2.13.0",
+    "@stylistic/eslint-plugin-plus": "^3.0.0",
     "@stylistic/eslint-plugin-ts": "^2.13.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
