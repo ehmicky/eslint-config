@@ -278,7 +278,10 @@ export default [
         projectService: true,
       },
     },
-    linterOptions: { reportUnusedDisableDirectives: 'error' },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error',
+    },
     settings: {
       n: { tryExtensions: nExtensions },
       'import/resolver': {
