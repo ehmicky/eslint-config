@@ -553,7 +553,8 @@ export default defineConfig([
       'no-eq-null': 0,
       'unicorn/no-negation-in-equality-check': 2,
       'valid-typeof': 2,
-      'unicorn/no-instanceof-array': 2,
+      // Too restrictive for Errors, while Error.isError() is not widespread yet
+      'unicorn/no-instanceof-builtins': 0,
       'no-negated-condition': 2,
       'unicorn/no-negated-condition': 2,
       'no-constant-condition': 2,
@@ -649,6 +650,7 @@ export default defineConfig([
       'grouped-accessor-pairs': [2, 'getBeforeSet'],
       'getter-return': 2,
       'no-setter-return': 2,
+      'unicorn/no-accessor-recursion': 2,
       'fp/no-get-set': 2,
       'fp/no-proxy': 2,
       'no-useless-return': 2,
@@ -785,6 +787,7 @@ export default defineConfig([
 
       // Date
       'unicorn/prefer-date-now': 2,
+      'unicorn/consistent-date-clone': 2,
 
       // Async
       'n/handle-callback-err': [2, '^(err|error)$'],
@@ -850,6 +853,7 @@ export default defineConfig([
       'import/no-empty-named-blocks': 2,
       'import/no-namespace': 2,
       'import/no-named-default': 2,
+      'unicorn/no-named-default': 2,
       // This does not match our import/export style
       'import/no-named-export': 0,
       'import/prefer-default-export': 0,
@@ -994,6 +998,8 @@ export default defineConfig([
       'unicorn/no-invalid-remove-event-listener': 2,
       'unicorn/prefer-event-target': 2,
       'no-obj-calls': 2,
+      // Too verbose
+      'unicorn/consistent-assert': 0,
 
       // DOM
       'unicorn/prefer-query-selector': 2,
