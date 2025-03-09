@@ -1145,7 +1145,10 @@ export default defineConfig([
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 2,
       '@typescript-eslint/no-unnecessary-condition': [
         2,
-        { allowConstantLoopConditions: true, checkTypePredicates: true },
+        {
+          allowConstantLoopConditions: 'neverExceptWhileTrue',
+          checkTypePredicates: true,
+        },
       ],
       '@typescript-eslint/strict-boolean-expressions': 2,
       // Application-specific ordering is more relevant than type-specific
