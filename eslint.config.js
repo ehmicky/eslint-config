@@ -7,6 +7,7 @@ import markdown from '@eslint/markdown'
 import stylisticJs from '@stylistic/eslint-plugin-js'
 import stylisticPlus from '@stylistic/eslint-plugin-plus'
 import stylisticTs from '@stylistic/eslint-plugin-ts'
+import { defineConfig } from 'eslint/config'
 import ava from 'eslint-plugin-ava'
 import eslintComments from 'eslint-plugin-eslint-comments'
 import filenames from 'eslint-plugin-filenames'
@@ -246,7 +247,7 @@ const fixupOldPluginRule = (rule) => ({
   },
 })
 
-export default [
+export default defineConfig([
   importPlugin.flatConfigs.errors,
   {
     // The rules added by eslint-config-prettier are inlined explicitly instead
@@ -1741,6 +1742,6 @@ export default [
       'max-lines': 0,
     },
   },
-]
+])
 /* eslint-enable id-length, max-lines, no-magic-numbers,
    import/max-dependencies */
