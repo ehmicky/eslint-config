@@ -837,6 +837,8 @@ export default defineConfig([
             '@ehmicky/eslint-config',
             // TODO: figure out why those are being reported
             'eslint/config',
+            'got',
+            'memoize',
             'typescript-eslint',
           ],
         },
