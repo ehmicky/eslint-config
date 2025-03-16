@@ -286,10 +286,7 @@ export default defineConfig([
     },
     settings: {
       n: { tryExtensions: nExtensions },
-      'import/resolver': {
-        node: { extensions: nExtensions },
-        typescript: { project: 'tsconfig.json' },
-      },
+      'import/resolver': { node: { extensions: nExtensions } },
     },
     rules: {
       // Conflicts with Prettier
