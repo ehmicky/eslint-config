@@ -830,7 +830,17 @@ export default defineConfig([
       'promise/spec-only': 2,
 
       // Modules
-      'import/no-unresolved': [2, { ignore: ['@ehmicky/eslint-config'] }],
+      'import/no-unresolved': [
+        2,
+        {
+          ignore: [
+            '@ehmicky/eslint-config',
+            // TODO: figure out why those are being reported
+            'eslint/config',
+            'typescript-eslint',
+          ],
+        },
+      ],
       'n/no-missing-require': 2,
       'n/no-unpublished-require': 2,
       'n/no-missing-import': [
