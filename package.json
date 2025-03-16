@@ -1,6 +1,6 @@
 {
   "name": "@ehmicky/eslint-config",
-  "version": "20.0.26",
+  "version": "20.0.27",
   "type": "module",
   "exports": {
     ".": "./eslint.config.js"
