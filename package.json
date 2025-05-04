@@ -44,7 +44,7 @@
   "devDependencies": {
     "@ehmicky/dev-tasks": "^3.0.33",
     "@ehmicky/prettier-config": "^1.0.6",
-    "nano-spawn": "^0.2.0"
+    "nano-spawn": "^0.2.1"
   },
   "peerDependencies": {
     "@eslint/compat": "^1.2.7",
