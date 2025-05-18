@@ -1437,6 +1437,7 @@ export default defineConfig([
       'n/prefer-global/buffer': 0,
       'n/prefer-global/process': 0,
       'n/prefer-global/url': 0,
+      'n/no-process-env': 0,
 
       // Example test files
       'ava/no-ignored-test-files': 0,
